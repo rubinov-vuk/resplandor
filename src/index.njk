@@ -1,0 +1,77 @@
+---
+layout: layouts/base.njk
+---
+{% if home.hero %}
+<div class="hero">
+  <img src="{{ home.hero }}" alt="{{ home.heroAlt }}" sizes="100vw" loading="eager" fetchpriority="high" style="object-position: 50% {{ home.heroFocus if home.heroFocus != null else 50 }}%">
+</div>
+{% endif %}
+
+<section class="intro container">
+  <h1 class="page-title">{{ home.heading }}</h1>
+  {% for p in home.intro | paragraphs %}
+  <p>{{ p }}</p>
+  {% endfor %}
+  {% if home.quote %}<blockquote class="intro-quote">{{ home.quote }}</blockquote>{% endif %}
+</section>
+
+<section class="story-list container" aria-labelledby="putopis">
+  <div class="story-list-head">
+    <h2 id="putopis" class="section-title">{{ home.listHeading }}</h2>
+    <label class="country-filter">
+      <span class="visually-hidden">Filtriraj priče po zemlji</span>
+      <select id="country-filter">
+        <option value="">{{ home.allCountries }}</option>
+        {% for country in countries %}
+        <option value="{{ country | slugify }}">{{ country }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  </div>
+
+  {% for story in collections.stories %}
+  <article class="story-card" data-country="{{ story.data.country | slugify }}">
+    <a class="story-card-image" href="{{ story.url }}" tabindex="-1" aria-hidden="true">
+      <img src="{{ story.data.cover }}" alt="" sizes="(min-width: 820px) 550px, 100vw">
+    </a>
+    <div class="story-card-body">
+      <p class="meta"><span>{{ story.data.location }}</span><time datetime="{{ story.date | isoDate }}">{{ story.date | srDate }}</time></p>
+      <h3 class="story-card-title"><a href="{{ story.url }}">{{ story.data.title }}</a></h3>
+      <p class="story-card-excerpt">{{ story.data.excerpt or (story.content | excerpt) }}</p>
+      <a class="read-more" href="{{ story.url }}">{{ home.readMore }}<span class="visually-hidden">: {{ story.data.title }}</span></a>
+    </div>
+  </article>
+  {% else %}
+  <p>Uskoro prve priče.</p>
+  {% endfor %}
+  <p class="no-stories" id="no-stories" role="status" hidden>{{ home.noStories }}</p>
+</section>
+
+<script>
+  // Shows only the stories from the chosen country. The choice is kept in the address (?zemlja=peru),
+  // so a filtered list can be shared as a link.
+  (() => {
+    const select = document.getElementById("country-filter");
+    const cards = document.querySelectorAll(".story-card");
+    const empty = document.getElementById("no-stories");
+    const apply = () => {
+      let shown = 0;
+      cards.forEach((card) => {
+        const match = !select.value || card.dataset.country === select.value;
+        card.hidden = !match;
+        if (match) shown++;
+      });
+      empty.hidden = shown > 0;
+    };
+    const fromUrl = new URLSearchParams(location.search).get("zemlja");
+    if (fromUrl && select.querySelector(`option[value="${CSS.escape(fromUrl)}"]`)) select.value = fromUrl;
+    select.addEventListener("change", () => {
+      const url = new URL(location.href);
+      if (select.value) url.searchParams.set("zemlja", select.value);
+      else url.searchParams.delete("zemlja");
+      history.replaceState(null, "", url);
+      apply();
+    });
+    apply();
+  })();
+</script>

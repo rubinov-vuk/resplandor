@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+---
+<article class="story container-narrow">
+  <h1 class="story-title">{{ title }}</h1>
+  <p class="meta"><span>{{ location }}</span><time datetime="{{ page.date | isoDate }}">{{ page.date | srDate }}</time></p>
+
+  <div class="story-body">
+    {{ content | safe }}
+  </div>
+
+  {% if gallery and gallery.length %}
+    {% for photo in gallery %}
+    <figure class="story-photo">
+      <img src="{{ photo.image }}" alt="{{ photo.caption or title }}">
+      {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
+    </figure>
+    {% endfor %}
+  {% elif cover %}
+    <figure class="story-photo">
+      <img src="{{ cover }}" alt="{{ title }}">
+    </figure>
+  {% endif %}
+
+  {% set next = collections.stories | nextStory(page.url) %}
+  {% if next %}
+  <a class="next-story" href="{{ next.url }}">
+    <span class="next-label">
+      <svg width="25" height="12" viewBox="0 0 25 12" fill="none" aria-hidden="true"><path d="M0.75 6H24.25M19 0.75L24.25 6L19 11.25" stroke="#B87734" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      {{ home.nextStory }}
+    </span>
+    <span class="next-title">{{ next.data.title }}</span>
+  </a>
+  {% endif %}
+</article>

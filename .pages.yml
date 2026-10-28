@@ -1,0 +1,123 @@
+# Editor settings for Pages CMS (https://app.pagescms.org).
+# This is what lets you add stories and photos from the browser without touching code.
+media:
+  input: src/images
+  output: /images
+
+content:
+  - name: stories
+    label: Priče (Putopis)
+    type: collection
+    path: src/putopis
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, country, date, draft]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Naslov
+        type: string
+        required: true
+      - name: location
+        label: Mesto (npr. Pisaq, Peru)
+        type: string
+      # Used by the "Sve Zemlje" filter. To add a country, add it here AND in src/_data/countries.json.
+      - name: country
+        label: Zemlja (za filter)
+        type: select
+        required: true
+        options:
+          values: [Kanada, SAD, Gvatemala, Peru, Bolivija, Kolumbija, Argentina, Čile, Brazil]
+      - name: date
+        label: Datum
+        type: date
+        required: true
+      - name: cover
+        label: Naslovna fotografija (prikazuje se u listi priča)
+        type: image
+        required: true
+      - name: excerpt
+        label: Kratak opis za listu (ako je prazno, uzima se početak priče)
+        type: text
+      - name: body
+        label: Tekst priče
+        type: rich-text
+      - name: gallery
+        label: Fotografije na kraju priče
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Fotografija
+            type: image
+          - name: caption
+            label: Opis fotografije
+            type: string
+      - name: draft
+        label: Skica (ne objavljuj još)
+        type: boolean
+        default: false
+
+  - name: home
+    label: Početna strana
+    type: file
+    path: src/_data/home.json
+    fields:
+      - name: hero
+        label: Velika fotografija na vrhu
+        type: image
+      - name: heroAlt
+        label: Opis velike fotografije (za slabovide i Google)
+        type: string
+      - name: heroFocus
+        label: Koji deo fotografije se vidi (0 = vrh, 50 = sredina, 100 = dno)
+        type: number
+      - name: heading
+        label: Naslov
+        type: string
+      - name: intro
+        label: Uvodni tekst (prazan red = novi pasus)
+        type: text
+      - name: quote
+        label: Citat
+        type: string
+      - name: listHeading
+        label: Naslov liste priča
+        type: string
+      - name: allCountries
+        label: Tekst filtera „Sve Zemlje“
+        type: string
+      - name: noStories
+        label: Poruka kad iz izabrane zemlje nema priča
+        type: string
+      - name: readMore
+        label: Tekst linka „Čitaj još“
+        type: string
+      - name: nextStory
+        label: Tekst „Sledeća priča“
+        type: string
+
+  - name: site
+    label: Podešavanja sajta
+    type: file
+    path: src/_data/site.json
+    fields:
+      - name: title
+        label: Ime sajta
+        type: string
+      - name: description
+        label: Opis sajta (za Google i deljenje linka)
+        type: text
+      - name: author
+        label: Autor
+        type: string
+      - name: language
+        label: Jezik (kod)
+        type: string
+      - name: instagram
+        label: Instagram link
+        type: string
