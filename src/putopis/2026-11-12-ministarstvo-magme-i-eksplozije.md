@@ -96,7 +96,7 @@ gallery:
     caption: Glavni Skver
     layout: full
     shape: wide
-    focus: top
+    focus: center
     zoom: "1"
 draft: false
 ---
