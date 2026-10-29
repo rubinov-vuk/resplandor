@@ -14,7 +14,7 @@ sections:
     items:
       - image: /images/WhatsApp Image 2026-10-29 at 19.27.27 (1)-1.jpeg
         caption: Pogled na Aguas
-        layout: screen
+        layout: wide
         shape: original
         focus: center
         zoom: "1"
@@ -96,7 +96,7 @@ gallery:
     caption: Glavni Skver
     layout: full
     shape: wide
-    focus: center
+    focus: top
     zoom: "1"
 draft: false
 ---
