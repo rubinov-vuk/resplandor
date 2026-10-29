@@ -9,10 +9,13 @@ layout: layouts/base.njk
     {{ content | safe }}
   </div>
 
+  <div class="story-photos">
   {% if gallery and gallery.length %}
     {% for photo in gallery %}
-    <figure class="story-photo">
-      <img src="{{ photo.image }}" alt="{{ photo.caption or title }}">
+    {% set layout = photo.layout or "full" %}
+    <figure class="story-photo story-photo--{{ layout }}">
+      <img src="{{ photo.image }}" alt="{{ photo.caption or title }}"
+        {% if layout == "wide" %}sizes="(min-width: 1440px) 1090px, 100vw"{% elif layout == "half" %}sizes="(min-width: 820px) 435px, 100vw"{% endif %}>
       {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
     </figure>
     {% endfor %}
@@ -21,6 +24,7 @@ layout: layouts/base.njk
       <img src="{{ cover }}" alt="{{ title }}">
     </figure>
   {% endif %}
+  </div>
 
   {% set next = collections.stories | nextStory(page.url) %}
   {% if next %}

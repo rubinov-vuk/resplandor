@@ -11,7 +11,16 @@ A travel blog built from the Figma "Journal Page" designs. Stories are Markdown 
 
 To keep a story hidden while you're still working on it, tick **Skica (ne objavljuj još)**.
 
-The big photo at the top, the intro text, the quote and the filter wording are under **Početna strana**. The site name, description and Instagram link are under **Podešavanja sajta**.
+Every photo at the end of a story has a **Raspored** (layout) choice:
+
+| Option | What it does |
+| --- | --- |
+| Širina teksta | As wide as the text (the default) |
+| Široka | Wider than the text, for big landscapes |
+| Pola | Half width. Put two in a row and they sit side by side |
+| Mala, u sredini | Smaller and centred, for detail shots |
+
+The slideshow at the top of the home page is under **Početna strana → Velike fotografije na vrhu**. Add, remove or reorder photos there. Each photo has a caption (shown top right) and a "focus" number that picks which part of the photo is visible. The slideshow changes photo every 5 seconds and makes one dot per photo automatically. The intro text, the quote and the filter wording are on the same page. The site name, description and Instagram link are under **Podešavanja sajta**.
 
 To add a new country to the filter, add it in two places: the `values` list under `country` in `.pages.yml`, and `src/_data/countries.json`.
 

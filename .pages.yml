@@ -57,6 +57,16 @@ content:
           - name: caption
             label: Opis fotografije
             type: string
+          - name: layout
+            label: Raspored
+            type: select
+            default: full
+            options:
+              values:
+                - { value: full, label: "Širina teksta" }
+                - { value: wide, label: "Široka (šira od teksta)" }
+                - { value: half, label: "Pola (dve jedna pored druge)" }
+                - { value: small, label: "Mala, u sredini" }
       - name: draft
         label: Skica (ne objavljuj još)
         type: boolean
@@ -67,15 +77,25 @@ content:
     type: file
     path: src/_data/home.json
     fields:
-      - name: hero
-        label: Velika fotografija na vrhu
-        type: image
-      - name: heroAlt
-        label: Opis velike fotografije (za slabovide i Google)
-        type: string
-      - name: heroFocus
-        label: Koji deo fotografije se vidi (0 = vrh, 50 = sredina, 100 = dno)
-        type: number
+      - name: slides
+        label: Velike fotografije na vrhu (menjaju se svakih 5 sekundi)
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Fotografija
+            type: image
+            required: true
+          - name: caption
+            label: Natpis u gornjem desnom uglu (npr. Sveta Dolina, Peru, 2025)
+            type: string
+          - name: alt
+            label: Opis fotografije (za slabovide i Google)
+            type: string
+          - name: focus
+            label: Koji deo fotografije se vidi (0 = vrh, 50 = sredina, 100 = dno)
+            type: number
+            default: 50
       - name: heading
         label: Naslov
         type: string

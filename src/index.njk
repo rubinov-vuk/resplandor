@@ -1,10 +1,26 @@
 ---
 layout: layouts/base.njk
 ---
-{% if home.hero %}
-<div class="hero">
-  <img src="{{ home.hero }}" alt="{{ home.heroAlt }}" sizes="100vw" loading="eager" fetchpriority="high" style="object-position: 50% {{ home.heroFocus if home.heroFocus != null else 50 }}%">
-</div>
+{% if home.slides and home.slides.length %}
+<section class="hero" aria-roledescription="carousel" aria-label="Fotografije sa puta">
+  {% for slide in home.slides %}
+  <div class="hero-slide{% if loop.first %} is-active{% endif %}" data-caption="{{ slide.caption }}"{% if not loop.first %} aria-hidden="true"{% endif %}>
+    <img src="{{ slide.image }}" alt="{{ slide.alt or slide.caption }}" sizes="100vw"
+      {% if loop.first %}loading="eager" fetchpriority="high"{% endif %}
+      style="object-position: 50% {{ slide.focus if slide.focus != null else 50 }}%">
+  </div>
+  {% endfor %}
+  <div class="hero-bar">
+    {% if home.slides.length > 1 %}
+    <div class="hero-dots">
+      {% for slide in home.slides %}
+      <button class="hero-dot" type="button" aria-label="Fotografija {{ loop.index }}"{% if loop.first %} aria-current="true"{% endif %}></button>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <p class="hero-caption" aria-live="polite">{{ home.slides[0].caption }}</p>
+  </div>
+</section>
 {% endif %}
 
 <section class="intro container">
@@ -48,6 +64,34 @@ layout: layouts/base.njk
 </section>
 
 <script>
+  // Hero slideshow: next photo every 5 seconds; the dots jump to a photo.
+  // It pauses while the mouse is over the photo or the tab is in the background.
+  (() => {
+    const slides = document.querySelectorAll(".hero-slide");
+    const dots = document.querySelectorAll(".hero-dot");
+    const caption = document.querySelector(".hero-caption");
+    if (slides.length < 2) return;
+    let current = 0, timer;
+    const show = (i) => {
+      slides[current].classList.remove("is-active");
+      slides[current].setAttribute("aria-hidden", "true");
+      dots[current].removeAttribute("aria-current");
+      current = (i + slides.length) % slides.length;
+      slides[current].classList.add("is-active");
+      slides[current].removeAttribute("aria-hidden");
+      dots[current].setAttribute("aria-current", "true");
+      caption.textContent = slides[current].dataset.caption;
+    };
+    const start = () => { clearInterval(timer); timer = setInterval(() => show(current + 1), 5000); };
+    const stop = () => clearInterval(timer);
+    dots.forEach((dot, i) => dot.addEventListener("click", () => { show(i); start(); }));
+    const hero = document.querySelector(".hero");
+    hero.addEventListener("mouseenter", stop);
+    hero.addEventListener("mouseleave", start);
+    document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
+    start();
+  })();
+
   // Shows only the stories from the chosen country. The choice is kept in the address (?zemlja=peru),
   // so a filtered list can be shared as a link.
   (() => {
