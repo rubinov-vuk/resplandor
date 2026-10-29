@@ -87,7 +87,5 @@ gallery:
     layout: full
 draft: false
 ---
-
-
 ---
 
