@@ -46,6 +46,45 @@ content:
       - name: body
         label: Tekst priče
         type: rich-text
+      # Parts shown after "Tekst priče", in the order they are listed here.
+      # To start a story with a photo, leave "Tekst priče" empty and put a photo part first.
+      - name: sections
+        label: Delovi priče — tekst i fotografije, bilo kojim redom
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: text
+            label: Tekst
+            fields:
+              - name: body
+                label: Tekst
+                type: rich-text
+                format: markdown
+          - name: photos
+            label: Fotografije
+            fields:
+              - name: items
+                label: Fotografije
+                type: object
+                list: true
+                fields:
+                  - name: image
+                    label: Fotografija
+                    type: image
+                  - name: caption
+                    label: Opis fotografije
+                    type: string
+                  - name: layout
+                    label: Raspored
+                    type: select
+                    default: full
+                    options:
+                      values:
+                        - { value: full, label: "Širina teksta" }
+                        - { value: wide, label: "Široka (šira od teksta)" }
+                        - { value: half, label: "Pola (dve jedna pored druge)" }
+                        - { value: small, label: "Mala, u sredini" }
       - name: gallery
         label: Fotografije na kraju priče
         type: object

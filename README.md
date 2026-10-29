@@ -11,7 +11,9 @@ A travel blog built from the Figma "Journal Page" designs. Stories are Markdown 
 
 To keep a story hidden while you're still working on it, tick **Skica (ne objavljuj još)**.
 
-Every photo at the end of a story has a **Raspored** (layout) choice:
+To put photos in the middle (or at the start) of a story, use **Delovi priče**. Click **Add**, choose **Tekst** or **Fotografije**, and stack the parts in any order, e.g. text → photos → text → photos. They appear after **Tekst priče**, so to start a story with a photo, leave **Tekst priče** empty and make the first part **Fotografije**. Drag the parts to reorder them.
+
+Every photo (in **Delovi priče** and at the end of a story) has a **Raspored** (layout) choice:
 
 | Option | What it does |
 | --- | --- |

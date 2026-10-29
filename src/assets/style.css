@@ -247,6 +247,9 @@ a { color: inherit; }
 /* Photos at the end of a story. Each photo picks a layout in the editor:
    full (column width), wide (wider than the text), half (two side by side), small (centred, narrower). */
 .story-photos { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 35px; }
+/* photo parts in the middle of a story get the same space above and below as a paragraph */
+.story-photos.story-section { margin-bottom: var(--lh-intro); }
+.story-body:empty { display: none; }
 .story-photo { flex: 1 1 100%; margin: 0; }
 .story-photo img { width: 100%; }
 .story-photo figcaption { margin-top: 10px; font: italic 15px/1.4 var(--serif); color: var(--body); opacity: .8; }

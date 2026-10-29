@@ -1,4 +1,4 @@
-import { HtmlBasePlugin } from "@11ty/eleventy";
+import { HtmlBasePlugin, RenderPlugin } from "@11ty/eleventy";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import site from "./src/_data/site.json" with { type: "json" };
@@ -49,6 +49,8 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(HtmlBasePlugin);
+  // Lets the text parts of a story (written in Pages CMS) be turned into HTML: {{ text | renderContent("md") }}
+  eleventyConfig.addPlugin(RenderPlugin);
 
   // Every <img> is resized and converted automatically, so full-size phone photos are fine to upload.
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
