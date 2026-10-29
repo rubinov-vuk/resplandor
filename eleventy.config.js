@@ -41,6 +41,26 @@ export default function (eleventyConfig) {
     String(text).split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
   );
 
+  // Photo parts that follow each other are joined into one row, so two "Pola" photos sit side by side
+  // even when they were added as separate parts in the editor.
+  eleventyConfig.addFilter("groupSections", (sections) => {
+    const out = [];
+    for (const s of sections || []) {
+      if (!s) continue;
+      const prev = out[out.length - 1];
+      if (s.type === "photos" && prev?.type === "photos") prev.items.push(...(s.items || []));
+      else out.push(s.type === "photos" ? { ...s, items: [...(s.items || [])] } : s);
+    }
+    return out;
+  });
+
+  // "Fokus" choice from the editor → which part of a cropped photo stays visible.
+  const FOCUS = {
+    center: "50% 50%", top: "50% 0%", bottom: "50% 100%", left: "0% 50%", right: "100% 50%",
+    "top-left": "0% 0%", "top-right": "100% 0%", "bottom-left": "0% 100%", "bottom-right": "100% 100%",
+  };
+  eleventyConfig.addFilter("focusPos", (focus) => FOCUS[focus] || FOCUS.center);
+
   // The story that follows this one in the list (wraps around to the newest).
   eleventyConfig.addFilter("nextStory", (stories, url) => {
     if (!stories || stories.length < 2) return null;

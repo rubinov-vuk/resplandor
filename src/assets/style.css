@@ -27,7 +27,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; } /* full-screen photos never cause sideways scrolling */
 body {
   margin: 0;
   background: var(--bg);
@@ -251,16 +251,30 @@ a { color: inherit; }
 .story-photos.story-section { margin-bottom: var(--lh-intro); }
 .story-body:empty { display: none; }
 .story-photo { flex: 1 1 100%; margin: 0; }
-.story-photo img { width: 100%; }
+.photo-frame { overflow: hidden; }
+.photo-frame img { width: 100%; }
 .story-photo figcaption { margin-top: 10px; font: italic 15px/1.4 var(--serif); color: var(--body); opacity: .8; }
-.story-photo--half { flex: 1 1 calc(50% - 10px); }
-.story-photo--half img { aspect-ratio: 4 / 5; object-fit: cover; }
+
+/* Layouts */
+.story-photo--half { flex: 1 1 calc(50% - 10px); min-width: 0; }
 .story-photo--small { flex: 0 1 62%; margin-inline: auto; }
 .story-photo--wide {
   --wide: min(1090px, 100vw - 2 * var(--gutter));
   flex: 0 0 auto; width: var(--wide);
   margin-inline: calc((100% - var(--wide)) / 2);
 }
+.story-photo--screen { flex: 0 0 auto; width: 100vw; margin-inline: calc((100% - 100vw) / 2); }
+.story-photo--screen figcaption { padding-inline: var(--gutter); }
+
+/* Crop shapes ("Oblik"). "Pola" photos without a shape get 4:5 so the pair lines up. */
+.shape--landscape .photo-frame { aspect-ratio: 3 / 2; }
+.shape--wide .photo-frame { aspect-ratio: 16 / 9; }
+.shape--panorama .photo-frame { aspect-ratio: 21 / 9; }
+.shape--square .photo-frame { aspect-ratio: 1; }
+.shape--portrait .photo-frame,
+.story-photo--half.shape--original .photo-frame { aspect-ratio: 4 / 5; }
+.story-photo:not(.shape--original) .photo-frame img,
+.story-photo--half .photo-frame img { height: 100%; object-fit: cover; }
 
 .next-story {
   display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
@@ -332,8 +346,11 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .story { padding-top: 56px; }
   .story-title { margin-bottom: 32px; }
   .story .meta { flex-direction: column; gap: 4px; }
-  .story-photo--half, .story-photo--small { flex-basis: 100%; }
+  .story-photos { gap: 12px; }
+  .story-photo--half { flex-basis: calc(50% - 6px); } /* pairs stay side by side on phones too */
+  .story-photo--small { flex-basis: 100%; }
   .story-photo--wide { width: 100%; margin-inline: 0; }
+  .story-photo--screen figcaption { padding-inline: 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

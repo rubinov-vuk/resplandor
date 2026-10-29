@@ -40,6 +40,17 @@ content:
         label: Naslovna fotografija (prikazuje se u listi priča)
         type: image
         required: true
+      - name: coverFocus
+        label: Koji deo naslovne fotografije se vidi na kartici
+        type: select
+        default: center
+        options:
+          values:
+            - { value: center, label: "Sredina" }
+            - { value: top, label: "Gore" }
+            - { value: bottom, label: "Dole" }
+            - { value: left, label: "Levo" }
+            - { value: right, label: "Desno" }
       - name: excerpt
         label: Kratak opis za listu (ako je prazno, uzima se početak priče)
         type: text
@@ -83,8 +94,46 @@ content:
                       values:
                         - { value: full, label: "Širina teksta" }
                         - { value: wide, label: "Široka (šira od teksta)" }
+                        - { value: screen, label: "Cela širina ekrana" }
                         - { value: half, label: "Pola (dve jedna pored druge)" }
                         - { value: small, label: "Mala, u sredini" }
+                  - name: shape
+                    label: Oblik (isecanje)
+                    type: select
+                    default: original
+                    options:
+                      values:
+                        - { value: original, label: "Originalni oblik (bez isecanja)" }
+                        - { value: landscape, label: "Položena 3:2" }
+                        - { value: wide, label: "Široka 16:9" }
+                        - { value: panorama, label: "Panorama 21:9" }
+                        - { value: square, label: "Kvadrat 1:1" }
+                        - { value: portrait, label: "Uspravna 4:5" }
+                  - name: focus
+                    label: Koji deo fotografije ostaje kad se iseče
+                    type: select
+                    default: center
+                    options:
+                      values:
+                        - { value: center, label: "Sredina" }
+                        - { value: top, label: "Gore" }
+                        - { value: bottom, label: "Dole" }
+                        - { value: left, label: "Levo" }
+                        - { value: right, label: "Desno" }
+                        - { value: top-left, label: "Gore levo" }
+                        - { value: top-right, label: "Gore desno" }
+                        - { value: bottom-left, label: "Dole levo" }
+                        - { value: bottom-right, label: "Dole desno" }
+                  - name: zoom
+                    label: Uvećanje (približi deo fotografije)
+                    type: select
+                    default: "1"
+                    options:
+                      values:
+                        - { value: "1", label: "Bez uvećanja" }
+                        - { value: "1.25", label: "125%" }
+                        - { value: "1.5", label: "150%" }
+                        - { value: "2", label: "200%" }
       - name: gallery
         label: Fotografije na kraju priče
         type: object
@@ -104,8 +153,46 @@ content:
               values:
                 - { value: full, label: "Širina teksta" }
                 - { value: wide, label: "Široka (šira od teksta)" }
+                - { value: screen, label: "Cela širina ekrana" }
                 - { value: half, label: "Pola (dve jedna pored druge)" }
                 - { value: small, label: "Mala, u sredini" }
+          - name: shape
+            label: Oblik (isecanje)
+            type: select
+            default: original
+            options:
+              values:
+                - { value: original, label: "Originalni oblik (bez isecanja)" }
+                - { value: landscape, label: "Položena 3:2" }
+                - { value: wide, label: "Široka 16:9" }
+                - { value: panorama, label: "Panorama 21:9" }
+                - { value: square, label: "Kvadrat 1:1" }
+                - { value: portrait, label: "Uspravna 4:5" }
+          - name: focus
+            label: Koji deo fotografije ostaje kad se iseče
+            type: select
+            default: center
+            options:
+              values:
+                - { value: center, label: "Sredina" }
+                - { value: top, label: "Gore" }
+                - { value: bottom, label: "Dole" }
+                - { value: left, label: "Levo" }
+                - { value: right, label: "Desno" }
+                - { value: top-left, label: "Gore levo" }
+                - { value: top-right, label: "Gore desno" }
+                - { value: bottom-left, label: "Dole levo" }
+                - { value: bottom-right, label: "Dole desno" }
+          - name: zoom
+            label: Uvećanje (približi deo fotografije)
+            type: select
+            default: "1"
+            options:
+              values:
+                - { value: "1", label: "Bez uvećanja" }
+                - { value: "1.25", label: "125%" }
+                - { value: "1.5", label: "150%" }
+                - { value: "2", label: "200%" }
       - name: draft
         label: Skica (ne objavljuj još)
         type: boolean

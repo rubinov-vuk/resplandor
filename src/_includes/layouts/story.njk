@@ -1,12 +1,19 @@
 ---
 layout: layouts/base.njk
 ---
-{# One photo; layout is full, wide, half or small (chosen per photo in Pages CMS). #}
+{# One photo, with the choices made per photo in Pages CMS:
+   layout (full, wide, screen, half, small), shape (crop to a ratio), focus (which part stays) and zoom. #}
 {% macro photo(item, fallbackAlt) %}
   {% set layout = item.layout or "full" %}
-  <figure class="story-photo story-photo--{{ layout }}">
-    <img src="{{ item.image }}" alt="{{ item.caption or fallbackAlt }}"
-      {% if layout == "wide" %}sizes="(min-width: 1440px) 1090px, 100vw"{% elif layout == "half" %}sizes="(min-width: 820px) 435px, 100vw"{% endif %}>
+  {% set shape = item.shape or "original" %}
+  {% set pos = item.focus | focusPos %}
+  {% set zoom = (item.zoom or 1) | float %}
+  <figure class="story-photo story-photo--{{ layout }} shape--{{ shape }}">
+    <div class="photo-frame">
+      <img src="{{ item.image }}" alt="{{ item.caption or fallbackAlt }}"
+        {% if layout == "screen" %}sizes="100vw"{% elif layout == "wide" %}sizes="(min-width: 1440px) 1090px, 100vw"{% elif layout == "half" %}sizes="(min-width: 820px) 410px, 100vw"{% endif %}
+        style="object-position: {{ pos }};{% if zoom > 1 %} transform: scale({{ zoom }}); transform-origin: {{ pos }};{% endif %}">
+    </div>
     {% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}
   </figure>
 {% endmacro %}
@@ -20,7 +27,7 @@ layout: layouts/base.njk
   </div>
 
   {# "Delovi priče": text and photo parts, in the order they were added #}
-  {% for section in sections %}
+  {% for section in sections | groupSections %}
     {% if section.type == "text" and section.body %}
     <div class="story-body story-section">
       {{ section.body | renderContent("md") | safe }}

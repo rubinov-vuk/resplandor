@@ -20,7 +20,18 @@ Every photo (in **Delovi priče** and at the end of a story) has a **Raspored** 
 | Širina teksta | As wide as the text (the default) |
 | Široka | Wider than the text, for big landscapes |
 | Pola | Half width. Put two in a row and they sit side by side |
+| Cela širina ekrana | Edge to edge across the whole screen |
 | Mala, u sredini | Smaller and centred, for detail shots |
+
+Photo parts that follow each other join into one row, so two **Pola** photos always sit side by side (on phones too), whether they're in one part or two.
+
+Cropping is done with three choices on each photo (the original file is never changed):
+
+- **Oblik (isecanje):** the shape to cut the photo to. The options are original, 3:2, 16:9, panorama 21:9, square or 4:5. **Pola** photos without a shape are cut to 4:5 so the pair lines up.
+- **Koji deo fotografije ostaje:** which part is kept when it's cut: middle, top, bottom, left, right or a corner.
+- **Uvećanje:** zoom in (125%, 150%, 200%) towards that same part, for a tighter crop.
+
+The cover photo has its own **Koji deo naslovne fotografije se vidi** choice for the story card.
 
 The slideshow at the top of the home page is under **Početna strana → Velike fotografije na vrhu**. Add, remove or reorder photos there. Each photo has a caption (shown top right) and a "focus" number that picks which part of the photo is visible. The slideshow changes photo every 5 seconds and makes one dot per photo automatically. The intro text, the quote and the filter wording are on the same page. The site name, description and Instagram link are under **Podešavanja sajta**.
 

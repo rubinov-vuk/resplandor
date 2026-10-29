@@ -48,7 +48,7 @@ layout: layouts/base.njk
   {% for story in collections.stories %}
   <article class="story-card" data-country="{{ story.data.country | slugify }}">
     <a class="story-card-image" href="{{ story.url }}" tabindex="-1" aria-hidden="true">
-      <img src="{{ story.data.cover }}" alt="" sizes="(min-width: 820px) 550px, 100vw">
+      <img src="{{ story.data.cover }}" alt="" sizes="(min-width: 820px) 475px, 100vw" style="object-position: {{ story.data.coverFocus | focusPos }}">
     </a>
     <div class="story-card-body">
       <p class="meta"><span>{{ story.data.location }}</span><time datetime="{{ story.date | isoDate }}">{{ story.date | srDate }}</time></p>
