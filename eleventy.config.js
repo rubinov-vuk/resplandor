@@ -78,6 +78,9 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addGlobalData("siteUrl", SITE_URL);
   eleventyConfig.addGlobalData("year", new Date().getFullYear());
+  // Added to the stylesheet link so browsers fetch the new styles after every publish
+  // instead of reusing an old saved copy.
+  eleventyConfig.addGlobalData("buildId", Date.now().toString(36));
 
   return {
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
