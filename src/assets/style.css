@@ -15,9 +15,9 @@
      Text sizes are the Figma sizes on computers, with one smaller step for
      tablets and one for phones (see the media queries at the bottom). */
   --gutter: max(12.153vw, calc((100vw - 1090px) / 2));
-  --column: 890px;           /* intro text and story pages */
+  --column: 840px;           /* intro text and story pages (300px margins at 1440px) */
   --fs-title: 40px;
-  --fs-intro: 23px;
+  --fs-intro: 20px;          /* intro and story text */
   --lh-intro: 35px;
   --fs-card-title: 30px;
   --fs-card-text: 12px;
@@ -136,12 +136,12 @@ a { color: inherit; }
   font-size: var(--fs-intro); line-height: var(--lh-intro);
 }
 .intro-quote {
-  max-width: 972px; margin: 46px auto 0;
-  font: italic var(--fs-intro)/1.3 var(--serif);
+  max-width: 847px; margin: 46px auto 0;
+  font: italic var(--fs-intro)/1.5 var(--serif);
   text-align: center; opacity: 0.7;
 }
 
-.story-list { padding-top: 92px; padding-bottom: 120px; }
+.story-list { padding-top: 72px; padding-bottom: 120px; }
 .story-list-head {
   display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
   margin-bottom: 64px;
@@ -246,7 +246,7 @@ a { color: inherit; }
 
 /* Photos at the end of a story. Each photo picks a layout in the editor:
    full (column width), wide (wider than the text), half (two side by side), small (centred, narrower). */
-.story-photos { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 35px; }
+.story-photos { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 25px; }
 /* photo parts in the middle of a story get the same space above and below as a paragraph */
 .story-photos.story-section { margin-bottom: var(--lh-intro); }
 .story-body:empty { display: none; }
@@ -264,7 +264,7 @@ a { color: inherit; }
 
 .next-story {
   display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
-  margin-top: 20px;
+  margin-top: 25px;
   text-decoration: none;
 }
 .next-label {
@@ -293,8 +293,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 @media (max-width: 1099px) {
   :root {
     --fs-title: 36px;
-    --fs-intro: 20px;
-    --lh-intro: 31px;
+    --fs-intro: 19px;
+    --lh-intro: 32px;
     --fs-card-title: 27px;
     --fs-card-text: 13px;
     --lh-card-text: 22px;
@@ -309,7 +309,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
     --gutter: 24px;
     --fs-title: 32px;
     --fs-intro: 18px;
-    --lh-intro: 28px;
+    --lh-intro: 30px;
     --fs-card-title: 26px;
     --fs-card-text: 14px;
     --lh-card-text: 22px;
