@@ -23,6 +23,8 @@ Every photo (in **Delovi priče** and at the end of a story) has a **Raspored** 
 | Cela širina ekrana | Edge to edge across the whole screen |
 | Mala, u sredini | Smaller and centred, for detail shots |
 
+To centre part of the text, put it in its own **Tekst** part under **Delovi priče** and set **Poravnanje** to **Na sredini**, or to **Na sredini, kurziv** for a quote-like look.
+
 Photo parts that follow each other join into one row, so two **Pola** photos always sit side by side (on phones too), whether they're in one part or two.
 
 Cropping is done with three choices on each photo (the original file is never changed):

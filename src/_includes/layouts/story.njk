@@ -29,7 +29,7 @@ layout: layouts/base.njk
   {# "Delovi priče": text and photo parts, in the order they were added #}
   {% for section in sections | groupSections %}
     {% if section.type == "text" and section.body %}
-    <div class="story-body story-section">
+    <div class="story-body story-section{% if section.align and section.align != 'left' %} align--{{ section.align }}{% endif %}">
       {{ section.body | renderContent("md") | safe }}
     </div>
     {% elif section.type == "photos" and section.items and section.items.length %}

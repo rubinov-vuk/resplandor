@@ -243,6 +243,9 @@ a { color: inherit; }
 .story-body img { width: 100%; margin: 12px 0; }
 .story-body blockquote { margin: 32px 0; font-style: italic; opacity: .8; text-align: center; }
 .story-body a { color: var(--accent); }
+/* "Poravnanje" on a text part */
+.align--center, .align--center-italic { text-align: center; }
+.align--center-italic { font-style: italic; opacity: .85; }
 
 /* Photos at the end of a story. Each photo picks a layout in the editor:
    full (column width), wide (wider than the text), half (two side by side), small (centred, narrower). */

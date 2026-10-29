@@ -72,6 +72,15 @@ content:
                 label: Tekst
                 type: rich-text
                 format: markdown
+              - name: align
+                label: Poravnanje
+                type: select
+                default: left
+                options:
+                  values:
+                    - { value: left, label: "Normalno (levo)" }
+                    - { value: center, label: "Na sredini" }
+                    - { value: center-italic, label: "Na sredini, kurziv (kao citat)" }
           - name: photos
             label: Fotografije
             fields:
