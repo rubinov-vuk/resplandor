@@ -36,7 +36,7 @@ sections:
                                                                                                                                                 
     align: left
   - type: text
-    body: |-
+    body: |+
       *Power over mind*
 
       *Total body control*
@@ -45,8 +45,9 @@ sections:
 
       *Understanding the soul*
 
-
-
+    align: center-italic
+  - type: text
+    body: |-
       *Am I a machine*
 
       *or am I becoming God?*
