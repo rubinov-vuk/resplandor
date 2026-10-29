@@ -4,6 +4,7 @@ location: Antigua, Guatemala
 country: Gvatemala
 date: 2026-11-12
 cover: /images/antigua.png
+coverFocus: center
 excerpt: Zaboravio sam koliko aktivno putovanje zna da istroši čoveka fizički i
   finansijski. Nije prošlo ni nedelju dana otkako smo Kati i ja napustili vlažnu
   džunglu krenuvši prema zapadu, a već me je zasvrbelao život iz ranca, večito
@@ -11,9 +12,12 @@ excerpt: Zaboravio sam koliko aktivno putovanje zna da istroši čoveka fizički
 sections:
   - type: photos
     items:
-      - image: /images/740a26d9-fd3c-45ce-aea9-118b8ca9be73.jpg
+      - image: /images/WhatsApp Image 2026-10-29 at 19.27.27 (1)-1.jpeg
         caption: Pogled na Aguas
-        layout: full
+        layout: screen
+        shape: original
+        focus: center
+        zoom: "1"
   - type: text
     body: >-
       Zaboravio sam koliko aktivno putovanje zna da istroši čoveka fizički i
@@ -38,10 +42,16 @@ sections:
     items:
       - image: /images/WhatsApp Image 2026-10-29 at 19.27.27-1.jpeg
         layout: half
+        shape: original
+        focus: center
+        zoom: "1"
   - type: photos
     items:
       - image: /images/WhatsApp Image 2026-10-29 at 19.27.26-2.jpeg
         layout: half
+        shape: original
+        focus: center
+        zoom: "1"
   - type: text
     body: Sa oboda Antigve vire moćni džinovi koji vatrenim očima nadziru grad.
       Naime, ovaj predeo Gvatemale je poznat po čestim zemljotresima i aktivnim
@@ -82,9 +92,12 @@ sections:
       hladnom bombom piva koju lagano cirkamo iz plastičnih čašica. Duga je noć,
       a ekipa je dobro raspoložena… a evo ga i Karlos sa novom bombom !
 gallery:
-  - image: /images/WhatsApp Image 2026-10-29 at 19.27.27 (1).jpeg
+  - image: /images/740a26d9-fd3c-45ce-aea9-118b8ca9be73-1.jpg
     caption: Glavni Skver
     layout: full
+    shape: wide
+    focus: center
+    zoom: "1"
 draft: false
 ---
 ---
