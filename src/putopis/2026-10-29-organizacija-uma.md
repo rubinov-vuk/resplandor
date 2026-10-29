@@ -31,8 +31,12 @@ sections:
 
       Trenutno sam *osuđen* na izolaciju od ljudi. Više nego ikada, potrebna mi je vera u cilj. Na dobrom sam putu; čak i na dan kao što je ovaj, ispreplitan teškim mislima i snažnim melanholičnim senzacijama, uspevam naći izlaz prema svetlu, koliko god bledo tinjalo. Suština vreba iza ćoška, osećam je. Slušam jezike prirode oko sebe i trudim se da im razumem reči. Revolucija idalje krčka duboko u žarištu srca. Idalje nisam naučio da kontrolišem njen plamen koji izaziva u meni.
 
-      Ko sam ja u vašim očima?                                                                                                                                            
+      Ko sam ja u vašim očima?  
 
+                                                                                                                                                
+    align: left
+  - type: text
+    body: |-
       *Power over mind*
 
       *Total body control*
@@ -46,5 +50,6 @@ sections:
       *Am I a machine*
 
       *or am I becoming God?*
+    align: center-italic
 draft: false
 ---
