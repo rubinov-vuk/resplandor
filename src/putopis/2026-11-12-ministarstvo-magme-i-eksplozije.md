@@ -2,7 +2,7 @@
 title: Ministarstvo Magme i Eksplozije
 location: Antigua, Guatemala
 country: Gvatemala
-date: 2026-11-12
+date: 2024-11-12
 cover: /images/antigua.png
 coverFocus: center
 excerpt: "Zaboravio sam koliko aktivno putovanje zna fizički i finansijski da
