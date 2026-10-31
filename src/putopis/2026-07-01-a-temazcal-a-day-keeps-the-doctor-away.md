@@ -2,7 +2,7 @@
 title: A temazcal a day keeps the doctor away!
 location: Pisaq, Peru
 country: Peru
-date: 2026-07-01
+date: 2025-07-01
 cover: /images/pisaq-ruins.png
 coverFocus: center
 draft: false
