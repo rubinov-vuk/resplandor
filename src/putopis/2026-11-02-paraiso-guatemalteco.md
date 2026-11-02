@@ -4,7 +4,7 @@ location: El Paredon Buena Vista, Guatemala
 country: Gvatemala
 date: 2025-11-30
 cover: /images/WhatsApp Image 2026-11-02 at 17.29.10 (2).jpeg
-coverFocus: center
+coverFocus: bottom
 excerpt: Poslednjih dana gaće oblačim naopačke. Pretpostavljam da je ovo produkt
   čudnovatog ritma života koji vodim u poslednje vreme; noći se često pretvaraju
   u dane, a dani još češće u noći. Butterfly Effect je ovde prisutniji nego
