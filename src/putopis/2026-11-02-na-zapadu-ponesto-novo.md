@@ -4,7 +4,11 @@ location: El Paredon Buena Vista, Guatemala
 country: Gvatemala
 date: 2024-12-23
 cover: /images/WhatsApp Image 2026-11-02 at 17.42.03.jpeg
-coverFocus: center
+coverFocus: top
+excerpt: Mi, domci ovog upečatljivog surferskog sela, privilegovani smo toplim
+  sunčanim zracima, lokalnim specijalitetima, senzualnim plesom, melodičnom
+  latinoameričkom muzikom, nepredvidivim talasima, šumama mangrova i naravno,
+  toplim i živahnim ljudima.
 sections:
   - type: photos
     items:
