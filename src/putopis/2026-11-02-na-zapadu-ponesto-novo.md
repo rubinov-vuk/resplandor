@@ -20,13 +20,12 @@ sections:
   - type: text
     body: >-
       Kao što se može videti u gornjem levom ćošku stranice, danas bi trebalo da
-      je dvadeset i treći decembar. Do sada je već opštepoznato da mi je
-      vremenska percepcija žešće iskrivljena. Tati je juče/preključe (vremenske
-      zone me maltretiraju) bio rođendan. Mami deset dana pre njega. Jovani
-      mesec dana pre mame. Meni mesec i po dana pre Jovane. Kako bih se sada
-      rado pridružio jednom porodičnom ručku; dobro pamtim miris nedeljnog
-      obroka u Beogradu: pileća supa, mesina i krompir, sveža salata i naravno,
-      familijarna ekipa. Hvala, Vojvođani, na ukusnoj kuhinji!
+      je dvadeset i treći decembar. Do sada je već opšte poznato da mi je
+      vremenska percepcija žešće iskrivljena. Tati je preključe bio rođendan.
+      Mami deset dana pre njega. Jovani mesec dana pre mame. Meni mesec i po
+      dana pre Jovane. Kako bih se sada rado pridružio jednom porodičnom ručku;
+      dobro pamtim miris nedeljnog obroka u Beogradu: pileća supa, mesina i
+      krompir, sveža salata i naravno, familijarna ekipa. 
 
 
       Danas, međutim, Beograd miriše na revoluciju. Napadom na eminentnog
