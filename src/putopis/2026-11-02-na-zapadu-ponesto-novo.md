@@ -3,8 +3,8 @@ title: Na Zapadu Ponešto Novo
 location: El Paredon Buena Vista, Guatemala
 country: Gvatemala
 date: 2024-12-23
-cover: /images/WhatsApp Image 2026-11-02 at 17.42.03.jpeg
-coverFocus: top
+cover: /images/WhatsApp Image 2026-11-02 at 17.49.20-2.jpeg
+coverFocus: center
 excerpt: Mi, domci ovog upečatljivog surferskog sela, privilegovani smo toplim
   sunčanim zracima, lokalnim specijalitetima, senzualnim plesom, melodičnom
   latinoameričkom muzikom, nepredvidivim talasima, šumama mangrova i naravno,
@@ -14,7 +14,7 @@ sections:
     items:
       - image: /images/WhatsApp Image 2026-11-02 at 17.42.02.jpeg
         layout: wide
-        shape: wide
+        shape: landscape
         focus: center
         zoom: "1"
   - type: text
