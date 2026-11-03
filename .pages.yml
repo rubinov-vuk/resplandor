@@ -228,8 +228,19 @@ content:
           - name: alt
             label: Opis fotografije (za slabovide i Google)
             type: string
+          - name: zoom
+            label: Uvećanje (koliko fotografije se vidi)
+            type: select
+            default: auto
+            options:
+              values:
+                - { value: auto, label: "Automatski (najbolje za tu fotografiju)" }
+                - { value: fit, label: "Cela fotografija (zamućene ivice sa strane)" }
+                - { value: "0.5", label: "50% (dosta udaljeno)" }
+                - { value: "0.75", label: "75% (malo udaljeno)" }
+                - { value: "1", label: "Popuni ceo pojas (iseci gore i dole)" }
           - name: focus
-            label: Koji deo fotografije se vidi (0 = vrh, 50 = sredina, 100 = dno)
+            label: Koji deo se vidi kad se iseče (0 = vrh, 50 = sredina, 100 = dno)
             type: number
             default: 50
       - name: heading

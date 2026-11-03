@@ -75,7 +75,8 @@ export default function (eleventyConfig) {
   // Every <img> is resized and converted automatically, so full-size phone photos are fine to upload.
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["webp", "jpeg"],
-    widths: [480, 960, 1600],
+    // 2400 keeps large photos sharp on big and high-resolution screens; photos are never enlarged
+    widths: [480, 960, 1600, 2400],
     htmlOptions: {
       imgAttributes: {
         loading: "lazy",

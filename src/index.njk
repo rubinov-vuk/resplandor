@@ -4,10 +4,14 @@ layout: layouts/base.njk
 {% if home.slides and home.slides.length %}
 <section class="hero" aria-roledescription="carousel" aria-label="Fotografije sa puta">
   {% for slide in home.slides %}
-  <div class="hero-slide{% if loop.first %} is-active{% endif %}"{% if not loop.first %} aria-hidden="true"{% endif %}>
-    <img src="{{ slide.image }}" alt="{{ slide.alt or slide.caption }}" sizes="100vw" draggable="false"
+  {% set focusY = slide.focus if slide.focus != null else 50 %}
+  <div class="hero-slide{% if loop.first %} is-active{% endif %}"{% if not loop.first %} aria-hidden="true"{% endif %}
+    data-zoom="{{ slide.zoom or 'auto' }}" data-focus="{{ focusY }}">
+    {# soft blurred copy that fills the sides when the whole photo is shown #}
+    <img class="hero-blur" src="{{ slide.image }}" alt="" aria-hidden="true" sizes="480px" draggable="false">
+    <img class="hero-photo" src="{{ slide.image }}" alt="{{ slide.alt or slide.caption }}" sizes="100vw" draggable="false"
       {% if loop.first %}loading="eager" fetchpriority="high"{% endif %}
-      style="object-position: 50% {{ slide.focus if slide.focus != null else 50 }}%">
+      style="object-position: 50% {{ focusY }}%">
   </div>
   {% endfor %}
   {% if home.slides.length > 1 %}
@@ -118,6 +122,43 @@ layout: layouts/base.njk
     hero.addEventListener("pointerup", end);
     hero.addEventListener("pointercancel", end);
     start();
+  })();
+
+  // How each slideshow photo fills the strip ("Uvećanje" in the editor):
+  //   auto  – a photo close to the strip's shape fills it; a tall or square photo is shown
+  //           whole, with a blurred copy of itself filling the sides (no cropping, no blur from enlarging)
+  //   1     – always fill the strip (crop top/bottom, "focus" picks which part)
+  //   0.75, 0.5 – zoom out from "fill"
+  //   fit   – always show the whole photo
+  (() => {
+    const hero = document.querySelector(".hero");
+    if (!hero) return;
+    const slides = [...document.querySelectorAll(".hero-slide")];
+    const fit = (slide) => {
+      const img = slide.querySelector(".hero-photo");
+      const w = img.naturalWidth, h = img.naturalHeight;
+      if (!w) return;
+      const W = hero.clientWidth, H = hero.clientHeight;
+      const cover = Math.max(W / w, H / h), contain = Math.min(W / w, H / h);
+      const mode = slide.dataset.zoom;
+      let scale;
+      if (mode === "fit") scale = contain;
+      else if (mode === "auto") scale = contain / cover >= 0.5 ? cover : contain;
+      else scale = cover * (parseFloat(mode) || 1);
+      const iw = w * scale, ih = h * scale;
+      const fy = parseFloat(slide.dataset.focus) / 100;
+      slide.classList.toggle("is-fitted", iw < W - 1 || ih < H - 1);
+      Object.assign(img.style, {
+        position: "absolute", maxWidth: "none", objectFit: "fill",
+        width: `${iw}px`, height: `${ih}px`,
+        left: `${(W - iw) / 2}px`, top: `${(H - ih) * fy}px`,
+      });
+    };
+    slides.forEach((slide) => {
+      const img = slide.querySelector(".hero-photo");
+      if (img.complete) fit(slide); else img.addEventListener("load", () => fit(slide));
+    });
+    new ResizeObserver(() => slides.forEach(fit)).observe(hero);
   })();
 
   // Shows only the stories from the chosen country. The choice is kept in the address (?zemlja=peru),
