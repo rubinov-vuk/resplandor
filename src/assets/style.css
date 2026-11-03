@@ -28,6 +28,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; overflow-x: clip; } /* full-screen photos never cause sideways scrolling */
 body {
+  container-type: inline-size; /* lets wide photos measure the page without the scrollbar (cqw) */
   margin: 0;
   background: var(--bg);
   color: var(--ink);
@@ -76,10 +77,8 @@ a { color: inherit; }
    in a 16:9 frame: landscape photos lose little when cropped and are never blown up past
    1090px, so they stay sharp. */
 .hero {
-  --wide: min(1090px, 100vw - 2 * var(--gutter));
   position: relative;
-  width: var(--wide);
-  margin: 50px auto 0;
+  margin: 50px var(--gutter) 0; /* same edges as the logo and the story cards */
   aspect-ratio: 16 / 9;
   box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -293,12 +292,13 @@ a { color: inherit; }
 /* Layouts */
 .story-photo--half { flex: 1 1 calc(50% - 10px); min-width: 0; }
 .story-photo--small { flex: 0 1 62%; margin-inline: auto; }
+/* "Široka": lines up exactly with the logo and the slideshow on the home page */
 .story-photo--wide {
-  --wide: min(1090px, 100vw - 2 * var(--gutter));
+  --wide: calc(100cqw - 2 * var(--gutter));
   flex: 0 0 auto; width: var(--wide);
   margin-inline: calc((100% - var(--wide)) / 2);
 }
-.story-photo--screen { flex: 0 0 auto; width: 100vw; margin-inline: calc((100% - 100vw) / 2); }
+.story-photo--screen { flex: 0 0 auto; width: 100cqw; margin-inline: calc((100% - 100cqw) / 2); }
 .story-photo--screen figcaption { padding-inline: var(--gutter); }
 
 /* Crop shapes ("Oblik"). "Pola" photos without a shape get 4:5 so the pair lines up. */
