@@ -21,9 +21,9 @@ sections:
     body: >-
       U posetu čuvarima zapadnih nebesa i umirajućeg Sunca, sa nebesa istoka, u
       posetu su došli čuvari rađajućeg Sunca. Susret kondora i orlova je davno u
-      zvezdama zapisan penkalom sudbine.Ušuškana između hladnih vrhova Anda, u
+      zvezdama zapisan penkalom sudbine. Ušuškana između hladnih vrhova Anda, u
       Arekipi se krije jedna od najčudesnijih peruanskih tajni – veličanstveni
-      Kanjon Kolka. Sa suludim visinskim razlicima od preko 4000 m, Kolka
+      Kanjon Kolka. Sa suludim visinskim razlikama od preko 4000 m, Kolka
       predstavlja jedan od najdubljih kanjona sveta i ujedno i dom krilatim
       čuvarima gornjeg sveta (Hanan Pacha) – andskim kondorima. Grabljivice
       čarobnog pera su jedna od najpoštovanijih stvorenja inkanske kosmologije,
