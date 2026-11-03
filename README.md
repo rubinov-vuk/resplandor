@@ -31,7 +31,7 @@ Cropping is done with three choices on each photo (the original file is never ch
 
 - **Oblik (isecanje):** the shape to cut the photo to. The options are original, 3:2, 16:9, panorama 21:9, square or 4:5. **Pola** photos without a shape are cut to 4:5 so the pair lines up.
 - **Koji deo fotografije ostaje:** which part is kept when it's cut: middle, top, bottom, left, right or a corner.
-- **Uvećanje:** zoom in (125%, 150%, 200%) towards that same part, for a tighter crop.
+- **Uvećanje:** zoom in (125%, 150%, 200%) towards that same part for a tighter crop, or zoom out (75%, 50%) to show more of the photo. When zoomed out, the empty space around the photo is filled with a soft, blurred copy of it.
 
 The cover photo has its own **Koji deo naslovne fotografije se vidi** choice for the story card.
 

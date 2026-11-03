@@ -9,10 +9,10 @@ layout: layouts/base.njk
   {% set pos = item.focus | focusPos %}
   {% set zoom = (item.zoom or 1) | float %}
   <figure class="story-photo story-photo--{{ layout }} shape--{{ shape }}">
-    <div class="photo-frame">
+    <div class="photo-frame"{% if zoom != 1 %} data-zoom="{{ zoom }}" data-focus="{{ pos }}"{% endif %}>
       <img src="{{ item.image }}" alt="{{ item.caption or fallbackAlt }}"
         {% if layout == "screen" %}sizes="100vw"{% elif layout == "wide" %}sizes="(min-width: 1440px) 1090px, 100vw"{% elif layout == "half" %}sizes="(min-width: 820px) 410px, 100vw"{% endif %}
-        style="object-position: {{ pos }};{% if zoom > 1 %} transform: scale({{ zoom }}); transform-origin: {{ pos }};{% endif %}">
+        style="object-position: {{ pos }}">
     </div>
     {% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}
   </figure>
@@ -60,3 +60,38 @@ layout: layouts/base.njk
   </a>
   {% endif %}
 </article>
+
+<script>
+  // "Uvećanje" on a photo: zooms in (125–200%) or out (75%, 50%) inside the photo's frame,
+  // towards the chosen "Fokus". When zoomed out, the empty space is filled with a soft,
+  // blurred copy of the same photo.
+  document.querySelectorAll(".photo-frame[data-zoom]").forEach((frame) => {
+    const img = frame.querySelector("img");
+    const zoom = parseFloat(frame.dataset.zoom);
+    const [fx, fy] = frame.dataset.focus.split(" ").map((v) => parseFloat(v) / 100);
+    const keepsOwnShape = frame.closest(".shape--original") && !frame.closest(".story-photo--half");
+    let blur;
+    const fit = () => {
+      const w = img.naturalWidth, h = img.naturalHeight;
+      if (!w) return;
+      if (keepsOwnShape) frame.style.aspectRatio = `${w} / ${h}`;
+      if (zoom < 1 && !blur) {
+        blur = new Image();
+        blur.src = img.currentSrc || img.src;
+        blur.alt = "";
+        blur.className = "photo-blur";
+        frame.prepend(blur);
+      }
+      const W = frame.clientWidth, H = frame.clientHeight;
+      const scale = Math.max(W / w, H / h) * zoom;
+      const iw = w * scale, ih = h * scale;
+      Object.assign(img.style, {
+        position: "absolute", maxWidth: "none", objectFit: "fill",
+        width: `${iw}px`, height: `${ih}px`,
+        left: `${(W - iw) * fx}px`, top: `${(H - ih) * fy}px`,
+      });
+    };
+    if (img.complete) fit(); else img.addEventListener("load", fit);
+    new ResizeObserver(fit).observe(frame);
+  });
+</script>

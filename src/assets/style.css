@@ -23,7 +23,6 @@
   --fs-card-text: 12px;
   --lh-card-text: 24px;
   --fs-story-title: 64px;
-  --fs-caption: 20px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -80,22 +79,24 @@ a { color: inherit; }
   box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   background: #2b2723;
+  touch-action: pan-y; /* sideways swipes go to the slideshow, up/down still scrolls the page */
+  user-select: none;
 }
 .hero-slide {
   position: absolute; inset: 0;
   opacity: 0;
-  transition: opacity 1.2s ease;
+  transition: opacity 1.2s ease, transform .6s ease;
 }
 .hero-slide.is-active { opacity: .9; }
+.hero-slide.is-dragging { transition: none; }
 .hero-slide img { width: 100%; height: 100%; object-fit: cover; }
 
-/* dots in the middle and the photo caption on the right, 25px from the top */
-.hero-bar {
+/* dots in the middle, 25px from the top (wraps onto more rows if there are many photos) */
+.hero-dots {
   position: absolute; z-index: 1; top: 25px; left: var(--gutter); right: var(--gutter);
-  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px;
   min-height: 25px;
 }
-.hero-dots { grid-column: 2; display: flex; align-items: center; gap: 10px; }
 .hero-dot {
   width: 10px; height: 10px; padding: 0;
   border: 0; border-radius: 50%;
@@ -106,14 +107,6 @@ a { color: inherit; }
 .hero-dot:hover { background: rgba(250, 248, 242, .85); }
 .hero-dot[aria-current="true"] { width: 15px; height: 15px; background: var(--bg); }
 .hero-dot:focus-visible { outline: 2px solid var(--bg); outline-offset: 3px; }
-.hero-caption {
-  grid-column: 3; justify-self: end;
-  margin: 0;
-  font: var(--fs-caption)/25px var(--serif);
-  color: #fff;
-  text-align: right;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, .45);
-}
 
 /* ---------- Shared bits ---------- */
 .meta {
@@ -188,22 +181,28 @@ a { color: inherit; }
 .story-card-image picture { display: contents; }
 .story-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
 .story-card:hover .story-card-image img { transform: scale(1.03); }
+/* Every card is the same: the photo is always 475:314, and the text box (234/314 of the
+   photo's height in Figma) is centred on it, with its text centred inside. Long titles
+   are cut after 2 lines and the excerpt after 3, so no card grows taller than the others. */
 .story-card-body {
   grid-column: 2 / 4; grid-row: 1;
-  align-self: start;
-  margin-top: 40px;
-  min-height: 234px;
-  display: flex; flex-direction: column;
+  align-self: center;
+  min-height: 75.5%;
+  display: flex; flex-direction: column; justify-content: center;
   padding: 25px;
   background: var(--bg);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
 .story-card .meta { font-size: 12px; letter-spacing: 1.44px; }
+/* place and date always on one line (a very long place name ends in "…") */
+.story-card .meta span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.story-card .meta time { flex-shrink: 0; }
 .story-card-title {
   margin: 25px 0 10px;
   font: 500 var(--fs-card-title)/1.2 var(--display);
   letter-spacing: -0.01em;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden;
 }
 .story-card-title a { text-decoration: none; transition: color .2s ease; }
 .story-card-title a:hover { color: var(--accent); }
@@ -212,9 +211,10 @@ a { color: inherit; }
   font: var(--fs-card-text)/var(--lh-card-text) var(--serif);
   letter-spacing: 0.01em;
   color: var(--body);
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden;
 }
 .read-more {
-  margin-top: auto; padding-top: 12px;
+  margin-top: 0; padding-top: 12px;
   align-self: flex-end;
   font: 700 12px var(--serif);
   letter-spacing: 1.44px;
@@ -254,7 +254,11 @@ a { color: inherit; }
 .story-photos.story-section { margin-bottom: var(--lh-intro); }
 .story-body:empty { display: none; }
 .story-photo { flex: 1 1 100%; margin: 0; }
-.photo-frame { overflow: hidden; }
+.photo-frame { position: relative; overflow: hidden; }
+.photo-blur {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; filter: blur(22px); transform: scale(1.15); opacity: .6;
+}
 .photo-frame img { width: 100%; }
 .story-photo figcaption { margin-top: 10px; font: italic 15px/1.4 var(--serif); color: var(--body); opacity: .8; }
 
@@ -316,7 +320,6 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
     --fs-card-text: 13px;
     --lh-card-text: 22px;
     --fs-story-title: 52px;
-    --fs-caption: 17px;
   }
 }
 
@@ -331,21 +334,20 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
     --fs-card-text: 14px;
     --lh-card-text: 22px;
     --fs-story-title: 40px;
-    --fs-caption: 14px;
   }
   .site-header { grid-template-columns: auto 1fr; column-gap: 20px; padding-top: 28px; }
   .logo { font-size: 24px; }
   .hero { margin-top: 28px; }
-  /* on phones the caption and dots sit centred at the bottom of the photo */
-  .hero-bar { top: auto; bottom: 16px; grid-template-columns: 1fr; justify-items: center; row-gap: 6px; }
-  .hero-dots, .hero-caption { grid-column: 1; }
-  .hero-dots { grid-row: 2; }
-  .hero-caption { justify-self: center; text-align: center; }
+  /* on phones the dots sit at the bottom of the photo, under the thumb */
+  .hero-dots { top: auto; bottom: 16px; }
   .intro { padding-top: 48px; }
   .story-list { padding-top: 64px; }
   .story-list-head { margin-bottom: 32px; }
   .story-card { display: block; margin-bottom: 44px; }
   .story-card-body { margin: -40px 0 0 16px; min-height: 0; padding: 20px 20px 22px; position: relative; }
+  /* same room on every phone card: 2 lines for the title, 3 for the excerpt */
+  .story-card-title { min-height: 2.4em; }
+  .story-card-excerpt { min-height: calc(3 * var(--lh-card-text)); }
   .story { padding-top: 56px; }
   .story-title { margin-bottom: 32px; }
   .story .meta { flex-direction: column; gap: 4px; }

@@ -134,11 +134,13 @@ content:
                         - { value: bottom-left, label: "Dole levo" }
                         - { value: bottom-right, label: "Dole desno" }
                   - name: zoom
-                    label: Uvećanje (približi deo fotografije)
+                    label: Uvećanje (približi ili udalji fotografiju)
                     type: select
                     default: "1"
                     options:
                       values:
+                        - { value: "0.5", label: "50% (udalji, vidi se više fotografije)" }
+                        - { value: "0.75", label: "75% (malo udalji)" }
                         - { value: "1", label: "Bez uvećanja" }
                         - { value: "1.25", label: "125%" }
                         - { value: "1.5", label: "150%" }
@@ -193,11 +195,13 @@ content:
                 - { value: bottom-left, label: "Dole levo" }
                 - { value: bottom-right, label: "Dole desno" }
           - name: zoom
-            label: Uvećanje (približi deo fotografije)
+            label: Uvećanje (približi ili udalji fotografiju)
             type: select
             default: "1"
             options:
               values:
+                - { value: "0.5", label: "50% (udalji, vidi se više fotografije)" }
+                - { value: "0.75", label: "75% (malo udalji)" }
                 - { value: "1", label: "Bez uvećanja" }
                 - { value: "1.25", label: "125%" }
                 - { value: "1.5", label: "150%" }
@@ -213,7 +217,7 @@ content:
     path: src/_data/home.json
     fields:
       - name: slides
-        label: Velike fotografije na vrhu (menjaju se svakih 5 sekundi)
+        label: Velike fotografije na vrhu (menjaju se svakih 5 sekundi, dodaj koliko god želiš)
         type: object
         list: true
         fields:
@@ -221,9 +225,6 @@ content:
             label: Fotografija
             type: image
             required: true
-          - name: caption
-            label: Natpis u gornjem desnom uglu (npr. Sveta Dolina, Peru, 2025)
-            type: string
           - name: alt
             label: Opis fotografije (za slabovide i Google)
             type: string

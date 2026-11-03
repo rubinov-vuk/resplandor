@@ -21,11 +21,11 @@ export default function (eleventyConfig) {
     api.getFilteredByGlob("src/putopis/*.md").sort((a, b) => b.date - a.date)
   );
 
-  // 01/07/2026
+  // European date: 01.07.2026 (day.month.year)
   eleventyConfig.addFilter("srDate", (value) => {
     const d = new Date(value);
     const pad = (n) => String(n).padStart(2, "0");
-    return `${pad(d.getUTCDate())}/${pad(d.getUTCMonth() + 1)}/${d.getUTCFullYear()}`;
+    return `${pad(d.getUTCDate())}.${pad(d.getUTCMonth() + 1)}.${d.getUTCFullYear()}`;
   });
   eleventyConfig.addFilter("isoDate", (value) => new Date(value).toISOString().slice(0, 10));
 

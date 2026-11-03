@@ -4,22 +4,19 @@ layout: layouts/base.njk
 {% if home.slides and home.slides.length %}
 <section class="hero" aria-roledescription="carousel" aria-label="Fotografije sa puta">
   {% for slide in home.slides %}
-  <div class="hero-slide{% if loop.first %} is-active{% endif %}" data-caption="{{ slide.caption }}"{% if not loop.first %} aria-hidden="true"{% endif %}>
-    <img src="{{ slide.image }}" alt="{{ slide.alt or slide.caption }}" sizes="100vw"
+  <div class="hero-slide{% if loop.first %} is-active{% endif %}"{% if not loop.first %} aria-hidden="true"{% endif %}>
+    <img src="{{ slide.image }}" alt="{{ slide.alt or slide.caption }}" sizes="100vw" draggable="false"
       {% if loop.first %}loading="eager" fetchpriority="high"{% endif %}
       style="object-position: 50% {{ slide.focus if slide.focus != null else 50 }}%">
   </div>
   {% endfor %}
-  <div class="hero-bar">
-    {% if home.slides.length > 1 %}
-    <div class="hero-dots">
-      {% for slide in home.slides %}
-      <button class="hero-dot" type="button" aria-label="Fotografija {{ loop.index }}"{% if loop.first %} aria-current="true"{% endif %}></button>
-      {% endfor %}
-    </div>
-    {% endif %}
-    <p class="hero-caption" aria-live="polite">{{ home.slides[0].caption }}</p>
+  {% if home.slides.length > 1 %}
+  <div class="hero-dots">
+    {% for slide in home.slides %}
+    <button class="hero-dot" type="button" aria-label="Fotografija {{ loop.index }}"{% if loop.first %} aria-current="true"{% endif %}></button>
+    {% endfor %}
   </div>
+  {% endif %}
 </section>
 {% endif %}
 
@@ -64,31 +61,62 @@ layout: layouts/base.njk
 </section>
 
 <script>
-  // Hero slideshow: next photo every 5 seconds; the dots jump to a photo.
-  // It pauses while the mouse is over the photo or the tab is in the background.
+  // Hero slideshow: next photo every 5 seconds; the dots jump to a photo; on phones and
+  // tablets the photo can be swiped left/right. It pauses while the mouse is over it,
+  // while a finger is on it, and while the tab is in the background.
   (() => {
+    const hero = document.querySelector(".hero");
     const slides = document.querySelectorAll(".hero-slide");
     const dots = document.querySelectorAll(".hero-dot");
-    const caption = document.querySelector(".hero-caption");
     if (slides.length < 2) return;
     let current = 0, timer;
-    const show = (i) => {
-      slides[current].classList.remove("is-active");
-      slides[current].setAttribute("aria-hidden", "true");
+    const show = (i, swipeDir = 0) => {
+      const old = slides[current];
+      old.classList.remove("is-active");
+      old.setAttribute("aria-hidden", "true");
+      // a swiped photo keeps moving out the way the finger went while it fades
+      old.style.transform = swipeDir ? `translateX(${swipeDir * 35}%)` : "";
+      setTimeout(() => { if (!old.classList.contains("is-active")) old.style.transform = ""; }, 1200);
       dots[current].removeAttribute("aria-current");
       current = (i + slides.length) % slides.length;
       slides[current].classList.add("is-active");
       slides[current].removeAttribute("aria-hidden");
+      slides[current].style.transform = "";
       dots[current].setAttribute("aria-current", "true");
-      caption.textContent = slides[current].dataset.caption;
     };
     const start = () => { clearInterval(timer); timer = setInterval(() => show(current + 1), 5000); };
     const stop = () => clearInterval(timer);
     dots.forEach((dot, i) => dot.addEventListener("click", () => { show(i); start(); }));
-    const hero = document.querySelector(".hero");
     hero.addEventListener("mouseenter", stop);
     hero.addEventListener("mouseleave", start);
     document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
+
+    // Swipe: the photo follows the finger; a swipe of 50px or more changes the photo.
+    let startX = null, startY = 0, dx = 0, dragging = false;
+    hero.addEventListener("pointerdown", (e) => {
+      if (e.pointerType === "mouse") return;
+      startX = e.clientX; startY = e.clientY; dx = 0; dragging = false;
+      stop();
+    });
+    hero.addEventListener("pointermove", (e) => {
+      if (startX === null) return;
+      dx = e.clientX - startX;
+      if (!dragging && Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(e.clientY - startY)) dragging = true;
+      if (dragging) {
+        slides[current].classList.add("is-dragging");
+        slides[current].style.transform = `translateX(${dx}px)`;
+      }
+    });
+    const end = () => {
+      if (startX === null) return;
+      slides[current].classList.remove("is-dragging");
+      if (dragging && Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1), dx < 0 ? -1 : 1);
+      else slides[current].style.transform = "";
+      startX = null;
+      start();
+    };
+    hero.addEventListener("pointerup", end);
+    hero.addEventListener("pointercancel", end);
     start();
   })();
 
