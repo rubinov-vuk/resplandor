@@ -71,11 +71,16 @@ a { color: inherit; }
   background: url("header-line.svg") no-repeat right center / 100% 5px;
 }
 
-/* ---------- Hero slideshow (full width, Figma: 620px tall at 1440px) ---------- */
+/* ---------- Hero slideshow ----------
+   Same width as the "Široka" story photos (slightly wider than the text, max 1090px),
+   in a 16:9 frame: landscape photos lose little when cropped and are never blown up past
+   1090px, so they stay sharp. */
 .hero {
+  --wide: min(1090px, 100vw - 2 * var(--gutter));
   position: relative;
-  margin-top: 50px;
-  height: clamp(260px, 43.06vw, 680px);
+  width: var(--wide);
+  margin: 50px auto 0;
+  aspect-ratio: 16 / 9;
   box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   background: #2b2723;
@@ -87,17 +92,39 @@ a { color: inherit; }
   opacity: 0;
   transition: opacity 1.2s ease, transform .6s ease;
 }
-.hero-slide.is-active { opacity: .9; }
+.hero-slide.is-active { opacity: 1; }
 .hero-slide.is-dragging { transition: none; }
 /* every photo fills the whole strip; "focus" in the editor picks which band of it shows */
 .hero-slide img { width: 100%; height: 100%; object-fit: cover; }
 
 /* dots in the middle, 25px from the top (wraps onto more rows if there are many photos) */
 .hero-dots {
-  position: absolute; z-index: 1; top: 25px; left: var(--gutter); right: var(--gutter);
+  position: absolute; z-index: 2; top: 25px; left: 20px; right: 20px;
   display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px;
   min-height: 25px;
+  pointer-events: none;
 }
+.hero-dot { pointer-events: auto; }
+
+/* clicking the left or right part of the photo goes back / forward;
+   a soft arrow appears on that side when the mouse is over it */
+.hero-nav {
+  position: absolute; z-index: 1; top: 0; bottom: 0; width: 35%;
+  display: flex; align-items: center;
+  padding: 0 24px; border: 0; background: none;
+  color: #fff; cursor: pointer;
+}
+.hero-nav--prev { left: 0; justify-content: flex-start; }
+.hero-nav--next { right: 0; justify-content: flex-end; }
+.hero-nav svg {
+  width: 34px; height: 34px;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, .5));
+  opacity: 0; transform: translateX(0); transition: opacity .25s ease, transform .25s ease;
+}
+.hero-nav:hover svg, .hero-nav:focus-visible svg { opacity: .9; }
+.hero-nav--prev:hover svg { transform: translateX(-4px); }
+.hero-nav--next:hover svg { transform: translateX(4px); }
+.hero-nav:focus-visible { outline: 2px solid var(--bg); outline-offset: -6px; }
 .hero-dot {
   width: 10px; height: 10px; padding: 0;
   border: 0; border-radius: 50%;
@@ -338,7 +365,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   }
   .site-header { grid-template-columns: auto 1fr; column-gap: 20px; padding-top: 28px; }
   .logo { font-size: 24px; }
-  .hero { margin-top: 28px; }
+  .hero { margin-top: 28px; aspect-ratio: 4 / 3; } /* a little taller on phones so photos aren't tiny */
+  .hero-nav svg { display: none; } /* phones: tap the sides or swipe, no arrows */
   /* on phones the dots sit at the bottom of the photo, under the thumb */
   .hero-dots { top: auto; bottom: 16px; }
   .intro { padding-top: 48px; }

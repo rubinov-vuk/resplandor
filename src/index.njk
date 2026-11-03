@@ -6,12 +6,18 @@ layout: layouts/base.njk
   {% for slide in home.slides %}
   {% set focusY = slide.focus if slide.focus != null else 50 %}
   <div class="hero-slide{% if loop.first %} is-active{% endif %}"{% if not loop.first %} aria-hidden="true"{% endif %}>
-    <img class="hero-photo" src="{{ slide.image }}" alt="{{ slide.alt or slide.caption }}" sizes="100vw" draggable="false"
+    <img class="hero-photo" src="{{ slide.image }}" alt="{{ slide.alt or slide.caption }}" sizes="(min-width: 1440px) 1090px, 90vw" draggable="false"
       {% if loop.first %}loading="eager" fetchpriority="high"{% endif %}
       style="object-position: 50% {{ focusY }}%">
   </div>
   {% endfor %}
   {% if home.slides.length > 1 %}
+  <button class="hero-nav hero-nav--prev" type="button" aria-label="Prethodna fotografija">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="hero-nav hero-nav--next" type="button" aria-label="Sledeća fotografija">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
   <div class="hero-dots">
     {% for slide in home.slides %}
     <button class="hero-dot" type="button" aria-label="Fotografija {{ loop.index }}"{% if loop.first %} aria-current="true"{% endif %}></button>
@@ -75,19 +81,36 @@ layout: layouts/base.njk
       const old = slides[current];
       old.classList.remove("is-active");
       old.setAttribute("aria-hidden", "true");
-      // a swiped photo keeps moving out the way the finger went while it fades
+      // swipe or side click: the old photo slides out one way while the new one slides in from the other
       old.style.transform = swipeDir ? `translateX(${swipeDir * 35}%)` : "";
       setTimeout(() => { if (!old.classList.contains("is-active")) old.style.transform = ""; }, 1200);
       dots[current].removeAttribute("aria-current");
       current = (i + slides.length) % slides.length;
-      slides[current].classList.add("is-active");
-      slides[current].removeAttribute("aria-hidden");
-      slides[current].style.transform = "";
+      const next = slides[current];
+      if (swipeDir) {
+        next.classList.add("is-dragging"); // place it at the side without animating
+        next.style.transform = `translateX(${-swipeDir * 35}%)`;
+        next.offsetWidth;
+        next.classList.remove("is-dragging");
+      }
+      next.classList.add("is-active");
+      next.removeAttribute("aria-hidden");
+      next.style.transform = "";
       dots[current].setAttribute("aria-current", "true");
     };
     const start = () => { clearInterval(timer); timer = setInterval(() => show(current + 1), 5000); };
     const stop = () => clearInterval(timer);
     dots.forEach((dot, i) => dot.addEventListener("click", () => { show(i); start(); }));
+    // clicking/tapping the left or right part of the photo: it slides out that way like a swipe
+    let swipedJustNow = false;
+    document.querySelector(".hero-nav--prev").addEventListener("click", () => {
+      if (swipedJustNow) return;
+      show(current - 1, 1); start();
+    });
+    document.querySelector(".hero-nav--next").addEventListener("click", () => {
+      if (swipedJustNow) return;
+      show(current + 1, -1); start();
+    });
     hero.addEventListener("mouseenter", stop);
     hero.addEventListener("mouseleave", start);
     document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
@@ -113,6 +136,8 @@ layout: layouts/base.njk
       slides[current].classList.remove("is-dragging");
       if (dragging && Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1), dx < 0 ? -1 : 1);
       else slides[current].style.transform = "";
+      // a swipe that ends over a side button must not also count as a tap on it
+      if (dragging) { swipedJustNow = true; setTimeout(() => (swipedJustNow = false), 300); }
       startX = null;
       start();
     };
