@@ -25,7 +25,8 @@ sections:
         focus: center
         zoom: "1"
   - type: text
-    body: "Banjanje nas je prijatno osvežilo pred polazak ka brodu. Ekipa je u
+    body: >-
+      Banjanje nas je prijatno osvežilo pred polazak ka brodu. Ekipa je u
       ozbiljnom izdanju: Menadžerka Sammy iz Antigve, Camille iz Pariza, Maia iz
       Kanade, Thing 1 and Thing 2 – Holi i Tili, i bata Mynor, kojeg i dalje
       nisam video bez trejdmarkovanog osmeha na licu. Ukrcali smo se na barku
@@ -35,8 +36,11 @@ sections:
       povremeno nam baci senku preko upeklih lica. Za kormilom je paredonska
       didžej ekipa koja utrenirano plovi žestokim tehno-talasima. Biće ovo
       nesvakidašnja vožnja. Pirati su pijani i veseli; svima je jasno – Blago je
-      pronađeno!Na ušću reke sa neumornim Pacifikom smo ispratili zalazak Sunca
-      i ritmično doplovili nazad prema izlazu, a na kopnu nas je dočekala jeziva
+      pronađeno!
+
+
+      Na ušću reke sa neumornim Pacifikom smo ispratili zalazak Sunca i ritmično
+      doplovili nazad prema izlazu, a na kopnu nas je dočekala jeziva
       kombinacija umora i roja krvoločnih komaraca. Komarci na ovom kontinentu
       su totalno drugačija sorta od onoga na šta sam navikao nazad u Srbiji.
       Pokreti srpskih komaraca su usporeni i predvidivi, dok je gvatemalska
@@ -55,7 +59,7 @@ sections:
       kineskog dućana i na starom Nintendu uključili Super Smash Bros. Holi i
       Tili su produžile žurku dalje od nas, pošto ih peglanje Luiđija i Marija
       ozbiljno izluđuje. Komarcima dim, Britankama Nintendo – svako stvorenje
-      ima svoj Kriptonit!"
+      ima svoj Kriptonit!
     align: left
 draft: false
 ---
