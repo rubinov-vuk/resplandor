@@ -13,8 +13,8 @@ sections:
   - type: photos
     items:
       - image: /images/WhatsApp Image 2026-11-03 at 10.50.45.jpeg
-        layout: small
-        shape: original
+        layout: full
+        shape: wide
         focus: center
         zoom: "1"
   - type: text
