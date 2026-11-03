@@ -35,14 +35,7 @@ Cropping is done with three choices on each photo (the original file is never ch
 
 The cover photo has its own **Koji deo naslovne fotografije se vidi** choice for the story card.
 
-The slideshow at the top of the home page is under **Početna strana → Velike fotografije na vrhu**. Add, remove or reorder photos there. Each slideshow photo has an **Uvećanje** (zoom) choice:
-
-- **Automatski** (the default): a wide photo fills the strip, and a tall or square phone photo is shown whole, with a blurred copy of itself filling the sides.
-- **Cela fotografija:** always shows the whole photo.
-- **50% / 75%:** zooms out from "fill".
-- **Popuni ceo pojas:** always fills the strip, cropping the top and bottom.
-
-The "focus" number picks which part stays visible when a photo is cropped. The slideshow changes photo every 5 seconds and makes one dot per photo automatically. The intro text, the quote and the filter wording are on the same page. The site name, description and Instagram link are under **Podešavanja sajta**.
+The slideshow at the top of the home page is under **Početna strana → Velike fotografije na vrhu**. Add, remove or reorder photos there. Every slideshow photo fills the whole strip, so they all look uniform. Use **landscape** photos at least 1600px wide. Tall phone photos get cropped heavily and enlarged, so they look soft. The "focus" number picks which band of the photo stays visible: 0 = top, 50 = middle, 100 = bottom. The slideshow changes photo every 5 seconds and makes one dot per photo automatically. The intro text, the quote and the filter wording are on the same page. The site name, description and Instagram link are under **Podešavanja sajta**.
 
 To add a new country to the filter, add it in two places: the `values` list under `country` in `.pages.yml`, and `src/_data/countries.json`.
 

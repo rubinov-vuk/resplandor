@@ -89,15 +89,8 @@ a { color: inherit; }
 }
 .hero-slide.is-active { opacity: .9; }
 .hero-slide.is-dragging { transition: none; }
+/* every photo fills the whole strip; "focus" in the editor picks which band of it shows */
 .hero-slide img { width: 100%; height: 100%; object-fit: cover; }
-/* the blurred copy only shows when a photo is shown whole and doesn't fill the strip */
-.hero-blur {
-  position: absolute; inset: 0;
-  filter: blur(28px) brightness(.85); transform: scale(1.2);
-  visibility: hidden;
-}
-.hero-slide.is-fitted .hero-blur { visibility: visible; }
-.hero-photo { position: relative; }
 
 /* dots in the middle, 25px from the top (wraps onto more rows if there are many photos) */
 .hero-dots {
