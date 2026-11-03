@@ -66,7 +66,7 @@ sections:
   - type: photos
     items:
       - image: /images/WhatsApp Image 2026-11-03 at 13.06.38.jpeg
-        layout: full
+        layout: half
         shape: original
         focus: center
         zoom: "1"
