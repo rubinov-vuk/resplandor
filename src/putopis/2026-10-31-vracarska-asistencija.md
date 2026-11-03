@@ -11,6 +11,14 @@ excerpt: Kormina magična terasica ima najbolji pogled na Beograd; cim igličice
   veličanstveni Hram motri na gradske lutalice zlatnim pogledom. Neko nas čuva.
   Svečani krstovi uspravno nadgledaju daleki horizont pod čijim se tlom kriju
   vekovi krvave istorije. Ko li je noćas budan u gradu pobednika?
+sections:
+  - type: photos
+    items:
+      - image: /images/voz.jpeg
+        layout: full
+        shape: landscape
+        focus: center
+        zoom: "1"
 draft: false
 ---
 Pre nekoliko godina u Beogradu sam uramljivao rokenrol postere po sobi – Stones, Guns ’n’ Roses, Zeppelin, Floyd... Ozbiljno slikoviti prikazi paklenog hedonizma rokenrola. Na posteru flojdare nalazio se zapaljeni biznismen u odelu sa albuma *Wish You Were Here*, međutim, ovog puta ga ne vidimo iz profila, nego ga gledamo direktno u pomračeno lice, sa šakom ispruženom prema nama. *Get burned.* Pazi s kim se demonima rukuješ, dečko... Gornji deo mračnog lica prekriven mu je famoznom dugom koja izlazi iz trougla sa *Dark Side-a*, a usta mu otkrivaju blistavo bele zube koji ocrtavaju izopačen osmeh. *Raving and Drooling* – Pink Floyd. Ovaj jebački poster služio je kao reklama za koncert u Pitsburgu 1975. godine, a danas služi kao ukras na zidovima ljubitelja Flojda i večne misterije života skrivene u svakom akordu njihove muzike. Ali ne i mog zida.
