@@ -46,5 +46,5 @@ sections:
     body: "*Ako postaviš pravo pitanje, pravoj osobi, u pravom trenutak, sačekaće te
       pravi odgovor.*"
     align: center
-draft: true
+draft: false
 ---
