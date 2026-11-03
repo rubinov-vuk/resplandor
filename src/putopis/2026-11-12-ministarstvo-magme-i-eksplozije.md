@@ -110,5 +110,3 @@ gallery:
     zoom: "1"
 draft: false
 ---
----
-
