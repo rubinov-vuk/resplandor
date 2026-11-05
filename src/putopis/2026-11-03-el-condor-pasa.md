@@ -62,10 +62,10 @@ sections:
     align: left
   - type: photos
     items:
-      - image: /images/WhatsApp Image 2026-11-03 at 13.04.15 (1).jpeg
+      - image: /images/20250627_160732 (1).jpg
         layout: half
         shape: original
-        focus: center
+        focus: left
         zoom: "1"
   - type: photos
     items:
