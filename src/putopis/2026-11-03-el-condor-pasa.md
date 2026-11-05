@@ -62,7 +62,7 @@ sections:
     align: left
   - type: photos
     items:
-      - image: /images/20250627_160732 (1).jpg
+      - image: /images/20250627_160732.jpg
         layout: half
         shape: original
         focus: left
