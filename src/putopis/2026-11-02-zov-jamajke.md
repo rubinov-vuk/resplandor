@@ -12,9 +12,14 @@ excerpt: Brat Hugo i ja smo ovih dana u potrazi za brodom koji bi nas ugostio na
 sections:
   - type: photos
     items:
-      - image: /images/WhatsApp Image 2026-11-03 at 10.50.45.jpeg
-        layout: wide
-        shape: landscape
+      - image: /images/IMG-20261103-WA0007.jpg
+        layout: half
+        shape: original
+        focus: center
+        zoom: "1"
+      - image: /images/IMG-20261103-WA0006.jpg
+        layout: half
+        shape: original
         focus: center
         zoom: "1"
   - type: text
@@ -46,5 +51,12 @@ sections:
     body: "*Ako postaviš pravo pitanje, pravoj osobi, u pravom trenutak, sačekaće te
       pravi odgovor.*"
     align: center
+  - type: photos
+    items:
+      - image: /images/IMG-20261103-WA0010-1.jpg
+        layout: wide
+        shape: wide
+        focus: center
+        zoom: "1"
 draft: false
 ---
