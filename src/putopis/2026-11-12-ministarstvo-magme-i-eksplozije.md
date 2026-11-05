@@ -84,9 +84,16 @@ sections:
       građevina u beskorisni šut i za sobom ostavilo hiljade mrtvih. Nakon ove
       tragedije, institucije su se masovno preselile u novoproklamovani glavni
       grad, daleko od užarenih vulkana – Gvatemala Siti.
-
-
-      U centru Antigve našli smo se sa Karlosom, još jednim bivšim volonterom
+    align: left
+  - type: photos
+    items:
+      - image: /images/j.jpg
+        layout: full
+        shape: landscape
+        focus: center
+        zoom: "1"
+  - type: text
+    body: U centru Antigve našli smo se sa Karlosom, još jednim bivšim volonterom
       Zefira. Karlos je momak iz Kalija u Kolumbiji – kraljice salse. On
       trenutno takođe putuje i šljaka po svetu, a protekle nedelje provodi
       radeći u Antigvi. Pošto je već proveo nekoliko meseci u Gvatemali, imao je
@@ -101,12 +108,5 @@ sections:
       čašica. Duga je noć, a ekipa je dobro raspoložena… a evo ga i Karlos sa
       novom bombom!
     align: left
-gallery:
-  - image: /images/740a26d9-fd3c-45ce-aea9-118b8ca9be73-1.jpg
-    caption: Glavni Skver
-    layout: full
-    shape: wide
-    focus: center
-    zoom: "1"
 draft: false
 ---
