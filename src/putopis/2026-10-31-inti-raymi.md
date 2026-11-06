@@ -6,10 +6,10 @@ date: 2025-06-25
 cover: /images/WhatsApp Image 2026-10-31 at 14.57.14.jpeg
 coverFocus: center
 excerpt: "Protekle dane Kormilijana i ja provodimo u društvu novostečenog člana
-  bande – Sare iz Brazila. U pitanju je ozbiljna igračica. Raspolaže raznovrsnim
-  katalogom veština i iskustva: govori četiri jezika, razume se u muziku i ples,
-  gotivi dobru cirku i masan džoint, ali najbitnije od svega, obožava dobru
-  zabavu i poseduje izuzetno zarazan smeh. "
+  bande – Sare iz Brazila. U pitanju je ozbiljna igračica koja raspolaže
+  raznovrsnim katalogom veština i iskustva: govori četiri jezika, razume se u
+  muziku i ples, gotivi dobru cirku i masan džoint, ali najbitnije od svega,
+  obožava dobru zabavu i poseduje izuzetno zarazan smeh. "
 sections:
   - type: photos
     items:
@@ -28,29 +28,30 @@ sections:
   - type: text
     body: >-
       Protekle dane Kormilijana i ja provodimo u društvu novostečenog člana
-      bande – Sare iz Brazila. U pitanju je ozbiljna igračica. Raspolaže
-      raznovrsnim katalogom veština i iskustva: govori četiri jezika, razume se
-      u muziku i ples, gotivi dobru cirku i masan džoint, ali najbitnije od
-      svega, obožava dobru zabavu i poseduje izuzetno zarazan smeh. Ima rezime
-      prvoklasne đanerke koja je eksperimentisala sa svakakvim modifikatorima
-      svesti, pa kao takva zauzima visoku poziciju na pisačkoj rang-listi
-      svetskih lutalica, pustolova i empirista. Sara je genijalno uskočila kao
-      treći član naše sužene ekipice u potrazi za smehom i dobrim društvom;
-      đuskali smo po obližnjim rege i kirdžem fijesticama, delili priče ispred
-      vatre i prepustili se ritmičnim talasima avanture. Sve po PS-u.
+      bande – Sare iz Brazila. U pitanju je ozbiljna zajebantkinja koja
+      raspolaže raznovrsnim katalogom veština i iskustva: govori četiri jezika,
+      razume se u muziku i ples, gotivi dobru cirku i masan džoint, ali
+      najbitnije od svega, obožava dobru zabavu i poseduje izuzetno zarazan
+      smeh. Ima rezime prvoklasne đanerke koja je eksperimentisala sa svakakvim
+      modifikatorima svesti, pa kao takva zauzima visoku poziciju na pisačkoj
+      rang-listi svetskih lutalica, pustolova i empirista. Sara je genijalno
+      uskočila kao treći član naše sužene ekipice u potrazi za smehom i dobrim
+      društvom; đuskali smo po obližnjim rege i kirdžem fijesticama, delili
+      priče ispred vatre i prepustili se ritmičnim talasima avanture. Sve po
+      PS-u.
 
 
       Noćas sleduje promena vazduha – iz svežeg Pisaka u zgužvani Kusko. Juče je
       počeo jedan od najznačajnijih peruanskih festivala zbog kojeg se u
       prestonici okupljaju guštači plesa, muzike, hrane i zabave sa svih strana
       sveta – Inti Rajmi (*Inti Raymi*; *Inti* – Sunce, *Raymi* – Festival).
-      Usred nagomilane mase, večeras smo se našli sa Sarom i njenim brazilskim
-      ljubavnikom, a neočekivano se uključio i bata Mađar koji suptilno guta
-      piviće skrivene po džepovima šuškavca i izbacuje prodorne podrige na svaka
-      tri i po minuta. Sara ga je već nakon prvog podriga oterala u pičku
+      Usred nagomilane mase, večeras smo se našli sa Sarom i njenim neočekivanim
+      brazilskim ljubavnikom, a usput se uključio i bata Mađar koji suptilno
+      guta piviće skrivene po džepovima šuškavca i izbacuje prodorne podrige na
+      svaka tri i po minuta. Sara ga je već nakon prvog podriga oterala u pičku
       materinu, ali đarma nije dozvolio da mu besne portugalske psovke poremete
       ritam, pa je nastavio da izbacuje demonske podrige punktualno kao
-      švajcarski sat, što je u meni i Kormi izazivalo svirepo vrištanje od
+      švajcarski sat, što je u Kormi i meni izazivalo svirepo vrištanje od
       smeha. Gubili smo se tragom mase po popločanim stepenicama inkanske
       prestonice, napred-nazad i gore-dole, sve dok nismo zaseli nakratko u
       obližnji pab da podelimo po koju staklenu bombu lokalnog piva. Dugo sam
