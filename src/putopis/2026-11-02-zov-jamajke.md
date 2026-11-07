@@ -48,8 +48,7 @@ sections:
       okuplja dnevna mornarska scena. Gubimo se po mokrim dokovima u potrazi za
       alasima i pijancima koji nas mogu usmeriti na pravi put. Dobijamo imena i
       adrese lokalnih njuški koje će se potencijalno kretati u smeru Jamajke
-      narednih dana. Sreća prati hrabre. Na samo jedan kvalitetan razgovor smo
-      od uspeha...
+      narednih dana. Sreća prati hrabre. 
     align: left
   - type: text
     body: "*Ako postaviš pravo pitanje, pravoj osobi, u pravom trenutak, sačekaće te
