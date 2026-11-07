@@ -27,15 +27,15 @@ sections:
       večito planiranje sledećeg koraka i keširanje skupljih-nego-što-misliš
       hostela. Prijatno je bilo provesti nekoliko noći švrćkajući po selima oko
       jezera Atitlan, mada mi je drago što smo napokon krenuli prema Antigvi i
-      počeli da planiramo logistiku za avanturu koja sledi. Neočekivani sudar na
-      autoputu malo nam je produžio putovanje prema glavnjaku, ali to nije ništa
-      što može naškoditi veseloj ekipi koja raskošno raspolaže vremenom.
+      počeli da planiramo logistiku za avanturu koja sleduje. Neočekivani sudar
+      na autoputu malo nam je produžio putovanje prema glavnjaku, ali to nije
+      ništa što može naškoditi veseloj ekipi koja raskošno raspolaže vremenom.
 
 
       Antigva je bivša prestonica Gvatemale, gradić krcat reprezentativnom
       gvatemalskom kulturom i skučenim šarenim kućicama poređanim duž klimave
       kaldrme. Za koji dan počinje famozni „Festival cveća“, kada će se ceo grad
-      dekorisati najmaštovitijim cvetnim skulpturama. Uprkos šarenim komšijskim
+      dekorisati najmaštovitijim cvetnim aranžmanima. Uprkos šarenim komšijskim
       kreacijama, poslednje dve godine trofej je kući odneo lokalni Mekdonalds.
       *I’m loving it...*
     align: left
@@ -74,16 +74,16 @@ sections:
 
 
       Kao administrativni centar većeg dela Centralne Amerike, kroz Antigvu je
-      teklo mnogo keša, što je bilo jasno vidljivo po raskošnim crkvama i
-      manastirima. Međutim, duhovi domorodaca imali su drugačije planove. Već na
-      samom početku 18. veka, Fuego je masivnom erupcijom ozbiljno ugrozio
-      prestižni status gvatemalskog glavnjaka. Španska kruna je na tankim
-      koncima održavala administrativni centar u senci nekadašnjeg sjaja, sve
-      dok moćni zemljotresi Santa Marte nisu podsetili plemstvo ko stvarno
-      kontroliše stvari. Besno treskanje pretvorilo je preko sedamdeset odsto
-      građevina u beskorisni šut i za sobom ostavilo hiljade mrtvih. Nakon ove
-      tragedije, institucije su se masovno preselile u novoproklamovani glavni
-      grad, daleko od užarenih vulkana – Gvatemala Siti.
+      teklo mnogo keša, što se dalo videti po raskošnim crkvama i aristokratskim
+      kućama. Uprkos raskoši, duhovi domorodaca imali su drugačije planove. Već
+      na samom početku 18. veka, Fuego je masivnom erupcijom ozbiljno ugrozio
+      prestižni status gvatemalskog glavnjaka, ali španska kruna je na tankim
+      koncima uspevala da održi administrativni centar u senci nekadašnjeg
+      sjaja, sve dok moćni zemljotresi Santa Marte nisu podsetili plemstvo ko
+      stvarno kontroliše stvari. Besno treskanje pretvorilo je preko sedamdeset
+      odsto građevina u beskorisni šut i za sobom ostavilo hiljade mrtvih. Nakon
+      ove tragedije, institucije su se masovno preselile u novoproklamovani
+      glavni grad, daleko od užarenih vulkana – Gvatemala Siti.
     align: left
   - type: photos
     items:
