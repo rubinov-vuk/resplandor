@@ -64,23 +64,22 @@ sections:
       *Puerta 2 – Agua.* Povratak u paklenu dolinu. Bubanj se deli po krugu i
       započinju se pesme sa svih strana temaskala. Intenzivna toplota izaziva
       bolnu potrebu za najosnovnijim; neobuzdana slika hladne vode i čistog
-      vazduha neretko proleti kroz glavu i poremeti ravnotežu. Nemoj misliti,
-      oseti. Prihvati toplotu. Prihvati bol. Prihvati realnost. Iskontroliši
-      protok upijenih misli i uvidi moć kojom raspolažeš. Moć koja te je
-      dogurala do ovde, svrha koju si šapnuo u šaku. Puna čaša vode poliva
-      užareni kamen. Para je sve gušća, sve neizbežnija. Znaj da ti je Majka
-      Priroda, *Pachamama*, pružila sve alate koji su ti potrebni da preživiš i
-      napreduješ u ovom svetu. Suština je u elementarnom. Jesi li zaboravio na
-      život koji ti daje vazduh koji dišeš, voda koju piješ? Jel ti nedostaje?
-      Koliko bi bio zahvalan kada bi sada mogao da osetiš samo kap sveže vode na
-      jeziku? Greg zahvata punu čašu vode i nasumično poliva krug, a poneka
-      kapljica zaluta i do nas i ispunjava nam sušne fantazije. Umorni um, kao
-      nesrećnik koji se skida sa pajdare, počinje da se moli za još samo jednu
-      zalutalu kap koja će pomilovati užarenu facu. Još samo jedna kapljica.
-      Bubanj je silan, a svakim novim udarcem toplote naša pesma sve je
-      glasnija. Još samo jedna kapljičica. Vrata se otvaraju – pauza. Veliki
-      predah. Dva vrata izdržana, još dva fale. Većina postave je u transu, a sa
-      njima i Korma i ja. Nego inače, jel je čaša polupuna ili poluprazna?
+      vazduha neretko proleti kroz glavu i sabotira pokušaj smiravanja. Nemoj
+      misliti, oseti. Prihvati toplotu. Prihvati bol. Iskontroliši protok
+      upijenih misli i uvidi moć kojom raspolažeš. Moć koja te gura kroz život,
+      svrha koju si šapnuo u šaku. Puna čaša vode poliva užareni kamen. Para je
+      sve gušća i neizbežnija. Znaj da ti je Majka Priroda, *Pachamama*, pružila
+      sve alate koji su ti potrebni da preživiš i napreduješ u ovom svetu.
+      Suština je u elementarnom. Jesi li zaboravio na život koji ti daje vazduh
+      koji dišeš, voda koju piješ? Da li ti nedostaje? Greg zahvata punu čašu
+      vode i nasumično poliva krug, a poneka kapljica zaluta i do nas i
+      ispunjava nam sušne fantazije. Umorni um, kao nesrećnik koji se skida sa
+      pajdare, moli za još samo jednu zalutalu kap koja će pomilovati užarenu
+      facu. Još samo jedna kapljica. Bubanj je silan, a svakim novim udarcem
+      toplote naša pesma sve je glasnija. Još samo jedna kapljičica. Vrata se
+      otvaraju – pauza. Veliki predah. Dva vrata izdržana, još dva fale. Većina
+      postave je u transu, a sa njima i Korma i ja. Nego inače, jel je čaša
+      polupuna ili poluprazna?
 
 
       *Puerta 3 – Fuego.* Opet. Opet si umoran i polako gubiš snagu za odbijanje
@@ -92,9 +91,9 @@ sections:
       glavi. Svakakve slike ti proleću kroz glavu – sećanja i momenti nepovezani
       sa trenutnom realnošću. Odakle dolaze? Ovog puta, nakon prvih nekoliko
       prolivenih čaša, Greg prosipa ostatak kazančine na usijano vulkansko
-      kamenje. Užarena lica se klečeći približavaju zemlji, gde gusta vrućina i
-      dalje ne preovlađuje. Zemlja je hladna i ispušta svež vazduh, pa kao takva
-      zahteva od tebe pad na kolena i apsolutnu predaju. Para oštro prodire u
+      kamenje. Užarena lica se klečeći približavaju zemlji, gde gusta para i
+      dalje ne preovlađuje. Zemlja je hladna i ispušta svež vazduh, ali zahteva
+      od tebe pad na kolena i apsolutnu predaju. Para oštro prodire u
       najintimnije odaje bića. Slabost te moli da napustiš temaskal; umor te
       ubeđuje da ti nije mesto ovde. Fali ono esencijalno, elementarno. Međutim,
       ti ipak negde pronalaziš snagu. Pronalaziš je u obećanju. U sećanju. U
@@ -114,8 +113,8 @@ sections:
       moraš. Ne misli. Oseti. Budi. Sve što ti je potrebno već imaš sa sobom.
       Ova para nije tu da ti naudi, ona je tu da te izleči, da ti pomogne.
       Monolozi se vrte po krugu. Učenici duhovne škole ispovedaju se jedni
-      drugima, pa i samima sebi. Mi smo familija. Prolazimo kroz istu bitku.
-      Kroz ljudsku bitku. Nije dovoljno da budemo jaki samo za sebe, moramo biti
+      drugima, pa i samima sebi. Mi smo familija. Prolazimo kroz istu bitku,
+      kroz ljudsku bitku. Nije dovoljno da budemo jaki samo za sebe, moramo biti
       jaki i za onog pored nas – krug se ne sme razbiti. Istinski rat se vodi
       iznutra, oduvek je tako i bilo. Imamo sve oružje potrebno za trijumf.
       Pobedićemo. Umiraćemo i preporađaćemo se iznova i iznova, svakim novim
@@ -137,12 +136,12 @@ sections:
       svakom momentu imaš sve što ti je potrebno za zadovoljstvo i mir.
       Pročišćenih umova i tela spustili smo se do pijace da se oguštamo uz još
       jedan litar tropskog nektara. Ovog puta smo pomešali mango sa jagodom i
-      pomorandžom. Erotika. Lagano ispijanje sokića i glasno ćaskanje; sve je na
-      svome mestu... U toku jednog od izliva krajskog humora, sa voćne tezge
-      preko puta našeg štanda, iz naglog poluokreta, pogledom nas je ulovio
-      ćelavi bata i usporenim hodom se zaputio prema nama. Blag osmeh, ruke iza
+      pomorandžom. Erotika. Lagano ispijanje sokića i glasno ćaskanje- sve je na
+      mestu... U toku jednog od izliva krajskog humora, sa voćne tezge preko
+      puta našeg štanda, iz naglog poluokreta, pogledom nas je ulovio jedan
+      ćelavi tip i usporenim hodom se zaputio prema nama. Blag osmeh, ruke iza
       leđa i oči koje zrače intrigom – komšija napušta pregovore sa abuelitom i
-      u tri dugačka koraka nam se približava ispred šanka:„Meni se učinilo kao
+      u tri dugačka koraka nam se približava ispred šanka: „Meni se učinilo kao
       da sam čuo poznat jezik. Reko', da l' sam lud...“ Pa gde si, brate
       dobri...
     align: left
@@ -160,7 +159,7 @@ draft: false
 ---
 *Temazcal*.
 
-Čas duhovne nauke. Bolje rečeno, izvorne prirodne nauke. Tokom ovog vagabundisanja po svetu imam privilegiju da oprobavam različite uglove proživljavanja realnosti i, shodno tome, sklopio sam temeljnija razumevanja koncepata koje sam ranije shvatao isključivo intelektualno. Neki od tih traljavo shvaćenih pojmova jesu prirodna nauka i medicina, oba jasno prisutna u izvornoj formi tokom današnjeg čeličenja u drevnoj sauni. Koncept prirodne nauke, prosto definisan i uprogramiran u dečački um, bio je isključivo limitiran na umno-racionalne i kritičke zaključke, a svaka pojava van trenutnog reona shvatanja nauke bila bi svrstavana u magiju i bajke. Daleko od toga da ne vidim vrednost kalkulisanja i logike, ali smatram da tradicionalnim pristupom neosporno izostavljamo duhovnu moć iz jednačine. Podjednako koliko čovek sabira, množi i zaključuje, čovek takođe treba da iskuša i oseti na sopstvenoj koži, svojim čulima, jednačinu koju intelektualizuje. Nedovoljno je samo umno prihvatiti postojanje gravitacije zato što osobe od autoriteta tako pripovedaju; neophodno je pasti i zaraditi koju modricu kako bi neosporan zakon prevazišao isključivo intelektualnu formu.
+Čas duhovne nauke. Bolje rečeno, izvorne prirodne nauke. Tokom ovog vagabundisanja po svetu imam privilegiju da oprobavam različite uglove proživljavanja realnosti i, shodno tome, sklopio sam temeljnija razumevanja koncepata koje sam ranije shvatao isključivo intelektualno. Neki od traljavo shvaćenih pojmova jesu prirodna nauka i medicina, oba jasno prisutna u izvornoj formi tokom današnjeg čeličenja u drevnoj sauni. Koncept prirodne nauke, prosto definisan i uprogramiran u dečački um, bio je limitiran na umno-racionalne i kritičke zaključke, a svaka pojava van trenutnog reona shvatanja nauke bila bi svrstavana u magiju i bajke. Daleko od toga da ne vidim vrednost kalkulisanja i logike, ali smatram da tradicionalnim pristupom neosporno izostavljamo duhovnu moć iz jednačine. Podjednako koliko čovek sabira, množi i zaključuje, čovek takođe treba da iskusi i oseti na sopstvenoj koži, svojim čulima, jednačinu koju intelektualizuje. Nedovoljno je samo umno prihvatiti postojanje gravitacije zato što osobe od autoriteta tako pripovedaju; neophodno je pasti i lupiti glavom kako bi neosporiv zakon prevazišao isključivo intelektualnu formu.
 
 Globalizacijom, industrijalizacijom, digitalizacijom i svim ostalim pojmovima na koje masturbiraju studenti Fakulteta političkih nauka, novi svetski poredak ispropagirao je restriktivnu politiku razmišljanja koja zanemaruje rast spiritualne i emotivne inteligencije. Kada spominjem spiritualnu inteligenciju, odnosim se na ljudsku sposobnost (to jest moć) da svet proživljava bez etiketiranja, tj. obeležavanja simbolom, rečju ili brojem; da ponovo progovori jezikom kosmosa – elementarnim jezikom energije. Dobrim pastirima koji diriguju svetskim pozorištem ne ide u korist da glumci provire iza zavese i poskidaju maske, te je iracionalan potencijal ljudskog duha često naučno osporavan ili neprihvaćen, i sledno tome, zanemaren i zaboravljen. Međutim, žitelji Svete doline imaju besprekorno pamćenje.
 
