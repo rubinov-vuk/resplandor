@@ -5,6 +5,10 @@ country: Peru
 date: 2025-07-01
 cover: /images/dscn0310.jpg
 coverFocus: center
+excerpt: "U mestima kao što je Sveta dolina, čovek se nikad ne može izgubiti –
+  uvek se nalazi baš tamo gde treba da bude! Prati potok i stići ćeš do reke,
+  prati reku i stići ćeš do sela. Svaki prolaz je nova dimenzija, a svaki
+  komšiluk svet za sebe. "
 sections:
   - type: photos
     items:
