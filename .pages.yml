@@ -3,6 +3,9 @@
 media:
   input: src/images
   output: /images
+  # Camera photos often end in capital letters (.JPG), so both spellings are listed.
+  # Pages CMS compares the extension exactly as written when a story is saved.
+  extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
 
 content:
   - name: stories
@@ -40,6 +43,8 @@ content:
         label: Naslovna fotografija (prikazuje se u listi priča)
         type: image
         required: true
+        options:
+          extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
       - name: coverFocus
         label: Koji deo naslovne fotografije se vidi na kartici
         type: select
@@ -92,6 +97,8 @@ content:
                   - name: image
                     label: Fotografija
                     type: image
+                    options:
+                      extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
                   - name: caption
                     label: Opis fotografije
                     type: string
@@ -153,6 +160,8 @@ content:
           - name: image
             label: Fotografija
             type: image
+            options:
+              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
           - name: caption
             label: Opis fotografije
             type: string
@@ -225,6 +234,8 @@ content:
             label: Fotografija — najbolje položena (šira nego viša), bar 1600 piksela široka
             type: image
             required: true
+            options:
+              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
           - name: alt
             label: Opis fotografije (za slabovide i Google)
             type: string
