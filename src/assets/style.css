@@ -271,24 +271,25 @@ a { color: inherit; }
 .story-body blockquote { margin: 32px 0; font-style: italic; opacity: .8; text-align: center; }
 .story-body a { color: var(--accent); }
 /* Map under the title: the country among its neighbours, region in gold, pin on the place.
-   The square map is cropped to a wide strip, and its edges fade into the page. */
+   Exactly as wide as the text; the sea is a pale tint so the map's edges line up with the text's.
+   The country sits in the middle of the map (the square map is cropped to a wide strip). */
 .story-map {
   aspect-ratio: 2 / 1;
   margin: 0 0 50px;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(transparent, #000 12%, #000 88%, transparent);
-  -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(transparent, #000 12%, #000 88%, transparent);
-  mask-composite: intersect;
+  background: #f1eee6;
+  outline: 1px solid #e2dacb; outline-offset: -1px; /* hairline frame on the text edges */
+  overflow: hidden;
 }
 .story-map svg { display: block; width: 100%; height: 100%; }
 .map path, .map circle { vector-effect: non-scaling-stroke; stroke-linejoin: round; }
-.map-others { fill: #f1ece2; stroke: #ddd4c4; stroke-width: .6; }
+.map-others { fill: #faf8f2; stroke: #d9d0bf; stroke-width: .6; }
 .map-country { fill: #e9e1d2; stroke: none; }
 .map-regions { fill: none; stroke: #d3c7b2; stroke-width: .5; }
 .map-region { fill: rgba(184, 119, 52, .28); stroke: var(--accent); stroke-width: .9; }
 .map-outline { fill: none; stroke: var(--body); stroke-width: .9; }
-.map-pin { fill: var(--accent); stroke: var(--bg); stroke-width: 1.5; }
-.map-pin-ring { fill: none; stroke: var(--accent); stroke-width: 1; opacity: .7; }
+/* forest green from the proposal PDF */
+.map-pin { fill: #34443a; stroke: var(--bg); stroke-width: 1.5; }
+.map-pin-ring { fill: none; stroke: #34443a; stroke-width: 1; opacity: .7; }
 
 /* "Poravnanje" on a text part */
 .align--center, .align--center-italic { text-align: center; }
