@@ -3,8 +3,9 @@
 media:
   input: src/images
   output: /images
-  # Camera photos often end in capital letters (.JPG), so both spellings are listed.
-  # Pages CMS compares the extension exactly as written when a story is saved.
+  # Camera photos often end in capital letters (.JPG), which the story editor rejects.
+  # "safe" renames every upload to a clean name with a lowercase ending (DSCN0310.JPG -> dscn0310.jpg).
+  rename: safe
   extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
 
 content:
