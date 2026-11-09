@@ -1,7 +1,7 @@
 ---
 title: Vračarska Asistencija
-location: Puno, Peru
-country: Peru
+location: La Paz, Bolivia
+country: Bolivija
 date: 2025-06-09
 cover: /images/WhatsApp Image 2026-10-31 at 13.58.02.jpeg
 coverFocus: center
