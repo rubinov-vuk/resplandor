@@ -13,8 +13,8 @@ sections:
   - type: photos
     items:
       - image: /images/dscn0314.jpg
-        layout: full
-        shape: original
+        layout: wide
+        shape: landscape
         focus: center
         zoom: "1"
   - type: text
@@ -65,7 +65,7 @@ sections:
     items:
       - image: /images/dscn0310-1.jpg
         layout: wide
-        shape: original
+        shape: landscape
         focus: center
         zoom: "1"
 draft: false
