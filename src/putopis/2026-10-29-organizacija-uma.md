@@ -30,15 +30,7 @@ sections:
 
       Davno sam zaključio da je disciplina jedan od neophodnih ključeva za odaju mira, ali takođe sam i utvrdio da je vrlo zajebana zverka za uloviti. Stalno beži i izmiče; potrebno je puno uloženog vremena i energije kako bismo je pripitomili. 
 
-      Ako su duh i duša naš *softver*, a telo naš *hardver* (spona sa materijalnim svetom), onda je um prevodilac između duhovnog i telesnog, sa ulogom da razume i nađe adekvatno obrazloženje duševnih zahteva i potreba. Kao i sve na ovom svetu, i naša duša govori jezikom se uči. Čovek ga često tumači kroz emocije, ali realnost je da je to samo fragment duševne azbuke, često iskrivljene veštački ugrađenim socijalnim filterima. Najneukaljaniji duševni glas, um prevodi u vidu snova i intuicije, čije reči ne odgovaraju zakonima fizike niti društvenim pravilima. Međutim, osoba koja je spremna da veruje i prepusti se ovim neobjašnjivim talasima može primetiti da ljudska duša funkcioniše kao receptor, ili čak i izvor, svih senzacija koje su neprimetne našim primarnim čulima, i kao takva, upozorava nas na opasnost i vodi prema svetlosti, zamagljenom stazom koju često razumemo tek u retrospektivi.
-
-      Duboko u odajama misli, još u vreme beogradskih meditacija, video bih tog čoveka iz trećeg lica, a u retkim situacijama imao bih priliku da horizont gledam njegovim očima i vazduh dišem njegovim plućima. I dalje nisam *on.* Fali mi još discipline, mudrosti, samorazumevanja... I dalje preda mnom stoje večna učenja, čekajući da im prodrmam kutiju. Moram prihvatiti ovo što postajem; to što jesam i što sam oduvek i bio. Kao ni reka, ni čovek ne poznaje prošlost ni budućnost. Živimo u večnom ciklusu dešavanja, sa budućnošću i prošlošću večno prisutnim u nama i oko nas. Isto kao i Dunav koji neprestano teče, čije korito će se još bezbroj puta napuniti snažnim jesenjim kišama i završiti u Crnom moru; čije kapi će promeniti agregatno stanje i napuniti putujuće oblake, kapi spremne da pokvase pustinje, šume i planine, pa ciklus ponove još bezbroj puta. I, kad-tad, opet će pomutiti dunavski mulj i doći pobednicima u posetu. Jedna reka je sva voda koja je ikada bila i koja će ikada biti; ciklus koji se neprestano i istovremeno dešava, i blagoslovi nas veličanstvenim Dunavom, Savom, Lankinom, Urubambom... Svaka teče svojim ritmom i žubori svojstvenim glasom, ali esencijalno su deo sveprisutne vode i njenog večnog ciklusa reinkarnacije. Čovek nije nimalo drugačiji. Ništa nikad ne nestaje, samo menja oblik. Ljudsko biće je šarenolik mozaik svega što je ikada doživeo, međutim, netačno bi bilo misliti da se promenom članova jednačine ne menja i proizvod.
-
-      Kako prihvatiti život i njegovu večnu tajnu? Taj ontološki paradoks koji čini svaki kosmički apsurd smislenom pojavom. Tajni je u opisu lika da ostane neotkrivena, ali čovekov sistem je davno isprogramiran za traženje odgovora i rešavanje problema. Da li se ovde može pronaći kompromis? Trenutno sam *osuđen* na izolaciju od ljudi. Više nego ikada, potrebna mi je vera u cilj. Na dobrom sam putu; čak i na dan kao što je ovaj, isprepleten teškim mislima i snažnim melanholičnim senzacijama, uspevam da nađem izlaz prema svetlu, koliko god bledo tinjalo. Suština vreba iza ćoška, osećam je. Slušam jezike prirode oko sebe i trudim se da im razumem reči. Revolucija i dalje krčka duboko u žarištu srca, ali idalje nisam naučio da kontrolišem plamen koji izaziva u meni.
-
-      Ko sam ja u vašim očima?
-
-                                                                                                                                                
+      Ako su duh i duša naš *softver*, a telo naš *hardver* (spona sa materijalnim svetom), onda je um prevodilac između duhovnog i telesnog, sa ulogom da razume i nađe adekvatno obrazloženje duševnih zahteva i potreba. Kao i sve na ovom svetu, i naša duša govori jezikom se uči. Čovek ga često tumači kroz emocije, ali realnost je da je to samo fragment duševne azbuke, često iskrivljene veštački ugrađenim socijalnim filterima. Najneukaljaniji duševni glas, um prevodi u vidu snova i intuicije, čije reči ne odgovaraju zakonima fizike niti društvenim pravilima. Međutim, osoba koja je spremna da veruje i prepusti se ovim neobjašnjivim talasima može primetiti da ljudska duša funkcioniše kao receptor, ili čak i izvor, svih senzacija koje su neprimetne našim primarnim čulima, i kao takva, upozorava nas na opasnost i vodi prema svetlosti, zamagljenom stazom koju često razumemo tek u retrospektivi.                                                                                                    
     align: left
   - type: photos
     items:
@@ -48,7 +40,8 @@ sections:
         focus: center
         zoom: "1"
   - type: text
-    body: Duboko u odajama misli, još u vreme beogradskih meditacija, video bih tog
+    body: >-
+      Duboko u odajama misli, još u vreme beogradskih meditacija, video bih tog
       čoveka iz trećeg lica, a u retkim situacijama imao bih priliku da horizont
       gledam njegovim očima i vazduh dišem njegovim plućima. I dalje nisam *on.*
       Fali mi još discipline, mudrosti, samorazumevanja... I dalje preda mnom
@@ -79,7 +72,10 @@ sections:
       tinjalo. Suština vreba iza ćoška, osećam je. Slušam jezike prirode oko
       sebe i trudim se da im razumem reči. Revolucija i dalje krčka duboko u
       žarištu srca, ali idalje nisam naučio da kontrolišem plamen koji izaziva u
-      meni.Ko sam ja u vašim očima?
+      meni.
+
+
+      Ko sam ja u vašim očima?
     align: left
   - type: text
     body: |-
