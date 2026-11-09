@@ -22,19 +22,9 @@ layout: layouts/base.njk
   <h1 class="story-title">{{ title }}</h1>
   <p class="meta"><span>{{ location }}</span><time datetime="{{ page.date | isoDate }}">{{ page.date | srDate }}</time></p>
 
-  {# Mini map: country, region and a pin from "Koordinate mesta" #}
-  {% set map = country | miniMap(coords, location) %}
-  {% if map %}
-  <aside class="story-map">
-    <div class="story-map-svg">{{ map.svg | safe }}</div>
-    <dl class="story-map-info">
-      <div><dt>Zemlja</dt><dd>{{ country }}</dd></div>
-      {% if map.region %}<div><dt>Region</dt><dd>{{ map.region }}</dd></div>{% endif %}
-      {% if map.place %}<div><dt>Mesto</dt><dd>{{ map.place }}</dd></div>{% endif %}
-      {% if map.coords %}<div><dt>Koordinate</dt><dd class="story-map-coords">{{ map.coords }}</dd></div>{% endif %}
-    </dl>
-  </aside>
-  {% endif %}
+  {# Map under the title: the country among its neighbours, its region in gold, a pin from "Koordinate mesta" #}
+  {% set map = country | miniMap(coords) %}
+  {% if map %}<div class="story-map">{{ map.svg | safe }}</div>{% endif %}
 
   {# Text, with [foto 1] lines swapped for photos from "Fotografije u tekstu" #}
   {% for part in content | splitPhotos %}

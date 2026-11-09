@@ -71,7 +71,7 @@ export default function (eleventyConfig) {
     return parts.filter((p) => p.photos || p.html.trim());
   });
 
-  // {% set map = country | miniMap(coords, location) %} → { svg, region, place, coords } or null
+  // {% set map = country | miniMap(coords) %} → { svg, region } or null
   eleventyConfig.addFilter("miniMap", miniMap);
 
   // "Fokus" choice from the editor → which part of a cropped photo stays visible.
