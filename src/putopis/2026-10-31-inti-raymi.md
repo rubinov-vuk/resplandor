@@ -73,5 +73,12 @@ sections:
       frekvenciju, telo se prepušta. Inti posmatra iznutra, podjednako koliko i
       spolja.
     align: left
+  - type: photos
+    items:
+      - image: /images/dscn0379.jpg
+        layout: full
+        shape: original
+        focus: center
+        zoom: "1"
 draft: false
 ---
