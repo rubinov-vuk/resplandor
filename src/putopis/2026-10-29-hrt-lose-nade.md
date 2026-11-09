@@ -1,6 +1,7 @@
 ---
 title: Hrt Loše Nade
 location: Chicago, USA
+coords: "41.8781, -87.6298"
 country: SAD
 date: 2024-05-15
 cover: /images/20cbca90-28b1-46d7-80cc-e5fd17482f7c.jpg

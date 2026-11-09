@@ -1,6 +1,7 @@
 ---
 title: Zov Jamajke
 location: Rio Dulce, Guatemala
+coords: "15.6600, -88.9930"
 country: Gvatemala
 date: 2025-01-21
 cover: /images/WhatsApp Image 2026-11-03 at 10.50.44.jpeg

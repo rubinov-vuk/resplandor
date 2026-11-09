@@ -1,6 +1,7 @@
 ---
 title: El Condor Pasa
 location: Canyon Colca, Peru
+coords: "-15.6167, -71.9667"
 country: Peru
 date: 2025-06-27
 cover: /images/WhatsApp Image 2026-11-03 at 13.04.15 (2)-1.jpeg

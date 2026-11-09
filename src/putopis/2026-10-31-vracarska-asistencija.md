@@ -1,6 +1,7 @@
 ---
 title: Vračarska Asistencija
 location: La Paz, Bolivia
+coords: "-16.4897, -68.1193"
 country: Bolivija
 date: 2025-06-09
 cover: /images/WhatsApp Image 2026-10-31 at 13.58.02.jpeg

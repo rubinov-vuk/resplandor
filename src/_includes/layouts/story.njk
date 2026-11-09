@@ -22,16 +22,43 @@ layout: layouts/base.njk
   <h1 class="story-title">{{ title }}</h1>
   <p class="meta"><span>{{ location }}</span><time datetime="{{ page.date | isoDate }}">{{ page.date | srDate }}</time></p>
 
-  <div class="story-body">
-    {{ content | safe }}
-  </div>
+  {# Mini map: country, region and a pin from "Koordinate mesta" #}
+  {% set map = country | miniMap(coords, location) %}
+  {% if map %}
+  <aside class="story-map">
+    <div class="story-map-svg">{{ map.svg | safe }}</div>
+    <dl class="story-map-info">
+      <div><dt>Zemlja</dt><dd>{{ country }}</dd></div>
+      {% if map.region %}<div><dt>Region</dt><dd>{{ map.region }}</dd></div>{% endif %}
+      {% if map.place %}<div><dt>Mesto</dt><dd>{{ map.place }}</dd></div>{% endif %}
+      {% if map.coords %}<div><dt>Koordinate</dt><dd class="story-map-coords">{{ map.coords }}</dd></div>{% endif %}
+    </dl>
+  </aside>
+  {% endif %}
+
+  {# Text, with [foto 1] lines swapped for photos from "Fotografije u tekstu" #}
+  {% for part in content | splitPhotos %}
+    {% if part.photos %}
+    <div class="story-photos story-section">
+      {% for n in part.photos %}{% set item = textPhotos[n - 1] if textPhotos else null %}{% if item and item.image %}{{ photo(item, title) }}{% endif %}{% endfor %}
+    </div>
+    {% else %}
+    <div class="story-body">{{ part.html | safe }}</div>
+    {% endif %}
+  {% endfor %}
 
   {# "Delovi priče": text and photo parts, in the order they were added #}
   {% for section in sections | groupSections %}
     {% if section.type == "text" and section.body %}
-    <div class="story-body story-section{% if section.align and section.align != 'left' %} align--{{ section.align }}{% endif %}">
-      {{ section.body | renderContent("md") | safe }}
-    </div>
+    {% for part in section.body | renderContent("md") | splitPhotos %}
+      {% if part.photos %}
+      <div class="story-photos story-section">
+        {% for n in part.photos %}{% set item = textPhotos[n - 1] if textPhotos else null %}{% if item and item.image %}{{ photo(item, title) }}{% endif %}{% endfor %}
+      </div>
+      {% else %}
+      <div class="story-body story-section{% if section.align and section.align != 'left' %} align--{{ section.align }}{% endif %}">{{ part.html | safe }}</div>
+      {% endif %}
+    {% endfor %}
     {% elif section.type == "photos" and section.items and section.items.length %}
     <div class="story-photos story-section">
       {% for item in section.items %}{% if item.image %}{{ photo(item, title) }}{% endif %}{% endfor %}

@@ -1,6 +1,7 @@
 ---
 title: Paraíso Guatemalteco
 location: El Paredon Buena Vista, Guatemala
+coords: "13.9183, -91.0767"
 country: Gvatemala
 date: 2025-11-30
 cover: /images/WhatsApp Image 2026-11-02 at 17.29.10 (2).jpeg

@@ -270,6 +270,31 @@ a { color: inherit; }
 .story-body img { width: 100%; margin: 12px 0; }
 .story-body blockquote { margin: 32px 0; font-style: italic; opacity: .8; text-align: center; }
 .story-body a { color: var(--accent); }
+/* Mini map under the title: country, region filled in gold, pin on the place */
+.story-map {
+  display: grid; grid-template-columns: 190px 1fr; gap: 40px; align-items: center;
+  margin: 0 0 50px; padding: 24px 0;
+  border-block: 1px solid #e4ddd0;
+}
+.story-map-svg svg { display: block; width: 100%; height: auto; }
+.map path { vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.map-others { fill: #f1ece2; stroke: #ddd4c4; stroke-width: .6; }
+.map-country { fill: #e9e1d2; stroke: none; }
+.map-regions { fill: none; stroke: #d3c7b2; stroke-width: .5; }
+.map-region { fill: rgba(184, 119, 52, .28); stroke: var(--accent); stroke-width: .9; }
+.map-outline { fill: none; stroke: var(--body); stroke-width: .9; }
+.map-pin { fill: var(--accent); stroke: var(--bg); stroke-width: .6; }
+.map-pin-ring { fill: none; stroke: var(--accent); stroke-width: .5; opacity: .6; }
+.story-map-info { margin: 0; }
+.story-map-info div {
+  display: grid; grid-template-columns: 120px 1fr; align-items: baseline;
+  padding: 9px 0; border-top: 1px solid #ece6da;
+}
+.story-map-info div:first-child { border-top: 0; }
+.story-map-info dt { font: 600 11px var(--label); letter-spacing: 1.6px; text-transform: uppercase; color: var(--accent); }
+.story-map-info dd { margin: 0; font: 500 22px/1.2 var(--display); color: var(--ink); }
+.story-map-info .story-map-coords { font: 400 13px var(--label); letter-spacing: .5px; color: var(--body); }
+
 /* "Poravnanje" on a text part */
 .align--center, .align--center-italic { text-align: center; }
 .align--center-italic { font-style: italic; opacity: .85; }
@@ -380,6 +405,10 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .story { padding-top: 56px; }
   .story-title { margin-bottom: 32px; }
   .story .meta { flex-direction: column; gap: 4px; }
+  .story-map { grid-template-columns: 112px 1fr; gap: 20px; padding: 18px 0; margin-bottom: 36px; }
+  .story-map-info div { grid-template-columns: 1fr; gap: 2px; padding: 6px 0; }
+  .story-map-info dt { font-size: 10px; }
+  .story-map-info dd { font-size: 18px; }
   .story-photos { gap: 12px; }
   .story-photo--half { flex-basis: calc(50% - 6px); } /* pairs stay side by side on phones too */
   .story-photo--small { flex-basis: 100%; }

@@ -1,6 +1,7 @@
 ---
 title: Organizacija Uma
 location: La Paz, Bolivia
+coords: "-16.4897, -68.1193"
 country: Bolivija
 date: 2025-06-05
 cover: /images/WhatsApp Image 2026-10-29 at 20.45.41-1.jpeg

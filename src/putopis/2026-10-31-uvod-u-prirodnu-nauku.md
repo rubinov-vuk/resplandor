@@ -1,6 +1,7 @@
 ---
 title: Uvod u Prirodnu Nauku
 location: Pisaq, Peru
+coords: "-13.4192, -71.8486"
 country: Peru
 date: 2025-06-22
 cover: /images/temazcal.jpg

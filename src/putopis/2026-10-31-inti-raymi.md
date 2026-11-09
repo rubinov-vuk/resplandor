@@ -1,6 +1,7 @@
 ---
 title: Inti Raymi
 location: Cuzco, Peru
+coords: "-13.5320, -71.9675"
 country: Peru
 date: 2025-06-25
 cover: /images/WhatsApp Image 2026-10-31 at 14.57.14.jpeg

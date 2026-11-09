@@ -1,6 +1,7 @@
 ---
 title: Ministarstvo Magme i Eksplozije
 location: Antigua, Guatemala
+coords: "14.5586, -90.7295"
 country: Gvatemala
 date: 2024-11-12
 cover: /images/antigua.png

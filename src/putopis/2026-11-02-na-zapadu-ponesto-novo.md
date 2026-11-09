@@ -1,6 +1,7 @@
 ---
 title: Na Zapadu Ponešto Novo
 location: El Paredon Buena Vista, Guatemala
+coords: "13.9183, -91.0767"
 country: Gvatemala
 date: 2024-12-23
 cover: /images/WhatsApp Image 2026-11-02 at 17.49.20-2.jpeg

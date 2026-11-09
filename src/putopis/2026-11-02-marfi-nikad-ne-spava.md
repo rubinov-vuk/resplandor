@@ -1,6 +1,7 @@
 ---
 title: Marfi Nikad Ne Spava
 location: Ciudad de Guatemala, Guatemala
+coords: "14.6349, -90.5069"
 country: Gvatemala
 date: 2024-09-19
 cover: /images/WhatsApp Image 2026-11-02 at 17.08.10.jpeg

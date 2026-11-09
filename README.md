@@ -11,7 +11,18 @@ A travel blog built from the Figma "Journal Page" designs. Stories are Markdown 
 
 To keep a story hidden while you're still working on it, tick **Skica (ne objavljuj još)**.
 
-To put photos in the middle (or at the start) of a story, use **Delovi priče**. Click **Add**, choose **Tekst** or **Fotografije**, and stack the parts in any order, e.g. text → photos → text → photos. They appear after **Tekst priče**, so to start a story with a photo, leave **Tekst priče** empty and make the first part **Fotografije**. Drag the parts to reorder them.
+The quickest way to put a photo inside text you've already written:
+
+1. Add the photo to **Fotografije u tekstu**. The first photo there is number 1, the second number 2, and so on.
+2. In the text, click where the photo should go, press Enter, and type `[foto 1]` on its own line.
+
+This works in **Tekst priče** and in every **Tekst** part. `[foto 2 3]` puts photos 2 and 3 in one row, which is useful for two **Pola** photos side by side. Each photo has the same layout, crop and zoom choices as the others.
+
+Every story starts with a small map showing the country, its region filled in gold, and a pin on the place. Paste the place's coordinates into **Koordinate mesta za mapu**. In Google Maps, right-click the place and click the numbers at the top of the menu to copy them. The region is found automatically. Without coordinates, the map shows just the country. A country is mapped once it's listed in `lib/minimap.js`; the 9 filter countries and most of the Americas already are.
+
+Stories are listed oldest first, so readers follow the journey from the beginning. **Sledeća priča** at the end of each story leads to the next one in time.
+
+To put photos in the middle (or at the start) of a story, you can also use **Delovi priče**. Click **Add**, choose **Tekst** or **Fotografije**, and stack the parts in any order, e.g. text → photos → text → photos. They appear after **Tekst priče**, so to start a story with a photo, leave **Tekst priče** empty and make the first part **Fotografije**. Drag the parts to reorder them.
 
 Every photo (in **Delovi priče** and at the end of a story) has a **Raspored** (layout) choice:
 
@@ -51,6 +62,8 @@ Photos straight from your phone are fine. Every photo is resized and compressed 
 | `src/_data/site.json` | Site name, description, Instagram |
 | `src/_includes/` | Page templates (header, story, card layout) |
 | `src/assets/style.css` | All the styling |
+| `lib/minimap.js` | Draws the story mini maps; country names → map codes |
+| `geo/americas.json` | Country and region outlines (Natural Earth, public domain) |
 | `.pages.yml` | Pages CMS editor setup |
 | `.github/workflows/deploy.yml` | Publishes to GitHub Pages on every change |
 

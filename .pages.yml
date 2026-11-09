@@ -29,6 +29,10 @@ content:
       - name: location
         label: Mesto (npr. Pisaq, Peru)
         type: string
+      # Pin on the story's mini map. Region is found automatically from the point.
+      - name: coords
+        label: "Koordinate mesta za mapu — u Google mapama desni klik na grad, klikni na brojeve i nalepi ih ovde (npr. -13.4192, -71.8476)"
+        type: string
       # Used by the "Sve Zemlje" filter. To add a country, add it here AND in src/_data/countries.json.
       - name: country
         label: Zemlja (za filter)
@@ -61,8 +65,73 @@ content:
         label: Kratak opis za listu (ako je prazno, uzima se početak priče)
         type: text
       - name: body
-        label: Tekst priče
+        label: Tekst priče — za fotografiju usred teksta napiši [foto 1] u posebnom redu
         type: rich-text
+      # Photos placed inside the text by writing [foto 1], [foto 2]… on their own line,
+      # in "Tekst priče" or in any "Tekst" part. [foto 2 3] puts photos 2 and 3 in one row.
+      - name: textPhotos
+        label: Fotografije u tekstu — prva je [foto 1], druga [foto 2]… (u tekstu napiši [foto 1] u posebnom redu tamo gde ide)
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Fotografija
+            type: image
+            options:
+              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+          - name: caption
+            label: Opis fotografije
+            type: string
+          - name: layout
+            label: Raspored
+            type: select
+            default: full
+            options:
+              values:
+                - { value: full, label: "Širina teksta" }
+                - { value: wide, label: "Široka (šira od teksta)" }
+                - { value: screen, label: "Cela širina ekrana" }
+                - { value: half, label: "Pola (dve jedna pored druge, npr. [foto 2 3])" }
+                - { value: small, label: "Mala, u sredini" }
+          - name: shape
+            label: Oblik (isecanje)
+            type: select
+            default: original
+            options:
+              values:
+                - { value: original, label: "Originalni oblik (bez isecanja)" }
+                - { value: landscape, label: "Položena 3:2" }
+                - { value: wide, label: "Široka 16:9" }
+                - { value: panorama, label: "Panorama 21:9" }
+                - { value: square, label: "Kvadrat 1:1" }
+                - { value: portrait, label: "Uspravna 4:5" }
+          - name: focus
+            label: Koji deo fotografije ostaje kad se iseče
+            type: select
+            default: center
+            options:
+              values:
+                - { value: center, label: "Sredina" }
+                - { value: top, label: "Gore" }
+                - { value: bottom, label: "Dole" }
+                - { value: left, label: "Levo" }
+                - { value: right, label: "Desno" }
+                - { value: top-left, label: "Gore levo" }
+                - { value: top-right, label: "Gore desno" }
+                - { value: bottom-left, label: "Dole levo" }
+                - { value: bottom-right, label: "Dole desno" }
+          - name: zoom
+            label: Uvećanje (približi ili udalji fotografiju)
+            type: select
+            default: "1"
+            options:
+              values:
+                - { value: "0.5", label: "50% (udalji, vidi se više fotografije)" }
+                - { value: "0.75", label: "75% (malo udalji)" }
+                - { value: "1", label: "Bez uvećanja" }
+                - { value: "1.25", label: "125%" }
+                - { value: "1.5", label: "150%" }
+                - { value: "2", label: "200%" }
       # Parts shown after "Tekst priče", in the order they are listed here.
       # To start a story with a photo, leave "Tekst priče" empty and put a photo part first.
       - name: sections

@@ -1,6 +1,7 @@
 ---
 title: A temazcal a day keeps the doctor away!
 location: Pisaq, Peru
+coords: "-13.4192, -71.8486"
 country: Peru
 date: 2025-07-01
 cover: /images/dscn0310.jpg

@@ -2,6 +2,7 @@ import { HtmlBasePlugin, RenderPlugin } from "@11ty/eleventy";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import site from "./src/_data/site.json" with { type: "json" };
+import { miniMap } from "./lib/minimap.js";
 
 const SITE_URL = process.env.SITE_URL || "http://localhost:8080";
 
@@ -16,9 +17,9 @@ export default function (eleventyConfig) {
     if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") return false;
   });
 
-  // Newest story first.
+  // Oldest story first, so readers follow the journey from the beginning to now.
   eleventyConfig.addCollection("stories", (api) =>
-    api.getFilteredByGlob("src/putopis/*.md").sort((a, b) => b.date - a.date)
+    api.getFilteredByGlob("src/putopis/*.md").sort((a, b) => a.date - b.date)
   );
 
   // European date: 01.07.2026 (day.month.year)
@@ -54,6 +55,25 @@ export default function (eleventyConfig) {
     return out;
   });
 
+  // Photos inside the text: a line with only [foto 1] (or [foto 2 3], [foto 2, 3], [foto 2 i 3])
+  // is replaced by those photos from the story's "Fotografije u tekstu" list (1 = first photo).
+  // Splits the finished HTML into text pieces and photo rows for the story template.
+  const PHOTO_MARK = /<p>\s*\\?\[\s*(?:foto(?:grafija|grafije)?|slika|slike)\s*([\d\s,i+&]+?)\s*\\?\]\s*<\/p>/gi;
+  eleventyConfig.addFilter("splitPhotos", (html = "") => {
+    const parts = [];
+    let last = 0;
+    for (const m of String(html).matchAll(PHOTO_MARK)) {
+      parts.push({ html: html.slice(last, m.index) });
+      parts.push({ photos: (m[1].match(/\d+/g) || []).map(Number) });
+      last = m.index + m[0].length;
+    }
+    parts.push({ html: html.slice(last) });
+    return parts.filter((p) => p.photos || p.html.trim());
+  });
+
+  // {% set map = country | miniMap(coords, location) %} → { svg, region, place, coords } or null
+  eleventyConfig.addFilter("miniMap", miniMap);
+
   // "Fokus" choice from the editor → which part of a cropped photo stays visible.
   const FOCUS = {
     center: "50% 50%", top: "50% 0%", bottom: "50% 100%", left: "0% 50%", right: "100% 50%",
@@ -61,7 +81,7 @@ export default function (eleventyConfig) {
   };
   eleventyConfig.addFilter("focusPos", (focus) => FOCUS[focus] || FOCUS.center);
 
-  // The story that follows this one in the list (wraps around to the newest).
+  // The next story in time (after the newest one it starts again from the first).
   eleventyConfig.addFilter("nextStory", (stories, url) => {
     if (!stories || stories.length < 2) return null;
     const i = stories.findIndex((s) => s.url === url);
