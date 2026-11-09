@@ -24,7 +24,7 @@ sections:
         zoom: "1"
   - type: text
     body: |-
-      Misli su mi neposlušne, realnost pomućena... Klasični simptomi prekomernog upijanja gradskog, kancerogenog sadržaja. Doskora je ovaj bučni, kontaminirani mehur predstavljao divan grad pun pozitivne energije. Sve je u oku posmatrača.
+      Misli su mi neposlušne, realnost pomućena... Klasični simptomi prekomernog upijanja gradskog, kancerogenog sadržaja. A samo do skoro je ovaj bučni, kontaminirani mehur predstavljao divan grad pun pozitivne energije. Sve je u oku posmatrača.
 
       Imam određene želje i obaveze, tj. dogovore i obećanja koja moram ispuniti sam sa sobom. Ništa se na svetu ne mora, imamo privilegiju odabira, tj. slobodnu volju, ali svako neispunjeno obećanje će neminovno uzeti neku žrtvu umesto one koju smo svesno priložili. Možemo sami odlučiti gde ćemo usmeriti vreme i energiju, ili prepustiti sudbini da odabere gde će i kada da nam glođe meso, zalogaj po zalogaj. Ravnoteža mora ostati precizno baždarena, jer ako ne osvestimo koliku cenu snose naši postupci i kako da je platimo, univerzum će uvek pronaći način da nam je naplati, što retko kada ide po našoj volji. Ovo znači da moramo pažljivo sklapati dogovore sa samim sobom, ali i sa drugima, pošto njihove cene često bivaju veće nego što želimo da platimo. Kosmos je surov kamataš bez strpljenja za naša mizerna obrazloženja o tome zašto kasnimo s ratom. Što manje uzimamo s kosmičkog tasa želja, manje moramo dodati na tas potreba da bismo prirodnu vagu vratili u ravnotežu.
 
