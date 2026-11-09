@@ -12,9 +12,14 @@ excerpt: "Misli su mi neposlušne, realnost pomućena... Klasični simptomi
 sections:
   - type: photos
     items:
-      - image: /images/WhatsApp Image 2026-10-29 at 20.45.41.jpeg
-        layout: wide
-        shape: wide
+      - image: /images/IMG-20261108-WA0076.jpg
+        layout: half
+        shape: original
+        focus: center
+        zoom: "1"
+      - image: /images/IMG-20261108-WA0063.jpg
+        layout: half
+        shape: original
         focus: center
         zoom: "1"
   - type: text
@@ -54,5 +59,12 @@ sections:
 
       *or am I becoming God?*
     align: center-italic
+  - type: photos
+    items:
+      - image: /images/20250828_102356.jpg
+        layout: full
+        shape: wide
+        focus: center
+        zoom: "1"
 draft: false
 ---
