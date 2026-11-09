@@ -52,7 +52,7 @@ sections:
   - type: photos
     items:
       - image: /images/20250627_152058 (1).jpg
-        layout: full
+        layout: wide
         shape: landscape
         focus: center
         zoom: "1"
