@@ -57,7 +57,7 @@ sections:
   - type: photos
     items:
       - image: /images/IMG-20261103-WA0010-1.jpg
-        layout: wide
+        layout: full
         shape: wide
         focus: center
         zoom: "1"
