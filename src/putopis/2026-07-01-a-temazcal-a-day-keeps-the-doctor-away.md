@@ -1,7 +1,7 @@
 ---
 title: A temazcal a day keeps the doctor away!
 location: Pisaq, Peru
-coords: "-13.4192, -71.8486"
+coords: -13.4192, -71.8486
 country: Peru
 date: 2025-07-01
 cover: /images/dscn0310.jpg
@@ -20,22 +20,6 @@ sections:
         zoom: "1"
   - type: text
     body: >-
-      Kao i uvek, u lokalnoj busolici prema Maski se kao sardine gužvaju
-      abuelite šarenih haljina. Verujem da im nije baš najdraže kad im se u
-      sparnu konzervu infiltriraju i tri srpske gušterčine teških lobanja.
-      Gušteri u pitanju: Mare Pi, Kormilo *y yo*. Ma ja ba... Paklena busolica
-      je uvek kvalitetna priprema za gušenje u pari temaskala, a današnjem
-      izdanju prisustvovali su mnogi, već dobro uhodani pisački kameleoni, tako
-      da je znojenje prošlo nekažnjeno. Sunce nas je blagoslovilo još jednim
-      rovitim podnevom u dolini, pa je jednoglasno odlučeno da se spustimo peške
-      nazad do sela. Svečani Andi otvaraju svoje najskrivenije prolaze i putiće,
-      a ptičice sa zelenih grana eukaliptusa zovu nas u posetu – nešto što Mare
-      na kvadrat i ja ne možemo odbiti...
-
-
-      Tumaraj, tumaraj, tumaraj...
-
-
       U mestima kao što je Sveta dolina, čovek se nikad ne može izgubiti – uvek
       se nalazi baš tamo gde treba da bude! Prati potok i stići ćeš do reke,
       prati reku i stići ćeš do sela. Svaki prolaz je nova dimenzija, a svaki
@@ -71,3 +55,4 @@ sections:
         zoom: "1"
 draft: false
 ---
+Kao i uvek, u lokalnoj busolici prema Maski se kao sardine gužvaju abuelite šarenih haljina. Verujem da im nije baš najdraže kad im se u sparnu konzervu infiltriraju i tri srpske gušterčine teških lobanja. Gušteri u pitanju: Mare Pi, Kormilo *y yo*. Ma ja ba... Paklena busolica je uvek kvalitetna priprema za gušenje u pari temaskala, a današnjem izdanju prisustvovali su mnogi, već dobro uhodani pisački kameleoni, tako da je znojenje prošlo nekažnjeno. Sunce nas je blagoslovilo još jednim rovitim podnevom u dolini, pa je jednoglasno odlučeno da se spustimo peške nazad do sela. Svečani Andi otvaraju svoje najskrivenije prolaze i putiće, a ptičice sa zelenih grana eukaliptusa zovu nas u posetu – nešto što Mare na kvadrat i ja ne možemo odbiti...
