@@ -15,7 +15,7 @@ textPhotos:
     layout: half
     shape: original
     focus: center
-    zoom: "1"
+    zoom: "0.75"
 sections:
   - type: text
     body: "Puerto Mont je lučki grad veoma specifičnog karaktera. Nalazi se na kraju
@@ -104,7 +104,7 @@ gallery:
     focus: center
     zoom: "1"
   - image: /images/20260113210242-1.jpg
-    layout: full
+    layout: half
     shape: original
     focus: center
     zoom: "1"
