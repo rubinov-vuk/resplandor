@@ -3,7 +3,7 @@ title: Matijas iz Avinjona i Grad Duhova
 location: Puerto Montt, Chile
 country: Čile
 date: 2026-01-13
-cover: /images/osorno-puerto-montt-1.jpg
+cover: /images/img-20260117-wa0023.jpg
 coverFocus: center
 textPhotos:
   - image: /images/20260124183915.jpg
@@ -99,7 +99,12 @@ sections:
     align: left
 gallery:
   - image: /images/20260114102847-1.jpg
-    layout: small
+    layout: half
+    shape: original
+    focus: center
+    zoom: "1"
+  - image: /images/20260113210242-1.jpg
+    layout: full
     shape: original
     focus: center
     zoom: "1"
