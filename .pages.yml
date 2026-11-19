@@ -462,95 +462,121 @@ content:
     type: file
     path: src/_data/work.json
     fields:
-      - { name: kicker, label: Small line above the heading, type: string }
-      - { name: heading, label: Heading, type: string }
-      - { name: lead, label: Intro sentence, type: text }
+      - { name: kicker, label: "Small gold line above the heading", type: string }
+      - { name: heading, label: "Heading", type: string }
+      - { name: lead, label: "Intro sentence", type: text }
       - name: heroImage
-        label: Wide photo under the intro
+        label: "Photo at the top (the only photo on the page)"
         type: image
         options:
           extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
-      - { name: heroAlt, label: Wide photo description, type: string }
-      - name: aboutImage
-        label: About me photo
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
-      - { name: aboutAlt, label: About me photo description, type: string }
-      - { name: aboutHeading, label: About me — heading, type: string }
-      - { name: about, label: "About me — text (blank line = new paragraph)", type: text }
-      - name: facts
-        label: About me — facts
-        type: object
-        list: true
-        fields:
-          - { name: label, label: Label, type: string }
-          - { name: text, label: Text, type: string }
-      - { name: servicesHeading, label: Services — heading, type: string }
-      - { name: servicesIntro, label: Services — intro, type: text }
+      - { name: heroAlt, label: "Photo description", type: string }
+      - { name: ctaContact, label: "Button that scrolls to About me", type: string }
+      - { name: pdf, label: "Proposal PDF link (file in src/assets)", type: string }
+      - { name: pdfLabel, label: "PDF button text", type: string }
+      - { name: offerLabel, label: "What I do — small label", type: string }
+      - { name: offerHeading, label: "What I do — heading", type: string }
       - name: services
-        label: Services
+        label: "What I do — three points"
         type: object
         list: true
         fields:
-          - { name: title, label: Title, type: string }
-          - { name: text, label: Text, type: text }
-          - { name: tags, label: "Keywords (separate with ·)", type: string }
-      - { name: destinationsHeading, label: Destinations — heading, type: string }
-      - name: destinations
-        label: Destinations
+          - { name: title, label: "Title", type: string }
+          - { name: text, label: "Text", type: text }
+      - { name: servicesNote, label: "Line under the three points", type: string }
+      - { name: whyLabel, label: "Why it works — small label", type: string }
+      - { name: whyHeading, label: "Why it works — heading", type: string }
+      - name: reasons
+        label: "Why it works — points"
         type: object
         list: true
         fields:
-          - { name: name, label: Country, type: string }
-          - name: image
-            label: Photo
-            type: image
-            options:
-              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
-          - { name: focus, label: "Which band shows (0–100)", type: number }
-          - { name: text, label: Text, type: text }
-      - { name: sampleKicker, label: Sample expedition — small label, type: string }
-      - { name: sampleHeading, label: Sample expedition — heading, type: string }
-      - name: sampleFacts
-        label: Sample expedition — facts
+          - { name: title, label: "Title", type: string }
+          - { name: text, label: "Text", type: text }
+      - { name: placesLabel, label: "Where — small label", type: string }
+      - { name: places, label: "Where — countries (separate with ·)", type: string }
+      - { name: stepsLabel, label: "How we start — small label", type: string }
+      - name: steps
+        label: "How we start — steps"
         type: object
         list: true
         fields:
-          - { name: label, label: Label, type: string }
-          - { name: text, label: Text, type: string }
-      - name: sampleDays
-        label: Sample expedition — day by day
+          - { name: title, label: "Title", type: string }
+          - { name: text, label: "Text", type: text }
+      - { name: aboutLabel, label: "About me — small label", type: string }
+      - { name: aboutHeading, label: "About me — name", type: string }
+      - { name: aboutRole, label: "About me — role", type: string }
+      - { name: about, label: "About me — text", type: text }
+      - name: facts
+        label: "About me — facts (languages, location, email…)"
         type: object
         list: true
         fields:
-          - { name: day, label: "Day (e.g. Days 2–3)", type: string }
-          - { name: text, label: Text, type: string }
-      - { name: sampleNote, label: Sample expedition — note, type: text }
-      - name: sampleImages
-        label: Sample expedition — two photos
+          - { name: label, label: "Label", type: string }
+          - { name: text, label: "Text", type: string }
+      - { name: email, label: "Email for the buttons", type: string }
+      - { name: ctaWrite, label: "Email button text", type: string }
+      - { name: note, label: "Small note at the bottom", type: text }
+  - name: saradnja
+    label: Saradnja (srpski)
+    type: file
+    path: src/_data/saradnja.json
+    fields:
+      - { name: kicker, label: "Mali zlatni red iznad naslova", type: string }
+      - { name: heading, label: "Naslov", type: string }
+      - { name: lead, label: "Uvodna rečenica", type: text }
+      - name: heroImage
+        label: "Fotografija na vrhu (jedina na strani)"
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+      - { name: heroAlt, label: "Opis fotografije", type: string }
+      - { name: ctaContact, label: "Dugme koje vodi do „O meni“", type: string }
+      - { name: pdf, label: "Link do PDF-a (fajl u src/assets)", type: string }
+      - { name: pdfLabel, label: "Tekst dugmeta za PDF", type: string }
+      - { name: offerLabel, label: "Šta radim — mali naslov", type: string }
+      - { name: offerHeading, label: "Šta radim — naslov", type: string }
+      - name: services
+        label: "Šta radim — tri tačke"
         type: object
         list: true
         fields:
-          - name: image
-            label: Photo
-            type: image
-            options:
-              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
-          - { name: alt, label: Description, type: string }
-          - { name: focus, label: "Which band shows (0–100)", type: number }
-      - { name: valueHeading, label: Green section — heading, type: string }
-      - { name: valueIntro, label: Green section — intro, type: text }
-      - name: values
-        label: Green section — six points
+          - { name: title, label: "Naslov", type: string }
+          - { name: text, label: "Tekst", type: text }
+      - { name: servicesNote, label: "Red ispod tri tačke", type: string }
+      - { name: whyLabel, label: "Zašto funkcioniše — mali naslov", type: string }
+      - { name: whyHeading, label: "Zašto funkcioniše — naslov", type: string }
+      - name: reasons
+        label: "Zašto funkcioniše — tačke"
         type: object
         list: true
         fields:
-          - { name: title, label: Title, type: string }
-          - { name: text, label: Text, type: text }
-      - { name: valueNote, label: Green section — note, type: text }
-      - { name: contactHeading, label: Contact — heading, type: string }
-      - { name: contactText, label: Contact — text, type: text }
-      - { name: email, label: Email, type: string }
-      - { name: pdf, label: "Proposal PDF link (the file lives in src/assets)", type: string }
-      - { name: pdfLabel, label: Download button text, type: string }
+          - { name: title, label: "Naslov", type: string }
+          - { name: text, label: "Tekst", type: text }
+      - { name: placesLabel, label: "Gde — mali naslov", type: string }
+      - { name: places, label: "Gde — zemlje (odvoji sa ·)", type: string }
+      - { name: stepsLabel, label: "Kako počinjemo — mali naslov", type: string }
+      - name: steps
+        label: "Kako počinjemo — koraci"
+        type: object
+        list: true
+        fields:
+          - { name: title, label: "Naslov", type: string }
+          - { name: text, label: "Tekst", type: text }
+      - { name: aboutLabel, label: "O meni — mali naslov", type: string }
+      - { name: aboutHeading, label: "O meni — ime", type: string }
+      - { name: aboutRole, label: "O meni — uloga", type: string }
+      - { name: about, label: "O meni — tekst", type: text }
+      - name: facts
+        label: "O meni — podaci (jezici, lokacija, e-pošta…)"
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Oznaka", type: string }
+          - { name: text, label: "Tekst", type: string }
+      - { name: email, label: "E-pošta za dugmad", type: string }
+      - { name: ctaWrite, label: "Tekst dugmeta za e-poštu", type: string }
+      - { name: note, label: "Mala napomena na dnu", type: text }
+      - { name: bandTitle, label: "Zeleni pojas na početnoj — naslov", type: string }
+      - { name: bandText, label: "Zeleni pojas na početnoj — tekst", type: text }
+      - { name: bandLink, label: "Zeleni pojas na početnoj — dugme", type: string }

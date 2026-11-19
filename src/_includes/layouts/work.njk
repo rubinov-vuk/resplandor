@@ -1,0 +1,72 @@
+---
+layout: layouts/base.njk
+---
+{# Work with me / Saradnja: short segments that carry the idea of the proposal, and a personal
+   section at the bottom (#contact). English text: src/_data/work.json, Serbian: src/_data/saradnja.json. #}
+{% set w = work if english else saradnja %}
+
+<section class="work-hero container">
+  <p class="work-kicker">{{ w.kicker }}</p>
+  <h1 class="work-heading">{{ w.heading }}</h1>
+  <p class="work-lead">{{ w.lead }}</p>
+  <div class="work-actions">
+    <a class="en-button en-button--solid" href="#contact">{{ w.ctaContact }}
+      <svg width="12" height="16" viewBox="0 0 12 16" fill="none" aria-hidden="true"><path d="M6 1v14M1 10l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <a class="en-button" href="{{ w.pdf }}" download>{{ w.pdfLabel }}</a>
+  </div>
+</section>
+<div class="work-hero-photo"><img src="{{ w.heroImage }}" alt="{{ w.heroAlt }}" sizes="(min-width: 1440px) 1090px, 90vw" loading="eager"></div>
+
+<section class="work-section container">
+  <p class="work-label">{{ w.offerLabel }}</p>
+  <h2 class="work-h2">{{ w.offerHeading }}</h2>
+  <ol class="work-services">
+    {% for s in w.services %}
+    <li><span class="work-num">{{ "0" + loop.index }}</span><h3>{{ s.title }}</h3><p>{{ s.text }}</p></li>
+    {% endfor %}
+  </ol>
+  {% if w.servicesNote %}<p class="work-aside">{{ w.servicesNote }}</p>{% endif %}
+</section>
+
+<section class="work-section container">
+  <p class="work-label">{{ w.whyLabel }}</p>
+  <h2 class="work-h2">{{ w.whyHeading }}</h2>
+  <div class="work-reasons">
+    {% for r in w.reasons %}<div><h3>{{ r.title }}</h3><p>{{ r.text }}</p></div>{% endfor %}
+  </div>
+</section>
+
+<section class="work-section work-places container">
+  <p class="work-label">{{ w.placesLabel }}</p>
+  <p class="work-places-list">{{ w.places }}</p>
+</section>
+
+<section class="work-section container">
+  <p class="work-label">{{ w.stepsLabel }}</p>
+  <ol class="work-steps">
+    {% for s in w.steps %}<li><span class="work-step-dot" aria-hidden="true"></span><h3>{{ s.title }}</h3><p>{{ s.text }}</p></li>{% endfor %}
+  </ol>
+</section>
+
+{# Personal section: who I am and how to reach me — the "Get in touch" button scrolls here #}
+<section class="work-contact" id="contact">
+  <div class="work-contact-inner container">
+    <div>
+      <p class="work-label">{{ w.aboutLabel }}</p>
+      <h2 class="work-contact-name">{{ w.aboutHeading }}</h2>
+      <p class="work-contact-role">{{ w.aboutRole }}</p>
+      <p class="work-contact-about">{{ w.about }}</p>
+    </div>
+    <div>
+      <dl class="work-facts">
+        {% for f in w.facts %}<div><dt>{{ f.label }}</dt><dd>{{ f.text }}</dd></div>{% endfor %}
+      </dl>
+      <div class="work-actions">
+        <a class="en-button en-button--light" href="mailto:{{ w.email }}">{{ w.ctaWrite }}</a>
+        <a class="en-button en-button--outline-light" href="{{ w.pdf }}" download>{{ w.pdfLabel }}</a>
+      </div>
+      {% if w.note %}<p class="work-note">{{ w.note }}</p>{% endif %}
+    </div>
+  </div>
+</section>

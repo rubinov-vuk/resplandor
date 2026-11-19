@@ -1,0 +1,55 @@
+{
+  "kicker": "Saradnja · Nezavisni konsultant za putovanja",
+  "heading": "Latinska Amerika, izvan uobičajenih okvira.",
+  "lead": "Partner sa terena za turističke agencije: pomažem vam da Latinsku Ameriku razvijete kao pouzdan i prepoznatljiv deo ponude, od prve ideje do grupe na terenu.",
+  "heroImage": "/images/20260323_104750.jpg",
+  "heroAlt": "Kolonijalni lukovi u Antigvi, Gvatemala, sa vulkanom u pozadini",
+  "ctaContact": "Kontakt",
+  "pdf": "/assets/Vuk-Joksimovic-predlog-saradnje.pdf",
+  "pdfLabel": "Preuzmi predlog saradnje (PDF)",
+
+  "offerLabel": "Šta radim",
+  "offerHeading": "Tri oblika saradnje.",
+  "services": [
+    { "title": "Osmišljavam putovanje", "text": "Rute, ritam i iskustva, pretočeni u itinerer koji odgovara vašim putnicima." },
+    { "title": "Koordinišem na terenu", "text": "Smeštaj, prevoz, vodiči i lokalni dobavljači — dogovoreni na španskom, u skladu sa vašim procedurama." },
+    { "title": "Vodim grupu", "text": "Na terenu sa vašim putnicima, iz dana u dan, rešavajući sve što put donese." }
+  ],
+  "servicesNote": "Izaberite jedan deo, ili ceo put od prve ideje do terena.",
+
+  "whyLabel": "Zašto funkcioniše",
+  "whyHeading": "Znanje sa puta, a ne iz kataloga.",
+  "reasons": [
+    { "title": "Tri godine na terenu", "text": "Lokalni autobusi, granični prelazi, noćni putevi i porodični smeštaji — poznati iz prve ruke." },
+    { "title": "Španski bez posrednika", "text": "Direktan razgovor sa lokalnim partnerima, bez gubitaka u prevodu." },
+    { "title": "Jedna osoba, od početka do kraja", "text": "Ko osmisli program, taj ga i vodi, pa se znanje ne gubi između faza." },
+    { "title": "Vaš brend ostaje vaš", "text": "Putovanja se realizuju pod vašom licencom, ugovorima i imenom. Ja sam vaš spoljni specijalista." }
+  ],
+
+  "placesLabel": "Gde",
+  "places": "Gvatemala · Peru · Bolivija · Kolumbija · Argentina · Čile · Urugvaj · Brazil",
+
+  "stepsLabel": "Kako počinjemo",
+  "steps": [
+    { "title": "Razgovor", "text": "Ispričajte mi o vašim putnicima i šta biste želeli da ponudite." },
+    { "title": "Prvi predlog", "text": "Skiciram rutu i program, sa svim što je potrebno na terenu." },
+    { "title": "Na terenu", "text": "Zajedno ga doradimo, a ja ga koordinišem ili vodim na licu mesta." }
+  ],
+
+  "aboutLabel": "O meni",
+  "aboutHeading": "Vuk Joksimović",
+  "aboutRole": "Nezavisni konsultant za putovanja · Latinska Amerika",
+  "about": "Gotovo tri godine samostalno putujem kroz Ameriku — lokalnim autobusima, kamionetima, čamcima, vozovima i peške. O tome pišem na Resplandoru, mom putopisnom dnevniku, i želim da pomognem agencijama da grade programe za Latinsku Ameriku koji su autentični, ali i izvodljivi.",
+  "facts": [
+    { "label": "Jezici", "text": "Srpski, engleski, španski — tečno" },
+    { "label": "Lokacija", "text": "Beograd, Srbija" },
+    { "label": "E-pošta", "text": "vukjoksimovic02@gmail.com" }
+  ],
+  "email": "vukjoksimovic02@gmail.com",
+  "ctaWrite": "Pišite mi",
+  "note": "Ne nastupam kao turoperator: aranžmani se realizuju u okviru licence i procedura agencije.",
+
+  "bandTitle": "Planirate program u Latinskoj Americi?",
+  "bandText": "Sarađujem sa turističkim agencijama kao nezavisni specijalista za destinaciju: osmišljavam rute, koordinišem na terenu i vodim male grupe.",
+  "bandLink": "Saradnja"
+}

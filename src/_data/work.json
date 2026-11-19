@@ -4,66 +4,48 @@
   "lead": "A partner on the ground for travel agencies: I help you develop Latin America into a reliable and distinctive part of your portfolio, from the first idea to the group in the field.",
   "heroImage": "/images/20260323_104750.jpg",
   "heroAlt": "Colonial arches in Antigua, Guatemala, with a volcano behind",
-  "aboutImage": "/images/WhatsApp Image 2026-11-03 at 13.06.38.jpeg",
-  "aboutAlt": "Vuk walking past cacti above the Colca Canyon",
-  "aboutHeading": "Travel as a way of understanding the world.",
-  "about": "For almost three years I have travelled independently across the Americas — by local buses, trucks, boats, trains and on foot.\n\nLatin America is a land I understand first-hand: its culture, history, landscapes, people and the realities of travelling there — from border crossings and night buses to small family-run guesthouses and the markets where the day begins.\n\nI want to help agencies build more thoughtful Latin American programmes: authentic, but also workable.",
-  "facts": [
-    { "label": "Languages", "text": "English, Spanish and Serbian — fluent" },
-    { "label": "Countries", "text": "Guatemala, Colombia, Peru, Bolivia, Argentina, Chile, Uruguay, Brazil" },
-    { "label": "Based in", "text": "Belgrade, Serbia · British passport · available to travel" }
-  ],
-  "servicesHeading": "Three services, one approach.",
-  "servicesIntro": "The partnership is modular: your agency picks the part of the process it needs help with — or the whole journey, from first idea to the field.",
-  "services": [
-    { "title": "Trip development", "text": "Research and programme design, from idea to finished itinerary: choosing routes, pacing the trip and tailoring it to your audience.", "tags": "Research · Itinerary design · Route assessment · Audience fit" },
-    { "title": "On-the-ground coordination", "text": "Researching and coordinating local accommodation, transport, guides and suppliers — together with your agency and in line with its procedures.", "tags": "Accommodation · Local transport · Guides · Suppliers · Spanish" },
-    { "title": "Expedition leadership", "text": "Accompanying groups in the field, running the programme day to day and handling the practical issues that always come up on the road.", "tags": "Group leadership · On-site coordination · Partner liaison" }
-  ],
-  "destinationsHeading": "Three countries, three distinct characters.",
-  "destinations": [
-    { "name": "Guatemala", "image": "/images/antigua.png", "focus": 60, "text": "Volcanoes and living Maya traditions. Colonial Antigua, jungle with caves and turquoise rivers, and Lake Atitlán ringed by volcanoes." },
-    { "name": "Bolivia", "image": "/images/20250904_182046.jpg", "focus": 50, "text": "Snow-capped peaks, the high altiplano, endless salt flats and the Amazon — for travellers drawn to space, altitude and silence." },
-    { "name": "Argentina", "image": "/images/20260207_132210-min.jpg", "focus": 50, "text": "Vast distances and contrasts, from the red canyons of the northwest to Patagonia's lakes and glaciers, and Buenos Aires." }
-  ],
-  "sampleKicker": "Sample expedition · illustrative",
-  "sampleHeading": "Guatemala: volcanoes, jungle and the Pacific",
-  "sampleFacts": [
-    { "label": "Duration", "text": "14 days" },
-    { "label": "Route", "text": "Antigua — Acatenango — Semuc Champey — Lake Atitlán — El Paredón" },
-    { "label": "Group", "text": "Small group, 4–8 active travellers" }
-  ],
-  "sampleDays": [
-    { "day": "Day 1", "text": "Arrival in Guatemala City and transfer to Antigua." },
-    { "day": "Days 2–3", "text": "Antigua: colonial town, market, coffee and an acclimatisation hike." },
-    { "day": "Days 4–5", "text": "Acatenango climb, a night on the slopes facing active Fuego." },
-    { "day": "Day 6", "text": "Rest day in Antigua." },
-    { "day": "Day 7", "text": "A long travel day through Alta Verapaz to Lanquín." },
-    { "day": "Days 8–9", "text": "Semuc Champey: turquoise pools, river and jungle caves." },
-    { "day": "Day 10", "text": "Transfer to Lake Atitlán." },
-    { "day": "Days 11–12", "text": "Lakeside villages, boat crossings and weaving cooperatives." },
-    { "day": "Day 13", "text": "Down to the Pacific: El Paredón, black sand and sunset." },
-    { "day": "Day 14", "text": "A morning on the coast and transfer to the airport." }
-  ],
-  "sampleNote": "An illustrative example, not an offer: no prices, suppliers or confirmed availability. Every programme is developed and checked together with the agency.",
-  "sampleImages": [
-    { "image": "/images/WhatsApp Image 2026-11-03 at 13.26.58.jpeg", "alt": "Sunset above the clouds from Acatenango", "focus": 45 },
-    { "image": "/images/WhatsApp Image 2026-11-02 at 17.42.02.jpeg", "alt": "Surfers on the black sand of El Paredón", "focus": 74 }
-  ],
-  "valueHeading": "Your brand. Your travellers. New destination expertise.",
-  "valueIntro": "Your agency keeps its brand, clients and structure — and gains a destination specialist as an external resource.",
-  "values": [
-    { "title": "First-hand knowledge", "text": "A region known from the ground, not from a catalogue: its pace, distances, transport and people." },
-    { "title": "Spanish", "text": "Direct conversations with local partners, with no extra intermediaries." },
-    { "title": "Local partners", "text": "Help finding and coordinating accommodation, transport and guides." },
-    { "title": "Flexible collaboration", "text": "By project, season or programme — on whatever scale suits you." },
-    { "title": "Content and stories", "text": "Original writing and photography through Resplandor to promote your programmes." },
-    { "title": "Design and leadership", "text": "The same person designs the programme and leads it — no knowledge lost between stages." }
-  ],
-  "valueNote": "I do not act as a tour operator. Trips are delivered under the agency's own licence, contracts and procedures.",
-  "contactHeading": "Let's build something different.",
-  "contactText": "I would be glad to present ideas for a specific programme and to discuss the kind of collaboration that suits your agency.",
-  "email": "vukjoksimovic02@gmail.com",
+  "ctaContact": "Get in touch",
   "pdf": "/assets/Vuk-Joksimovic-partnership-proposal.pdf",
-  "pdfLabel": "Download the proposal (PDF)"
+  "pdfLabel": "Download the proposal (PDF)",
+
+  "offerLabel": "What I do",
+  "offerHeading": "Three ways to work together.",
+  "services": [
+    { "title": "Design the trip", "text": "Routes, pace and experiences, shaped into an itinerary that suits your travellers." },
+    { "title": "Coordinate on the ground", "text": "Accommodation, transport, guides and local suppliers — arranged in Spanish, within your procedures." },
+    { "title": "Lead the group", "text": "In the field with your travellers, day to day, solving what the road always brings." }
+  ],
+  "servicesNote": "Pick one, or the whole journey from first idea to the field.",
+
+  "whyLabel": "Why it works",
+  "whyHeading": "Knowledge from the road, not from a catalogue.",
+  "reasons": [
+    { "title": "Three years in the field", "text": "Local buses, border crossings, night roads and family guesthouses — known first-hand." },
+    { "title": "Spanish without intermediaries", "text": "Direct conversations with local partners, so nothing is lost in translation." },
+    { "title": "One person, start to finish", "text": "The one who designs the programme also leads it, so no knowledge is lost between stages." },
+    { "title": "Your brand stays yours", "text": "Trips run under your licence, contracts and name. I work as your external specialist." }
+  ],
+
+  "placesLabel": "Where",
+  "places": "Guatemala · Peru · Bolivia · Colombia · Argentina · Chile · Uruguay · Brazil",
+
+  "stepsLabel": "How we start",
+  "steps": [
+    { "title": "A conversation", "text": "Tell me about your travellers and what you'd like to offer." },
+    { "title": "A first proposal", "text": "I sketch a route and a programme, with what it needs on the ground." },
+    { "title": "On the ground", "text": "We refine it together, and I coordinate or lead it in the field." }
+  ],
+
+  "aboutLabel": "About me",
+  "aboutHeading": "Vuk Joksimović",
+  "aboutRole": "Independent travel consultant · Latin America",
+  "about": "For almost three years I have travelled independently across the Americas, by local buses, trucks, boats, trains and on foot. I write about it on Resplandor, my travel journal, and I want to help agencies build Latin American programmes that are authentic, but also workable.",
+  "facts": [
+    { "label": "Languages", "text": "English, Spanish, Serbian — fluent" },
+    { "label": "Based in", "text": "Belgrade, Serbia · British passport" },
+    { "label": "Email", "text": "vukjoksimovic02@gmail.com" }
+  ],
+  "email": "vukjoksimovic02@gmail.com",
+  "ctaWrite": "Write to me",
+  "note": "I do not act as a tour operator: trips are delivered under the agency's own licence and procedures."
 }

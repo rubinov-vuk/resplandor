@@ -13,12 +13,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon.svg": "favicon.svg" });
 
   // Stories with "draft: true" show up while previewing locally but are never published.
-  // The English section (pages with "english: true") stays local too, until
-  // "english" is switched on in src/_data/site.json ("Podešavanja sajta" in Pages CMS).
+  // The English section (pages with "english: true") and the Serbian "Saradnja" page ("launch: true")
+  // stay local too, until "english" is switched on in src/_data/site.json ("Podešavanja sajta" in Pages CMS).
   const publishing = () => process.env.ELEVENTY_RUN_MODE === "build";
   eleventyConfig.addPreprocessor("drafts", "*", (data) => {
     if (data.draft && publishing()) return false;
-    if (data.english && !site.english && publishing()) return false;
+    if ((data.english || data.launch) && !site.english && publishing()) return false;
   });
   // Shows the EN / Work with me links: always while previewing, on the live site once switched on.
   eleventyConfig.addGlobalData("showEnglish", () => Boolean(site.english) || !publishing());

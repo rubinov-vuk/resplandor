@@ -67,6 +67,12 @@ layout: layouts/base.njk
   <p class="no-stories" id="no-stories" role="status" hidden>{{ home.noStories }}</p>
 </section>
 
+{# Leads agencies to "Saradnja" (shows once the English section and Saradnja are switched on) #}
+{% if showEnglish %}
+{% set band = { title: saradnja.bandTitle, text: saradnja.bandText, link: saradnja.bandLink, url: "/saradnja/" } %}
+{% include "partials/work-band.njk" %}
+{% endif %}
+
 <script>
   // Hero slideshow: next photo every 5 seconds; the dots jump to a photo; on phones and
   // tablets the photo can be swiped left/right. It pauses while the mouse is over it,
