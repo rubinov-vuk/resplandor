@@ -52,6 +52,12 @@ To add a new country to the filter, add it in two places: the `values` list unde
 
 Photos straight from your phone are fine. Every photo is resized and compressed automatically when the site is built.
 
+## English section and "Work with me"
+
+`/en/` holds the English stories ("Dispatches"), laid out like a book: a contents page, a narrower column, a drop cap, and chapter headings written as `## I. Title` in the text. Photos go in with `[photo 1]`. `/en/work-with-me/` is the partnership proposal as a web page for agencies, with the PDF to download from `src/assets/`.
+
+In Pages CMS, these are **Stories (English)**, **English page** and **Work with me (English)**. They show only in the local preview until **Podešavanja sajta → Objavi englesku stranu** is ticked. That also adds the SR · EN links to the header. The three sample stories are drafts, so replace or delete them first.
+
 ## Project layout
 
 | Path | What it is |

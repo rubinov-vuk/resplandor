@@ -1,0 +1,30 @@
+{# One photo, with the choices made per photo in Pages CMS:
+   layout (full, wide, screen, half, small), shape (crop to a ratio), focus (which part stays) and zoom.
+   Used by the Serbian and the English story pages: {% from "partials/photo.njk" import photo %} #}
+{% macro photo(item, fallbackAlt) %}
+  {% set layout = item.layout or "full" %}
+  {% set shape = item.shape or "original" %}
+  {% set pos = item.focus | focusPos %}
+  {% set zoom = (item.zoom or 1) | float %}
+  <figure class="story-photo story-photo--{{ layout }} shape--{{ shape }}">
+    <div class="photo-frame"{% if zoom != 1 %} data-zoom="{{ zoom }}" data-focus="{{ pos }}"{% endif %}>
+      <img src="{{ item.image }}" alt="{{ item.caption or fallbackAlt }}"
+        {% if layout == "screen" %}sizes="100vw"{% elif layout == "wide" %}sizes="(min-width: 1440px) 1090px, 100vw"{% elif layout == "half" %}sizes="(min-width: 820px) 410px, 100vw"{% endif %}
+        style="object-position: {{ pos }}">
+    </div>
+    {% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}
+  </figure>
+{% endmacro %}
+
+{# Text with [foto 1] lines swapped for photos from "Fotografije u tekstu" / "Photos in the text" #}
+{% macro textWithPhotos(html, photos, fallbackAlt, cls) %}
+  {% for part in html | splitPhotos %}
+    {% if part.photos %}
+    <div class="story-photos story-section">
+      {% for n in part.photos %}{% set item = photos[n - 1] if photos else null %}{% if item and item.image %}{{ photo(item, fallbackAlt) }}{% endif %}{% endfor %}
+    </div>
+    {% else %}
+    <div class="story-body{% if cls %} {{ cls }}{% endif %}">{{ part.html | safe }}</div>
+    {% endif %}
+  {% endfor %}
+{% endmacro %}

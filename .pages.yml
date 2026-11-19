@@ -358,3 +358,199 @@ content:
       - name: instagram
         label: Instagram link
         type: string
+      - name: english
+        label: Objavi englesku stranu i „Work with me“ na sajtu (dok nije čekirano, vide se samo kod tebe u pregledu)
+        type: boolean
+        default: false
+
+  # ---------- English section ----------
+  - name: storiesEn
+    label: Stories (English)
+    type: collection
+    path: src/en/stories
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date, draft]
+      primary: title
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: subtitle, label: "Subtitle (one line, shown under the title and in the contents)", type: string }
+      - { name: location, label: "Place (e.g. Uyuni, Bolivia)", type: string }
+      - name: coords
+        label: "Coordinates for the map — in Google Maps right-click the place, click the numbers and paste them here"
+        type: string
+      - name: country
+        label: Country (for the map)
+        type: select
+        options:
+          values: [Kanada, SAD, Gvatemala, Peru, Bolivija, Kolumbija, Argentina, Čile, Brazil]
+      - { name: date, label: Date, type: date, required: true }
+      - name: cover
+        label: Cover photo (for link previews)
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+      - name: body
+        label: "Text — ## starts a chapter heading; [photo 1] on its own line places a photo"
+        type: rich-text
+      - name: textPhotos
+        label: "Photos in the text — the first is [photo 1], the second [photo 2]… ([photo 2 3] puts two side by side)"
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            options:
+              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+          - { name: caption, label: Caption, type: string }
+          - name: layout
+            label: Layout
+            type: select
+            default: full
+            options:
+              values:
+                - { value: full, label: "Text width" }
+                - { value: wide, label: "Wide" }
+                - { value: screen, label: "Full screen" }
+                - { value: half, label: "Half (two side by side)" }
+                - { value: small, label: "Small, centred" }
+          - name: shape
+            label: Crop
+            type: select
+            default: original
+            options:
+              values:
+                - { value: original, label: "Original" }
+                - { value: landscape, label: "Landscape 3:2" }
+                - { value: wide, label: "Wide 16:9" }
+                - { value: panorama, label: "Panorama 21:9" }
+                - { value: square, label: "Square" }
+                - { value: portrait, label: "Portrait 4:5" }
+          - name: focus
+            label: Which part stays when cropped
+            type: select
+            default: center
+            options:
+              values: [center, top, bottom, left, right]
+      - { name: draft, label: "Draft (don't publish yet)", type: boolean, default: false }
+
+  - name: en
+    label: English page
+    type: file
+    path: src/_data/en.json
+    fields:
+      - name: photo
+        label: Photo at the top
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+      - { name: photoAlt, label: Photo description, type: string }
+      - { name: photoFocus, label: "Which band shows (0 = top, 50 = middle, 100 = bottom)", type: number }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: "Intro (blank line = new paragraph)", type: text }
+      - { name: contentsHeading, label: "„Contents“ label", type: string }
+      - { name: workTitle, label: Green box — title, type: string }
+      - { name: workText, label: Green box — text, type: text }
+      - { name: workLink, label: Green box — button, type: string }
+
+  - name: work
+    label: Work with me (English)
+    type: file
+    path: src/_data/work.json
+    fields:
+      - { name: kicker, label: Small line above the heading, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: lead, label: Intro sentence, type: text }
+      - name: heroImage
+        label: Wide photo under the intro
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+      - { name: heroAlt, label: Wide photo description, type: string }
+      - name: aboutImage
+        label: About me photo
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+      - { name: aboutAlt, label: About me photo description, type: string }
+      - { name: aboutHeading, label: About me — heading, type: string }
+      - { name: about, label: "About me — text (blank line = new paragraph)", type: text }
+      - name: facts
+        label: About me — facts
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: text, label: Text, type: string }
+      - { name: servicesHeading, label: Services — heading, type: string }
+      - { name: servicesIntro, label: Services — intro, type: text }
+      - name: services
+        label: Services
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: tags, label: "Keywords (separate with ·)", type: string }
+      - { name: destinationsHeading, label: Destinations — heading, type: string }
+      - name: destinations
+        label: Destinations
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Country, type: string }
+          - name: image
+            label: Photo
+            type: image
+            options:
+              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+          - { name: focus, label: "Which band shows (0–100)", type: number }
+          - { name: text, label: Text, type: text }
+      - { name: sampleKicker, label: Sample expedition — small label, type: string }
+      - { name: sampleHeading, label: Sample expedition — heading, type: string }
+      - name: sampleFacts
+        label: Sample expedition — facts
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: text, label: Text, type: string }
+      - name: sampleDays
+        label: Sample expedition — day by day
+        type: object
+        list: true
+        fields:
+          - { name: day, label: "Day (e.g. Days 2–3)", type: string }
+          - { name: text, label: Text, type: string }
+      - { name: sampleNote, label: Sample expedition — note, type: text }
+      - name: sampleImages
+        label: Sample expedition — two photos
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            options:
+              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+          - { name: alt, label: Description, type: string }
+          - { name: focus, label: "Which band shows (0–100)", type: number }
+      - { name: valueHeading, label: Green section — heading, type: string }
+      - { name: valueIntro, label: Green section — intro, type: text }
+      - name: values
+        label: Green section — six points
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: text }
+      - { name: valueNote, label: Green section — note, type: text }
+      - { name: contactHeading, label: Contact — heading, type: string }
+      - { name: contactText, label: Contact — text, type: text }
+      - { name: email, label: Email, type: string }
+      - { name: pdf, label: "Proposal PDF link (the file lives in src/assets)", type: string }
+      - { name: pdfLabel, label: Download button text, type: string }

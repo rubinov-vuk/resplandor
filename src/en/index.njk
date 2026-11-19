@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+title: Dispatches from the South
+description: Long-form travel stories from Latin America, written in English.
+permalink: /en/
+---
+{# English landing page: one calm photo, a short intro and a table of contents, like the opening of a book #}
+<section class="en-hero">
+  <img src="{{ en.photo }}" alt="{{ en.photoAlt }}" sizes="(min-width: 1440px) 1090px, 90vw" loading="eager" fetchpriority="high"
+    style="object-position: 50% {{ en.photoFocus if en.photoFocus != null else 50 }}%">
+</section>
+
+<section class="en-intro container-narrow">
+  <p class="en-kicker">Resplandor · In English</p>
+  <h1 class="en-heading">{{ en.heading }}</h1>
+  {% for p in en.intro | paragraphs %}<p>{{ p }}</p>{% endfor %}
+</section>
+
+<section class="en-contents container-narrow" aria-labelledby="contents">
+  <h2 id="contents" class="en-contents-title">{{ en.contentsHeading }}</h2>
+  <ol class="en-toc">
+    {% for story in collections.storiesEn %}
+    <li>
+      <a href="{{ story.url }}">
+        <span class="en-toc-num">{{ loop.index | roman }}</span>
+        <span class="en-toc-main">
+          <span class="en-toc-title">{{ story.data.title }}</span>
+          {% if story.data.subtitle %}<span class="en-toc-sub">{{ story.data.subtitle }}</span>{% endif %}
+        </span>
+        <span class="en-toc-place">{{ story.data.location }}<br><time datetime="{{ story.date | isoDate }}">{{ story.date | enDate }}</time></span>
+      </a>
+    </li>
+    {% else %}
+    <li class="en-toc-empty">The first dispatch is on its way.</li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="en-work-band container-narrow">
+  <p class="en-work-title">{{ en.workTitle }}</p>
+  <p>{{ en.workText }}</p>
+  <a class="en-button" href="/en/work-with-me/">{{ en.workLink }}
+    <svg width="25" height="12" viewBox="0 0 25 12" fill="none" aria-hidden="true"><path d="M0.75 6H24.25M19 0.75L24.25 6L19 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>

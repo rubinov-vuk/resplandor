@@ -1,0 +1,105 @@
+---
+layout: layouts/base.njk
+title: Work with me
+description: Independent travel consultant for Latin America — trip development, on-the-ground coordination and expedition leadership for travel agencies.
+permalink: /en/work-with-me/
+---
+{# "Work with me": the partnership proposal as a web page for agencies. All text is in src/_data/work.json ("Work with me" in Pages CMS). #}
+{% set w = work %}
+
+<section class="work-hero container">
+  <p class="en-kicker">{{ w.kicker }}</p>
+  <h1 class="work-heading">{{ w.heading }}</h1>
+  <p class="work-lead">{{ w.lead }}</p>
+  <div class="work-hero-actions">
+    <a class="en-button en-button--solid" href="mailto:{{ w.email }}">Get in touch</a>
+    <a class="en-button" href="{{ w.pdf }}" download>{{ w.pdfLabel }}</a>
+  </div>
+</section>
+<div class="work-hero-photo"><img src="{{ w.heroImage }}" alt="{{ w.heroAlt }}" sizes="(min-width: 1440px) 1090px, 90vw" loading="eager"></div>
+
+<section class="work-section work-about container">
+  <div class="work-about-photo"><img src="{{ w.aboutImage }}" alt="{{ w.aboutAlt }}" sizes="(min-width: 820px) 400px, 100vw"></div>
+  <div class="work-about-text">
+    <p class="work-label">01 — About me</p>
+    <h2 class="work-h2">{{ w.aboutHeading }}</h2>
+    {% for p in w.about | paragraphs %}<p>{{ p }}</p>{% endfor %}
+    <dl class="work-facts">
+      {% for f in w.facts %}<div><dt>{{ f.label }}</dt><dd>{{ f.text }}</dd></div>{% endfor %}
+    </dl>
+  </div>
+</section>
+
+<section class="work-section container">
+  <p class="work-label">02 — How we work together</p>
+  <h2 class="work-h2">{{ w.servicesHeading }}</h2>
+  <p class="work-intro">{{ w.servicesIntro }}</p>
+  <div class="work-services">
+    {% for s in w.services %}
+    <article class="work-service">
+      <p class="work-num">{{ "0" + loop.index }}</p>
+      <h3>{{ s.title }}</h3>
+      <p>{{ s.text }}</p>
+      <p class="work-tags">{{ s.tags }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="work-section container">
+  <p class="work-label">03 — Destinations</p>
+  <h2 class="work-h2">{{ w.destinationsHeading }}</h2>
+  <div class="work-destinations">
+    {% for d in w.destinations %}
+    <article class="work-destination">
+      <div class="work-destination-photo"><img src="{{ d.image }}" alt="{{ d.name }}" sizes="(min-width: 820px) 360px, 100vw" style="object-position: 50% {{ d.focus }}%"></div>
+      <h3>{{ d.name }}</h3>
+      <p>{{ d.text }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="work-section container">
+  <p class="work-label">04 — {{ w.sampleKicker }}</p>
+  <h2 class="work-h2">{{ w.sampleHeading }}</h2>
+  <div class="work-sample">
+    <div>
+      <dl class="work-facts work-facts--rows">
+        {% for f in w.sampleFacts %}<div><dt>{{ f.label }}</dt><dd>{{ f.text }}</dd></div>{% endfor %}
+      </dl>
+      <p class="work-note">{{ w.sampleNote }}</p>
+    </div>
+    <ol class="work-days">
+      {% for d in w.sampleDays %}<li><span>{{ d.day }}</span>{{ d.text }}</li>{% endfor %}
+    </ol>
+  </div>
+  <div class="work-sample-photos">
+    {% for p in w.sampleImages %}<div><img src="{{ p.image }}" alt="{{ p.alt }}" sizes="(min-width: 820px) 540px, 100vw" style="object-position: 50% {{ p.focus }}%"></div>{% endfor %}
+  </div>
+</section>
+
+<section class="work-value">
+  <div class="container">
+    <p class="work-label">05 — Value for your agency</p>
+    <h2 class="work-h2">{{ w.valueHeading }}</h2>
+    <p class="work-intro">{{ w.valueIntro }}</p>
+    <div class="work-values">
+      {% for v in w.values %}
+      <div><p class="work-num">{{ "0" + loop.index }}</p><h3>{{ v.title }}</h3><p>{{ v.text }}</p></div>
+      {% endfor %}
+    </div>
+    <p class="work-note">{{ w.valueNote }}</p>
+  </div>
+</section>
+
+<section class="work-contact container-narrow">
+  <p class="work-label">06 — Contact</p>
+  <h2 class="work-heading work-heading--small">{{ w.contactHeading }}</h2>
+  <p class="work-lead">{{ w.contactText }}</p>
+  <p class="work-email"><a href="mailto:{{ w.email }}">{{ w.email }}</a></p>
+  <div class="work-hero-actions">
+    <a class="en-button en-button--solid" href="mailto:{{ w.email }}">Write to me</a>
+    <a class="en-button" href="{{ w.pdf }}" download>{{ w.pdfLabel }}</a>
+  </div>
+</section>

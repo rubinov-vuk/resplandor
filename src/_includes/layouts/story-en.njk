@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+---
+{# English story: reads like a chapter of a book — narrower column, drop cap,
+   chapter headings (## in the text), reading time. Same photos and map as the Serbian pages. #}
+{% from "partials/photo.njk" import photo, textWithPhotos %}
+{% set number = (collections.storiesEn | getCollectionItemIndex(page)) + 1 %}
+
+<article class="story story-en container-narrow">
+  <p class="en-kicker">Dispatch {{ number | roman }}<span aria-hidden="true"> · </span>{{ content | readingTime }} min read</p>
+  <h1 class="story-title">{{ title }}</h1>
+  {% if subtitle %}<p class="en-subtitle">{{ subtitle }}</p>{% endif %}
+  <p class="meta"><span>{{ location }}</span><time datetime="{{ page.date | isoDate }}">{{ page.date | enDate }}</time></p>
+
+  {% set map = country | miniMap(coords) %}
+  {% if map %}<div class="story-map">{{ map.svg | safe }}</div>{% endif %}
+
+  <div class="en-text">
+    {{ textWithPhotos(content, textPhotos, title) }}
+  </div>
+
+  <p class="en-end" aria-hidden="true">✦</p>
+
+  {% set next = collections.storiesEn | nextStory(page.url) %}
+  {% if next and next.url != page.url %}
+  <a class="next-story" href="{{ next.url }}">
+    <span class="next-label">
+      <svg width="25" height="12" viewBox="0 0 25 12" fill="none" aria-hidden="true"><path d="M0.75 6H24.25M19 0.75L24.25 6L19 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Next dispatch
+    </span>
+    <span class="next-title">{{ next.data.title }}</span>
+  </a>
+  {% endif %}
+</article>
+
+{% include "partials/photo-zoom.njk" %}

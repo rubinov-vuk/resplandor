@@ -13,9 +13,34 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon.svg": "favicon.svg" });
 
   // Stories with "draft: true" show up while previewing locally but are never published.
+  // The English section (pages with "english: true") stays local too, until
+  // "english" is switched on in src/_data/site.json ("Podešavanja sajta" in Pages CMS).
+  const publishing = () => process.env.ELEVENTY_RUN_MODE === "build";
   eleventyConfig.addPreprocessor("drafts", "*", (data) => {
-    if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") return false;
+    if (data.draft && publishing()) return false;
+    if (data.english && !site.english && publishing()) return false;
   });
+  // Shows the EN / Work with me links: always while previewing, on the live site once switched on.
+  eleventyConfig.addGlobalData("showEnglish", () => Boolean(site.english) || !publishing());
+
+  // English stories ("Dispatches"), oldest first like the Serbian ones.
+  eleventyConfig.addCollection("storiesEn", (api) =>
+    api.getFilteredByGlob("src/en/stories/*.md").sort((a, b) => a.date - b.date)
+  );
+  // "14 min read" (about 230 words a minute)
+  eleventyConfig.addFilter("readingTime", (html = "") =>
+    Math.max(1, Math.round(String(html).replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length / 230))
+  );
+  // 1 → I, 4 → IV … for the English table of contents
+  eleventyConfig.addFilter("roman", (n) => {
+    let out = "", v = Number(n);
+    for (const [r, x] of [["M", 1000], ["CM", 900], ["D", 500], ["CD", 400], ["C", 100], ["XC", 90], ["L", 50], ["XL", 40], ["X", 10], ["IX", 9], ["V", 5], ["IV", 4], ["I", 1]])
+      while (v >= x) (out += r), (v -= x);
+    return out;
+  });
+  eleventyConfig.addFilter("enDate", (value) =>
+    new Date(value).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })
+  );
 
   // Oldest story first, so readers follow the journey from the beginning to now.
   eleventyConfig.addCollection("stories", (api) =>
@@ -58,7 +83,7 @@ export default function (eleventyConfig) {
   // Photos inside the text: a line with only [foto 1] (or [foto 2 3], [foto 2, 3], [foto 2 i 3])
   // is replaced by those photos from the story's "Fotografije u tekstu" list (1 = first photo).
   // Splits the finished HTML into text pieces and photo rows for the story template.
-  const PHOTO_MARK = /<p>\s*\\?\[\s*(?:foto(?:grafija|grafije)?|slika|slike)\s*([\d\s,i+&]+?)\s*\\?\]\s*<\/p>/gi;
+  const PHOTO_MARK = /<p>\s*\\?\[\s*(?:foto(?:grafija|grafije)?|slika|slike|photos?|image)\s*([\d\s,i+&]+?)\s*\\?\]\s*<\/p>/gi;
   eleventyConfig.addFilter("splitPhotos", (html = "") => {
     const parts = [];
     let last = 0;

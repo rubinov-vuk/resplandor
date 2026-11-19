@@ -1,4 +1,16 @@
 <header class="site-header">
-  <a class="logo" href="/" aria-label="{{ site.title }} — početna">RESPLAND<span class="logo-sun">O</span>R</a>
+  <a class="logo" href="{{ '/en/' if english else '/' }}" aria-label="{{ site.title }} — {{ 'home' if english else 'početna' }}">RESPLAND<span class="logo-sun">O</span>R</a>
   <span class="header-line" aria-hidden="true"></span>
+  {# Small links sitting on the gold line: SR · EN, and Work with me on the English pages #}
+  {% if showEnglish %}
+  <nav class="header-nav" aria-label="{{ 'Language and pages' if english else 'Jezik' }}">
+    {% if english %}
+    <a href="/en/"{% if page.url == "/en/" %} aria-current="page"{% endif %}>Stories</a>
+    <a href="/en/work-with-me/"{% if page.url == "/en/work-with-me/" %} aria-current="page"{% endif %}>Work with me</a>
+    <span class="header-lang"><a href="/" lang="sr" hreflang="sr">SR</a> · <b>EN</b></span>
+    {% else %}
+    <span class="header-lang"><b>SR</b> · <a href="/en/" lang="en" hreflang="en">EN</a></span>
+    {% endif %}
+  </nav>
+  {% endif %}
 </header>
