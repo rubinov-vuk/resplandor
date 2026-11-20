@@ -457,7 +457,7 @@ html { scroll-behavior: smooth; }
 .work-heading { margin: 0 0 26px; font: 500 clamp(40px, 5.2vw, 72px)/1.05 var(--display); letter-spacing: -0.015em; }
 .work-lead { margin: 0 0 34px; max-width: 680px; font: italic 22px/1.55 var(--serif); color: var(--body); }
 .work-actions { display: flex; flex-wrap: wrap; gap: 14px; }
-.work-hero-photo { margin: 70px 0 0; aspect-ratio: 2 / 1; max-height: 85vh; width: 100%; overflow: hidden; }
+.work-hero-photo { margin: 70px var(--gutter) 0; height: min(50vw, 85vh); overflow: hidden; }
 .work-hero-photo img { width: 100%; height: 100%; object-fit: cover; }
 .work-hero-photo picture { display: contents; }
 
@@ -472,9 +472,9 @@ html { scroll-behavior: smooth; }
 .work-section p { margin: 0; font: 16px/1.65 var(--serif); color: var(--body); }
 
 /* What I do: three short columns */
-.work-services { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+.work-services { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--accent); }
 .work-services li { padding: 28px 32px 0 0; }
-.work-services li + li { padding-left: 32px; border-left: 1px solid #e4ddd0; }
+.work-services li + li { padding-left: 32px; border-left: 1px solid rgba(184, 119, 52, .45); }
 .work-num { display: block; margin-bottom: 14px; font: 500 40px/1 var(--display); color: var(--accent); }
 .work-section .work-aside { margin-top: 34px; font: italic 17px/1.6 var(--serif); }
 
@@ -583,7 +583,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .work-section { padding-top: 72px; }
   .work-h2 { margin-bottom: 28px; }
   .work-services, .work-reasons, .work-steps, .work-contact-inner { grid-template-columns: 1fr; }
-  .work-services li, .work-services li + li { padding: 24px 0; border-left: 0; border-bottom: 1px solid #e4ddd0; }
+  .work-services li, .work-services li + li { padding: 24px 0; border-left: 0; border-bottom: 1px solid rgba(184, 119, 52, .45); }
   .work-steps { gap: 26px; }
   .work-steps::before { left: 6px; right: auto; top: 6px; bottom: 6px; width: 1px; height: auto; }
   .work-steps li { padding: 0 0 0 34px; }

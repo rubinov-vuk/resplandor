@@ -1,7 +1,7 @@
 {
   "kicker": "Work with me · Independent travel consultant",
   "heading": "Latin America, beyond the beaten track.",
-  "lead": "A partner on the ground for travel agencies: I help you develop Latin America into a reliable and distinctive part of your portfolio, from collaboration to work on the ground.",
+  "lead": "An on-ground partner for travel agencies: I help you develop Latin America into a reliable and distinctive part of your portfolio, from collaboration to work in the field.",
   "heroImage": "/images/dscn0346.jpg",
   "heroAlt": "Buses on the altiplano below the snowy peak of Huayna Potosí, Bolivia",
   "heroFocus": 58,
@@ -13,15 +13,15 @@
   "offerHeading": "Three ways to work together.",
   "services": [
     { "title": "Designing the trip", "text": "Routes, pace and experiences, shaped into an itinerary that suits your travellers." },
-    { "title": "Coordinating on the ground", "text": "Accommodation, transport, guides and local suppliers — arranged in Spanish, within your procedures." },
-    { "title": "Support along the way", "text": "With your group in the field, day by day, ready for whatever comes up." }
+    { "title": "Trip coordination", "text": "Accommodation, transport, guides and local suppliers — arranged in Spanish." },
+    { "title": "Support along the way", "text": "I will be with your group on the road, day by day, leading and supporting." }
   ],
   "servicesNote": "Pick one, or the whole journey from first idea to the field.",
 
   "whyLabel": "Why it works",
   "whyHeading": "Knowledge from the road, not from a catalogue.",
   "reasons": [
-    { "title": "Three years in the field", "text": "Hidden gems, border crossings, local transport and accommodation — known first-hand." },
+    { "title": "Three years in the field", "text": "Hidden gems, border crossings, local transport and accommodation — first-hand knowledge." },
     { "title": "Spanish without intermediaries", "text": "Direct conversations with local partners, so nothing is lost in translation." },
     { "title": "One person, start to finish", "text": "The same person designs the itinerary and runs it on the ground, so no detail falls through the cracks." },
     { "title": "Your brand stays yours", "text": "Trips run under your licence, contracts and name. I work as your external specialist." }
@@ -48,5 +48,5 @@
   ],
   "email": "vukjoksimovic02@gmail.com",
   "ctaWrite": "Write to me",
-  "note": "I do not act as a tour operator: trips are delivered under the agency's own licence and procedures."
+  "note": ""
 }
