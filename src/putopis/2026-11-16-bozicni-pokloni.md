@@ -1,6 +1,7 @@
 ---
 title: Božićni Pokloni
 location: No Man's Land
+coords: "-40.7136, -71.9497"
 country: Argentina
 date: 2026-01-07
 cover: /images/20260107182330-1.jpg
