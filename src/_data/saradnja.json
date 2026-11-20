@@ -32,8 +32,8 @@
   "stepsLabel": "Kako počinjemo",
   "steps": [
     { "title": "Razgovor", "text": "Ispričajte mi o vašim putnicima i šta biste želeli da ponudite." },
-    { "title": "Predlog", "text": "Na osnovu razgovora pripremam rutu i program, sa svim što je potrebno na terenu." },
-    { "title": "Sprovođenje", "text": "Zajedno doradimo program, a ja ga koordinišem i pratim grupu na licu mesta." }
+    { "title": "Predlog", "text": "Na osnovu razgovora pripremam rutu i itinerer, i preuzimam komunikaciju sa domaćinima, vodičima i hotelima." },
+    { "title": "Sprovođenje", "text": "Zajedno doradimo itinerer, a ja ga koordinišem i pratim grupu na licu mesta." }
   ],
 
   "aboutLabel": "O meni",

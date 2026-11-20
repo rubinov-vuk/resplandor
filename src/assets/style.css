@@ -457,7 +457,7 @@ html { scroll-behavior: smooth; }
 .work-heading { margin: 0 0 26px; font: 500 clamp(40px, 5.2vw, 72px)/1.05 var(--display); letter-spacing: -0.015em; }
 .work-lead { margin: 0 0 34px; max-width: 680px; font: italic 22px/1.55 var(--serif); color: var(--body); }
 .work-actions { display: flex; flex-wrap: wrap; gap: 14px; }
-.work-hero-photo { margin: 70px var(--gutter) 0; aspect-ratio: 21 / 9; overflow: hidden; }
+.work-hero-photo { margin: 70px 0 0; aspect-ratio: 2 / 1; max-height: 85vh; width: 100%; overflow: hidden; }
 .work-hero-photo img { width: 100%; height: 100%; object-fit: cover; }
 .work-hero-photo picture { display: contents; }
 

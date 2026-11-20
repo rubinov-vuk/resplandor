@@ -1,9 +1,10 @@
 {
   "kicker": "Work with me · Independent travel consultant",
   "heading": "Latin America, beyond the beaten track.",
-  "lead": "A partner on the ground for travel agencies: I help you develop Latin America into a reliable and distinctive part of your portfolio, from the first idea to the group in the field.",
-  "heroImage": "/images/20260323_104750.jpg",
-  "heroAlt": "Colonial arches in Antigua, Guatemala, with a volcano behind",
+  "lead": "A partner on the ground for travel agencies: I help you develop Latin America into a reliable and distinctive part of your portfolio, from collaboration to work on the ground.",
+  "heroImage": "/images/dscn0346.jpg",
+  "heroAlt": "Buses on the altiplano below the snowy peak of Huayna Potosí, Bolivia",
+  "heroFocus": 58,
   "ctaContact": "Get in touch",
   "pdf": "/assets/Vuk-Joksimovic-partnership-proposal.pdf",
   "pdfLabel": "Download the proposal (PDF)",
@@ -11,18 +12,18 @@
   "offerLabel": "What I do",
   "offerHeading": "Three ways to work together.",
   "services": [
-    { "title": "Design the trip", "text": "Routes, pace and experiences, shaped into an itinerary that suits your travellers." },
-    { "title": "Coordinate on the ground", "text": "Accommodation, transport, guides and local suppliers — arranged in Spanish, within your procedures." },
-    { "title": "Lead the group", "text": "In the field with your travellers, day to day, solving what the road always brings." }
+    { "title": "Designing the trip", "text": "Routes, pace and experiences, shaped into an itinerary that suits your travellers." },
+    { "title": "Coordinating on the ground", "text": "Accommodation, transport, guides and local suppliers — arranged in Spanish, within your procedures." },
+    { "title": "Support along the way", "text": "With your group in the field, day by day, ready for whatever comes up." }
   ],
   "servicesNote": "Pick one, or the whole journey from first idea to the field.",
 
   "whyLabel": "Why it works",
   "whyHeading": "Knowledge from the road, not from a catalogue.",
   "reasons": [
-    { "title": "Three years in the field", "text": "Local buses, border crossings, night roads and family guesthouses — known first-hand." },
+    { "title": "Three years in the field", "text": "Hidden gems, border crossings, local transport and accommodation — known first-hand." },
     { "title": "Spanish without intermediaries", "text": "Direct conversations with local partners, so nothing is lost in translation." },
-    { "title": "One person, start to finish", "text": "The one who designs the programme also leads it, so no knowledge is lost between stages." },
+    { "title": "One person, start to finish", "text": "The same person designs the itinerary and runs it on the ground, so no detail falls through the cracks." },
     { "title": "Your brand stays yours", "text": "Trips run under your licence, contracts and name. I work as your external specialist." }
   ],
 
@@ -31,18 +32,18 @@
 
   "stepsLabel": "How we start",
   "steps": [
-    { "title": "A conversation", "text": "Tell me about your travellers and what you'd like to offer." },
-    { "title": "A first proposal", "text": "I sketch a route and a programme, with what it needs on the ground." },
-    { "title": "On the ground", "text": "We refine it together, and I coordinate or lead it in the field." }
+    { "title": "Conversation", "text": "Tell me about your travellers and what you'd like to offer." },
+    { "title": "Proposal", "text": "Based on our conversation, I prepare the route and itinerary, and handle the communication with hosts, guides and hotels." },
+    { "title": "Delivery", "text": "We refine the itinerary together, and I coordinate it and accompany the group on the ground." }
   ],
 
   "aboutLabel": "About me",
   "aboutHeading": "Vuk Joksimović",
   "aboutRole": "Independent travel consultant · Latin America",
-  "about": "For almost three years I have travelled independently across the Americas, by local buses, trucks, boats, trains and on foot. I write about it on Resplandor, my travel journal, and I want to help agencies build Latin American programmes that are authentic, but also workable.",
+  "about": "For almost three years I have travelled independently across the Americas, getting to know it first-hand. I write about it on Resplandor, my travel journal, and I want to help agencies build Latin American programmes that are authentic, but also workable.",
   "facts": [
     { "label": "Languages", "text": "English, Spanish, Serbian — fluent" },
-    { "label": "Based in", "text": "Belgrade, Serbia · British passport" },
+    { "label": "Based in", "text": "Belgrade, Serbia" },
     { "label": "Email", "text": "vukjoksimovic02@gmail.com" }
   ],
   "email": "vukjoksimovic02@gmail.com",
