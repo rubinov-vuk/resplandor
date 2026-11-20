@@ -471,6 +471,7 @@ content:
         options:
           extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
       - { name: heroAlt, label: "Photo description", type: string }
+      - { name: heroFocus, label: "Which band of the photo shows (0 = top, 50 = middle, 100 = bottom)", type: number }
       - { name: ctaContact, label: "Button that scrolls to About me", type: string }
       - { name: pdf, label: "Proposal PDF link (file in src/assets)", type: string }
       - { name: pdfLabel, label: "PDF button text", type: string }
@@ -531,6 +532,7 @@ content:
         options:
           extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
       - { name: heroAlt, label: "Opis fotografije", type: string }
+      - { name: heroFocus, label: "Koji deo fotografije se vidi (0 = vrh, 50 = sredina, 100 = dno)", type: number }
       - { name: ctaContact, label: "Dugme koje vodi do „O meni“", type: string }
       - { name: pdf, label: "Link do PDF-a (fajl u src/assets)", type: string }
       - { name: pdfLabel, label: "Tekst dugmeta za PDF", type: string }

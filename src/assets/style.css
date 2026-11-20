@@ -364,7 +364,10 @@ a { color: inherit; }
   display: flex; gap: 8px;
   font: 600 11px var(--label); letter-spacing: 1.6px; color: var(--accent);
 }
-.header-lang b { font-weight: 600; color: var(--ink); }
+/* the other language in gold, turning green on hover; the current language in green */
+.header-lang a { transition: color .2s ease, opacity .2s ease; }
+.header-lang a:hover { color: var(--forest); opacity: 1; }
+.header-lang b { font-weight: 600; color: var(--forest); }
 
 /* ---------- English section ----------
    Same paper, typefaces and gold; forest green (from the proposal PDF) as the second accent. */

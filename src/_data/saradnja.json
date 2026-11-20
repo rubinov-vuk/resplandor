@@ -1,9 +1,9 @@
 {
   "kicker": "Saradnja · Nezavisni konsultant za putovanja",
   "heading": "Latinska Amerika, izvan uobičajenih okvira.",
-  "lead": "Partner sa terena za turističke agencije: pomažem vam da Latinsku Ameriku razvijete kao pouzdan i prepoznatljiv deo ponude, od prve ideje do grupe na terenu.",
-  "heroImage": "/images/20260323_104750.jpg",
-  "heroAlt": "Kolonijalni lukovi u Antigvi, Gvatemala, sa vulkanom u pozadini",
+  "lead": "Partner sa terena za turističke agencije: pomažem vam da Latinsku Ameriku razvijete kao pouzdan i prepoznatljiv deo ponude, od saradnje do rada na terenu.",
+  "heroImage": "/images/dscn0346.jpg",
+  "heroAlt": "Autobusi na altiplanu ispod snežnog vrha Huayna Potosí, Bolivija",
   "ctaContact": "Kontakt",
   "pdf": "/assets/Vuk-Joksimovic-predlog-saradnje.pdf",
   "pdfLabel": "Preuzmi predlog saradnje (PDF)",
@@ -11,35 +11,35 @@
   "offerLabel": "Šta radim",
   "offerHeading": "Tri oblika saradnje.",
   "services": [
-    { "title": "Osmišljavam putovanje", "text": "Rute, ritam i iskustva, pretočeni u itinerer koji odgovara vašim putnicima." },
-    { "title": "Koordinišem na terenu", "text": "Smeštaj, prevoz, vodiči i lokalni dobavljači — dogovoreni na španskom, u skladu sa vašim procedurama." },
-    { "title": "Vodim grupu", "text": "Na terenu sa vašim putnicima, iz dana u dan, rešavajući sve što put donese." }
+    { "title": "Osmišljavanje putovanja", "text": "Rute, ritam i iskustva, pretočeni u itinerer koji odgovara vašim putnicima." },
+    { "title": "Koordinacija na terenu", "text": "Smeštaj, prevoz, vodiči i lokalni dobavljači — dogovoreni na španskom, u skladu sa vašim procedurama." },
+    { "title": "Pomoć na putu", "text": "Uz vašu grupu na terenu, iz dana u dan, spreman za sve što iskrsne." }
   ],
   "servicesNote": "Izaberite jedan deo, ili ceo put od prve ideje do terena.",
 
   "whyLabel": "Zašto funkcioniše",
   "whyHeading": "Znanje sa puta, a ne iz kataloga.",
   "reasons": [
-    { "title": "Tri godine na terenu", "text": "Lokalni autobusi, granični prelazi, noćni putevi i porodični smeštaji — poznati iz prve ruke." },
+    { "title": "Tri godine na terenu", "text": "Skriveni dragulji, granični prelazi, lokalni prevozi i smeštaji — poznati iz prve ruke." },
     { "title": "Španski bez posrednika", "text": "Direktan razgovor sa lokalnim partnerima, bez gubitaka u prevodu." },
-    { "title": "Jedna osoba, od početka do kraja", "text": "Ko osmisli program, taj ga i vodi, pa se znanje ne gubi između faza." },
+    { "title": "Jedna osoba, od početka do kraja", "text": "Isti čovek osmišljava program i sprovodi ga na terenu, pa nijedan detalj ne ostaje između redova." },
     { "title": "Vaš brend ostaje vaš", "text": "Putovanja se realizuju pod vašom licencom, ugovorima i imenom. Ja sam vaš spoljni specijalista." }
   ],
 
   "placesLabel": "Gde",
-  "places": "Gvatemala · Peru · Bolivija · Kolumbija · Argentina · Čile · Urugvaj · Brazil",
+  "places": "Gvatemala · Peru · Bolivija · Kolumbija · Argentina · Čile · Brazil",
 
   "stepsLabel": "Kako počinjemo",
   "steps": [
     { "title": "Razgovor", "text": "Ispričajte mi o vašim putnicima i šta biste želeli da ponudite." },
-    { "title": "Prvi predlog", "text": "Skiciram rutu i program, sa svim što je potrebno na terenu." },
-    { "title": "Na terenu", "text": "Zajedno ga doradimo, a ja ga koordinišem ili vodim na licu mesta." }
+    { "title": "Predlog", "text": "Na osnovu razgovora pripremam rutu i program, sa svim što je potrebno na terenu." },
+    { "title": "Sprovođenje", "text": "Zajedno doradimo program, a ja ga koordinišem i pratim grupu na licu mesta." }
   ],
 
   "aboutLabel": "O meni",
   "aboutHeading": "Vuk Joksimović",
   "aboutRole": "Nezavisni konsultant za putovanja · Latinska Amerika",
-  "about": "Gotovo tri godine samostalno putujem kroz Ameriku — lokalnim autobusima, kamionetima, čamcima, vozovima i peške. O tome pišem na Resplandoru, mom putopisnom dnevniku, i želim da pomognem agencijama da grade programe za Latinsku Ameriku koji su autentični, ali i izvodljivi.",
+  "about": "Gotovo tri godine samostalno putujem kroz Ameriku i upoznajem je iz prve ruke. O tome pišem na Resplandoru, mom putopisnom dnevniku, i želim da pomognem agencijama da grade programe za Latinsku Ameriku koji su autentični, ali i izvodljivi.",
   "facts": [
     { "label": "Jezici", "text": "Srpski, engleski, španski — tečno" },
     { "label": "Lokacija", "text": "Beograd, Srbija" },

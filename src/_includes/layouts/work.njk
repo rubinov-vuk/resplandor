@@ -16,7 +16,7 @@ layout: layouts/base.njk
     <a class="en-button" href="{{ w.pdf }}" download>{{ w.pdfLabel }}</a>
   </div>
 </section>
-<div class="work-hero-photo"><img src="{{ w.heroImage }}" alt="{{ w.heroAlt }}" sizes="(min-width: 1440px) 1090px, 90vw" loading="eager"></div>
+<div class="work-hero-photo"><img src="{{ w.heroImage }}" alt="{{ w.heroAlt }}" sizes="(min-width: 1440px) 1090px, 90vw" loading="eager" style="object-position: 50% {{ w.heroFocus if w.heroFocus != null else 50 }}%"></div>
 
 <section class="work-section container">
   <p class="work-label">{{ w.offerLabel }}</p>
