@@ -31,12 +31,11 @@ sections:
   - type: photos
     items:
       - image: /images/puerto-montt.jpg
-        layout: half
-        shape: portrait
+        layout: wide
+        shape: original
         focus: center
         zoom: "1"
-      - image: /images/img-20261117-wa0003.jpg
-        layout: half
+      - layout: half
         shape: original
         focus: center
         zoom: "1"
