@@ -32,7 +32,7 @@ sections:
     items:
       - image: /images/puerto-montt.jpg
         layout: half
-        shape: landscape
+        shape: portrait
         focus: center
         zoom: "1"
       - image: /images/img-20261117-wa0003.jpg
