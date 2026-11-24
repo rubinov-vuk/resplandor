@@ -501,6 +501,18 @@ content:
           - { name: text, label: "Text", type: text }
       - { name: placesLabel, label: "Where — small label", type: string }
       - { name: places, label: "Where — countries (separate with ·)", type: string }
+      - name: placesSlides
+        label: "Where — photos for the slideshow (if empty, the landing page photos are used)"
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            options:
+              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+          - { name: alt, label: "Photo description", type: string }
+          - { name: focus, label: "Which band shows (0 = top, 50 = middle, 100 = bottom)", type: number, default: 50 }
       - { name: stepsLabel, label: "How we start — small label", type: string }
       - name: steps
         label: "How we start — steps"
@@ -562,6 +574,18 @@ content:
           - { name: text, label: "Tekst", type: text }
       - { name: placesLabel, label: "Gde — mali naslov", type: string }
       - { name: places, label: "Gde — zemlje (odvoji sa ·)", type: string }
+      - name: placesSlides
+        label: "Gde — fotografije za slajdšou (ako je prazno, koriste se fotografije sa početne)"
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Fotografija
+            type: image
+            options:
+              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+          - { name: alt, label: "Opis fotografije", type: string }
+          - { name: focus, label: "Koji deo se vidi (0 = vrh, 50 = sredina, 100 = dno)", type: number, default: 50 }
       - { name: stepsLabel, label: "Kako počinjemo — mali naslov", type: string }
       - name: steps
         label: "Kako počinjemo — koraci"

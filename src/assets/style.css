@@ -485,8 +485,16 @@ html { scroll-behavior: smooth; }
 .work-reasons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 60px; row-gap: 36px; }
 .work-reasons > div { padding-top: 20px; border-top: 1px solid rgba(184, 119, 52, .45); }
 
-/* Where: one line of countries */
-.work-places-list { font: 500 clamp(24px, 2.6vw, 34px)/1.5 var(--display) !important; color: var(--ink) !important; max-width: 1000px; }
+/* Where: countries listed on the left, photo slideshow on the right */
+.work-places { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 40px; align-items: center; }
+/* country names with an even, thin gold line between them */
+.work-places-list { list-style: none; margin: 0; padding: 0; }
+.work-places-list li {
+  padding: 9px 0;
+  font: 500 clamp(22px, 2.2vw, 29px)/1.3 var(--display); color: var(--ink);
+}
+.work-places-list li + li { border-top: 1px solid rgba(184, 119, 52, .55); }
+.hero.work-places-slides { margin: 0; aspect-ratio: 4 / 3; }
 
 /* How we start: three steps on a line */
 .work-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; position: relative; }
@@ -551,6 +559,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .hero-nav svg { display: none; } /* phones: tap the sides or swipe, no arrows */
   /* on phones the dots sit at the bottom of the photo, under the thumb */
   .hero-dots { top: auto; bottom: 16px; }
+  .work-places { grid-template-columns: 1fr; gap: 32px; }
   .intro { padding-top: 48px; }
   .story-list { padding-top: 64px; }
   .story-list-head { margin-bottom: 32px; }

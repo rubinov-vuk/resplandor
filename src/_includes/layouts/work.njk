@@ -37,9 +37,20 @@ layout: layouts/base.njk
   </div>
 </section>
 
+{# Where: countries on the left, photo slideshow on the right.
+   Uses "Where — photos" if filled in, otherwise the photos from the landing page. #}
 <section class="work-section work-places container">
-  <p class="work-label">{{ w.placesLabel }}</p>
-  <p class="work-places-list">{{ w.places }}</p>
+  <div class="work-places-text">
+    <p class="work-label">{{ w.placesLabel }}</p>
+    <ul class="work-places-list">
+      {% for place in (w.places or "").split("·") %}{% if place | trim %}<li>{{ place | trim }}</li>{% endif %}{% endfor %}
+    </ul>
+  </div>
+  {% set slides = w.placesSlides if (w.placesSlides and w.placesSlides.length) else home.slides %}
+  {% set slideshowClass = "work-places-slides" %}
+  {% set slideshowLabel = w.placesLabel %}
+  {% set slideshowSizes = "(min-width: 1440px) 740px, (min-width: 821px) 62vw, 100vw" %}
+  {% include "partials/slideshow.njk" %}
 </section>
 
 <section class="work-section container">
