@@ -5,7 +5,7 @@ subtitle: A designated spot in the ocean where surfers position themselves to
 location: El Paredon Buena Vista, Guatemala
 country: Gvatemala
 date: 2024-11-25
-draft: true
+draft: false
 ---
 **Lineup [ˈlaɪnˌʌp]** noun
 
