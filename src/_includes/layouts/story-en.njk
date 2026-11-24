@@ -16,6 +16,7 @@ layout: layouts/base.njk
   {% if map %}<div class="story-map">{{ map.svg | safe }}</div>{% endif %}
 
   <div class="en-text">
+    {% if beforeText %}<div class="story-body en-pretext">{{ beforeText | renderContent("md") | safe }}</div>{% endif %}
     {{ textWithPhotos(content, textPhotos, title) }}
   </div>
 

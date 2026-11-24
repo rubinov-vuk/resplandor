@@ -429,14 +429,17 @@ a { color: inherit; }
 .en-button--outline-light:hover { background: var(--bg); color: var(--forest); }
 
 /* English story: a chapter of a book */
-.story-en { --column: 680px; }
+.story-en { --column: 840px; }
 .story-en .en-kicker { text-align: center; color: var(--accent); }
 .story-en .story-title { margin-bottom: 16px; }
 .en-subtitle { margin: 0 auto 46px; max-width: 560px; text-align: center; font: italic 20px/1.5 var(--serif); color: var(--body); }
-.en-text .story-body { font-size: calc(var(--fs-intro) + 1px); line-height: calc(var(--lh-intro) + 2px); }
-.en-text .story-body:first-child > p:first-child::first-letter {
+.en-text .story-body { font-size: calc(var(--fs-intro) - 2px); line-height: calc(var(--lh-intro) - 4px); }
+.en-text .story-body p { margin-bottom: calc(var(--lh-intro) - 4px); }
+/* Big first letter: on the first text, or on the first text after "Text before the story" */
+.en-text > .story-body:not(.en-pretext):first-child > p:first-child::first-letter,
+.en-text > .en-pretext + .story-body > p:first-child::first-letter {
   float: left; margin: 6px 12px 0 0;
-  font: 500 calc(3 * var(--lh-intro)) / .8 var(--display); color: var(--accent);
+  font: 500 calc(3 * (var(--lh-intro) - 4px)) / .8 var(--display); color: var(--accent);
 }
 .en-text h2 {
   display: flex; flex-direction: column; align-items: center; gap: 14px;

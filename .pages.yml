@@ -393,6 +393,11 @@ content:
         type: image
         options:
           extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+      # Shown above "Text", in normal size, without the big first letter.
+      - name: beforeText
+        label: "Text before the story (optional — shown above the big first letter, in normal size)"
+        type: rich-text
+        format: markdown
       - name: body
         label: "Text — ## starts a chapter heading; [photo 1] on its own line places a photo"
         type: rich-text
