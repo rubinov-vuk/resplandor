@@ -1,18 +1,12 @@
 ---
 title: The Lineup
-subtitle: A designated spot in the ocean where surfers position themselves to
-  catch incoming waves.
+subtitle: "**Lineup [ˈlaɪnˌʌp]** noun*A designated spot in the ocean where
+  surfers position themselves to catch incoming waves.*"
 location: El Paredon Buena Vista, Guatemala
 country: Gvatemala
 date: 2024-11-25
 draft: false
 ---
-**Lineup [ˈlaɪnˌʌp]** noun
-
-*A designated spot in the ocean where surfers position themselves to catch incoming waves.*
-
-
-
 You lie behind the non-existent line that separates a fierce storm from tranquility. The colossals tickle the board beneath you as they expand and explode in front of you. The sea shakes and howls, yet in the midst of chaos, you lie at peace.
 
 ...
